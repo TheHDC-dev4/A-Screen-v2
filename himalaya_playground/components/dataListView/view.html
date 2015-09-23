@@ -1,27 +1,40 @@
 <div data-role="view" data-title="Personal Care" data-layout="main" data-model="app.dataListView" data-show="app.dataListView.onShow" data-after-show="app.dataListView.afterShow">
     <!-- START_CUSTOM_CODE_dataListView -->
+
     <!-- END_CUSTOM_CODE_dataListView -->
     <ul data-role="listview" data-style="inset" data-template="dataListViewModelTemplate" data-bind="{ source: dataListViewModel.dataSource, events: {click: dataListViewModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
     </ul>
     <!-- START_CUSTOM_CODE_dataListViewModel -->
     <!-- END_CUSTOM_CODE_dataListViewModel -->
     <script type="text/x-kendo-template" id="dataListViewModelTemplate">
-        <div class="image-with-text left"  >
-            <img src="#: data['ImageUrlUrl'] #" width="25%" height="25%">
-            <h5>#: data['ProductName'] #</h5>
-          <h6>Rs:#: data['Price'] #</h6>
-           </div>
+     <a  href="\#components/dataListView/details.html?uid=${uid}">   
+     <div class="image-with-text left"  >
+                    <img src="#: data['ImageUrlUrl'] #" width="25%" height="25%">
+                    <h5>#: data['ProductName'] #</h5>
+                  <h6>Rs:#: data['Price'] #</h6>
+      </div>
+      </a>
           <div class="left">
-          <div class="left">
-           <img  src="images/User-Interface-Plus-icon.png">
-        
-         
+                   <a  class="left round " onclick="addToCart();" data-title="test" >
+                    <img src="images/User-Interface-Minus-icon.png">
+                    </a>
+                       <div class="left" style="padding-right:7px;padding-left:7px;padding-top:4px;" >
+                                <i>0</i>
+                       </div>
+                   <a class="left round" onclick="removeFromCart();"" >
+         			  <img  src="images/User-Interface-Plus-icon.png">
+ 
+                    </a>
           </div>
-           <div class="left">
-            <img src="images/User-Interface-Minus-icon.png">
-         
-          </div>
-          </div
        
     </script>
 </div>
+<script>
+ 
+    function addToCart(e)
+{   
+    alert($("#appDrawer").length);
+}
+    
+    
+</script>

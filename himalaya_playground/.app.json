@@ -6,8 +6,33 @@
       "components": [],
       "name": "home",
       "title": "Home",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "dataListViewModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "PersonalCare",
+          "iconField": false,
+          "imageField": "ImageUrl",
+          "headerField": "ProductName",
+          "subHeaderField": "Price",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailSubHeaderField": "Price",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "dataListView",
+      "title": "Personal Care",
       "addToNavigation": true,
-      "icon": "home"
+      "icon": "organize"
     }
   ],
   "dataProviders": [
@@ -16,6 +41,15 @@
       "everliveUrl": "//platform.telerik.com/bs-api/v1/",
       "name": "defaultProvider",
       "title": "DefaultProvider",
+      "source": "everlive",
+      "everliveKey": "XHCIpaaWiYSClh6w",
+      "offlineStorage": true
+    },
+    {
+      "type": "dataProvider",
+      "everliveUrl": "//platform.telerik.com/bs-api/v1/",
+      "name": "himalayaPlaygroundBackend",
+      "title": "hemanth / himalaya_playground Backend",
       "source": "everlive",
       "everliveKey": "XHCIpaaWiYSClh6w",
       "offlineStorage": true

@@ -131,3 +131,5 @@
 #kendoUiMobileApp #navigation-container .active:after {
     color: #fff;
 }
+h5 {color:#FF6600;width:220px;}
+.left{float:left;vertical-align: top;}

@@ -1,3 +1,3 @@
 
-.icon-plus:before { content: '\e800'; } /* '' */
+.icon-plus:before { content: '&#43;'; } /* '' */
 .icon-minus:before { content: '\e801'; } /* '' */

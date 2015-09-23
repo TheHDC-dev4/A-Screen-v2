@@ -81,9 +81,9 @@ app.dataListView = kendo.observable({
         dataSource = new kendo.data.DataSource(dataSourceOptions),
         dataListViewModel = kendo.observable({
             dataSource: dataSource,
-            itemClick: function(e) {
+          /*  itemClick: function(e) {
                 app.mobileApp.navigate('#components/dataListView/details.html?uid=' + e.dataItem.uid);
-            },
+            },*/
             detailsShow: function(e) {
                 var item = e.view.params.uid,
                     dataSource = dataListViewModel.get('dataSource'),

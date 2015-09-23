@@ -7,9 +7,12 @@
     <!-- END_CUSTOM_CODE_dataListViewModel -->
     <script type="text/x-kendo-template" id="dataListViewModelTemplate">
         <div class="image-with-text">
-            <img src="#: data['ImageUrlUrl'] #" width="30%" height="30%">
-            <h3>#: data['ProductName'] #</h3>
-           <p> &#8377</p><p>#: data['Price'] #</p>
+            <img src="#: data['ImageUrlUrl'] #" width="25%" height="25%">
+            <h5 style='width:220px;'>#: data['ProductName'] #</h5>
+          <p>Rs:#: data['Price'] #</p>
+          <div>
+          <span style="content: '\e800';"></span>
+          </div>
         </div>
     </script>
 </div>

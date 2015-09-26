@@ -2,10 +2,199 @@
 
 app.dataListView = kendo.observable({
     onShow: function() {},
-    afterShow: function() {}
+    afterShow: function() {},
+ 
 });
 
 // START_CUSTOM_CODE_dataListView
+function addToCart(e)
+{
+ var app = {};
+app.db = null;
+
+    
+/* start create data base*/
+app.openDb = function() {
+    if (window.sqlitePlugin !== undefined) {
+        app.db = window.sqlitePlugin.openDatabase("Himalaya_Lite_Database");
+    } else {
+        // For debugging in simulator fallback to native SQL Lite
+        app.db = window.openDatabase("Himalaya_Lite_Database", "1.0", "Cordova Demo", 200000);
+    }
+}
+/* end create data base*/
+ /* start create table*/
+app.createTable = function() {
+    app.db.transaction(function(tx) {
+        tx.executeSql("CREATE TABLE IF NOT EXISTS CartTable (id INTEGER PRIMARY KEY ASC, ProductName TEXT, Catalogid INTEGER,size TEXT,Image_URL TEXT,Catalogy TEXT)", []);
+    });
+}
+ /* end  create table*/
+ /* start  insert table*/
+app.insertRecord = function(ProductName, Catalogid ,size ,Image_URL ,Catalogy) {
+    app.db.transaction(function(tx) {
+        var cDate = new Date();
+        tx.executeSql("INSERT INTO CartTable(ProductName, Catalogid ,size ,Image_URL ,Catalogy ) VALUES (?,?,?,?,?)",
+                      [ProductName, Catalogid ,size ,Image_URL ,Catalogy],
+                      app.onSuccess,
+                      app.onError);
+    });
+}
+app.onSuccess = function(tx, r) {
+    console.log("Your SQLite query was successful!");
+}
+
+app.onError = function(tx, e) {
+    console.log("SQLite Error: " + e.message);
+}
+ /* end  insert table*/
+ /* start  update table*/
+app.updateRecord = function(id, t) {
+    app.db.transaction(function(tx) {
+        var mDate = new Date();
+        tx.executeSql("UPDATE MyTable SET text_sample = ?, date_sample = ? WHERE id = ?",
+                      [t, mDate, id],
+                      app.onSuccess,
+                      app.onError);
+    });
+}
+ /* end  update table*/
+/* start  delete table*/
+app.deleteRecord = function(id) {
+    app.db.transaction(function(tx) {
+        tx.executeSql("DELETE FROM CartTable WHERE Catalogid = ?",
+                      [id],
+                      app.onSuccess,
+                      app.onError);
+    });
+}
+/* end  delete table*/
+/* start  select table*/
+app.selectAllRecords = function(fn) {
+    app.db.transaction(function(tx) {
+        tx.executeSql("SELECT * FROM CartTable ORDER BY id", [],
+                      fn,
+                      app.onError);
+    });
+}
+/* end  select table*/
+/* start  get table*/
+function getAllTheData() {
+    var render = function (tx, rs) {
+        // rs contains our SQLite recordset, at this point you can do anything with it
+        // in this case we'll just loop through it and output the results to the console
+        for (var i = 0; i < rs.rows.length; i++) {
+            alert(JSON.stringify(rs.rows.item(i)));
+        }
+    }
+
+    app.selectAllRecords(render);
+}
+    /* end  get table*/
+       var data = e.button.data();
+app.openDb();
+app.createTable();
+/* app.deleteRecord(parseInt(data.id));*/
+  
+    app.insertRecord(data.product,parseInt(data.id) ,data.size ,data.imageurl ,'Personal Care');
+    getAllTheData();
+
+   alert(data.product);''
+      alert(data.id);
+      alert(data.size);
+      alert(data.imageurl);
+}
+
+function removeFromCart(e)
+{
+    alert();
+    var app = {};
+app.db = null;
+
+    
+/* start create data base*/
+app.openDb = function() {
+    if (window.sqlitePlugin !== undefined) {
+        app.db = window.sqlitePlugin.openDatabase("Himalaya_Lite_Database");
+    } else {
+        // For debugging in simulator fallback to native SQL Lite
+        app.db = window.openDatabase("Himalaya_Lite_Database", "1.0", "Cordova Demo", 200000);
+    }
+}
+/* end create data base*/
+ /* start create table*/
+app.createTable = function() {
+    app.db.transaction(function(tx) {
+        tx.executeSql("CREATE TABLE IF NOT EXISTS CartTable (id INTEGER PRIMARY KEY ASC, ProductName TEXT, Catalogid INTEGER,size TEXT,Image_URL TEXT,Catalogy TEXT)", []);
+    });
+}
+ /* end  create table*/
+ /* start  insert table*/
+app.insertRecord = function(ProductName, Catalogid ,size ,Image_URL ,Catalogy) {
+    app.db.transaction(function(tx) {
+        var cDate = new Date();
+        tx.executeSql("INSERT INTO CartTable(ProductName, Catalogid ,size ,Image_URL ,Catalogy ) VALUES (?,?,?,?,?)",
+                      [ProductName, Catalogid ,size ,Image_URL ,Catalogy],
+                      app.onSuccess,
+                      app.onError);
+    });
+}
+app.onSuccess = function(tx, r) {
+    console.log("Your SQLite query was successful!");
+}
+
+app.onError = function(tx, e) {
+    console.log("SQLite Error: " + e.message);
+}
+ /* end  insert table*/
+ /* start  update table*/
+app.updateRecord = function(id, t) {
+    app.db.transaction(function(tx) {
+        var mDate = new Date();
+        tx.executeSql("UPDATE MyTable SET text_sample = ?, date_sample = ? WHERE id = ?",
+                      [t, mDate, id],
+                      app.onSuccess,
+                      app.onError);
+    });
+}
+ /* end  update table*/
+/* start  delete table*/
+app.deleteRecord = function(id) {alert(id);
+    app.db.transaction(function(tx) {
+        tx.executeSql("DELETE FROM CartTable WHERE Catalogid = ?",
+                      [id],
+                      app.onSuccess,
+                      app.onError);
+    });
+}
+/* end  delete table*/
+/* start  select table*/
+app.selectAllRecords = function(fn) {
+    app.db.transaction(function(tx) {
+        tx.executeSql("SELECT * FROM CartTable ORDER BY id", [],
+                      fn,
+                      app.onError);
+    });
+}
+/* end  select table*/
+/* start  get table*/
+function getAllTheData() {
+    var render = function (tx, rs) {
+        // rs contains our SQLite recordset, at this point you can do anything with it
+        // in this case we'll just loop through it and output the results to the console
+        for (var i = 0; i < rs.rows.length; i++) {
+            alert(JSON.stringify(rs.rows.item(i)));
+        }
+    }
+
+    app.selectAllRecords(render);
+}
+    /* end  get table*/
+    app.openDb();
+       var data = e.button.data();
+    alert(data.id);
+     app.deleteRecord(parseInt(data.id));
+}
 // END_CUSTOM_CODE_dataListView
 (function(parent) {
     var dataProvider = app.data.himalayaPlaygroundBackend,

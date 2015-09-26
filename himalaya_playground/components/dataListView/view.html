@@ -7,35 +7,36 @@
     <!-- START_CUSTOM_CODE_dataListViewModel -->
     <!-- END_CUSTOM_CODE_dataListViewModel -->
     <script type="text/x-kendo-template" id="dataListViewModelTemplate">
-     <a  href="\components/dataListView/details.html?uid=${uid}"> 
-  
-     <div class="image-with-text left"  >
-                    <img src="#: data['ImageUrlUrl'] #" width="25%" height="25%">
-                    <h5>#: data['ProductName'] #</h5>
-                  <h6>Rs:#: data['Price'] #</h6>
-      </div>
-      </a>
-          <div class="left">
-                   <a  class="left round " onclick="addToCart();" data-title="test" >
-                    <img src="images/User-Interface-Minus-icon.png">
-                    </a>
-                       <div class="left" style="padding-right:7px;padding-left:7px;padding-top:4px;" >
-                                <i>0</i>
-                       </div>
-                   <a class="left round" onclick="removeFromCart();"" >
-         			  <img  src="images/User-Interface-Plus-icon.png">
- 
-                    </a>
-          </div>
-       
+    <div style="width:100%;">
+                 <div class="image-with-text left" style=" display: table;width:100%;" >
+                 <div style="display: table-row;width:100%;">
+                                             <a  href="\components/dataListView/details.html?uid=${uid}"> 
+                                                     <div style="display: table-cell;width:30%;vertical-align:top;float:left;">
+                                                      <img src="#: data['ImageUrl'] #" width="100%" >
+                                                      </div>
+                                                       <div style="display: table-cell;vertical-align:top;width:30%;" >
+                                                       <h5 style="width:100%;">#: data['ProductName'] #</h5>
+                                                        <h6>Rs:#: data['Price'] #</h6>
+                                                         <h6 style="color:\#a8a8a8">#: data['size'] #</h6>
+                                                        </div>
+                                                 </a>   
+                                        				 <div style="display: table-cell;width:30%;vertical-align:top;">
+                                          						<div style="float:right;">
+                                          							<div style="float:right;">
+                                           								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="addToCart" data-title="test" >
+                                          									<img src="images/User-Interface-Minus-icon.png">
+                                          								</a>
+                                          								<div class="left" style="padding-right:7px;padding-left:7px;padding-top:4px;" >
+                                           										<i id="Icount">0</i>
+                                           								</div>
+                                                                               <a data-id="#: data['Catalogid'] #" data-role="button" class="left round" data-click="removeFromCart" >
+                                                                               <img  src="images/User-Interface-Plus-icon.png">
+                                                                                </a>
+                                           								</div>
+                                           							</div>
+                                           					</div>
+                                            </div>
+                      </div>
+       </div>
     </script>
 </div>
-<script>
- 
-    function addToCart(e)
-{   
-    alert($("#appDrawer").length);
-}
-    
-    
-</script>

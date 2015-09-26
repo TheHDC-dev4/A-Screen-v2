@@ -11,8 +11,7 @@ function addToCart(e)
 {
  var app = {};
 app.db = null;
-
-    
+  
 /* start create data base*/
 app.openDb = function() {
     if (window.sqlitePlugin !== undefined) {
@@ -30,6 +29,51 @@ app.createTable = function() {
     });
 }
  /* end  create table*/
+
+ /* start  inser or update table*/
+app.insertRecordUpdateRecord = function(ProductName, Catalogid ,size ,Image_URL ,Catalogy) {
+    alert('insertRecordUpdateRecord');
+     app.db.transaction(function(tx) {
+        tx.executeSql("SELECT * FROM CartTable where Catalogid = ? ", [Catalogid],
+                       function (tx, rs) {
+      
+        if ( rs.rows.length < 1) {
+            alert('insert');
+              app.db.transaction(function(tx) {
+         tx.executeSql("INSERT INTO CartTable(ProductName, Catalogid ,size ,Image_URL ,Catalogy,count ) VALUES (?,?,?,?,?,?)",
+                      [ProductName, Catalogid ,size ,Image_URL ,Catalogy,1],
+                      app.onSuccess,
+                      app.onError);
+    });
+        }
+            else
+                {alert('update');
+                        app.db.transaction(function(tx) {
+                      tx.executeSql("UPDATE CartTable SET count = count + 1 WHERE Catalogid = ?",
+                      [Catalogid],
+                      app.onSuccess,
+                      app.onError);
+                      }); 
+                    
+                }
+    },
+                      app.onError);
+    });
+    
+    
+    
+    app.db.transaction(function(tx) {
+        var cDate = new Date();
+        tx.executeSql("INSERT INTO CartTable(ProductName, Catalogid ,size ,Image_URL ,Catalogy ) VALUES (?,?,?,?,?)",
+                      [ProductName, Catalogid ,size ,Image_URL ,Catalogy],
+                      app.onSuccess,
+                      app.onError);
+    });
+}
+ /* end inser or update table*/
+
+
+
  /* start  insert table*/
 app.insertRecord = function(ProductName, Catalogid ,size ,Image_URL ,Catalogy) {
     app.db.transaction(function(tx) {
@@ -96,13 +140,32 @@ app.openDb();
 app.createTable();
 /* app.deleteRecord(parseInt(data.id));*/
   
-    app.insertRecord(data.product,parseInt(data.id) ,data.size ,data.imageurl ,'Personal Care');
-    getAllTheData();
+    app.insertRecordUpdateRecord(data.product,parseInt(data.id) ,data.size ,data.imageurl ,'Personal Care');
+   /* getAllTheData();*/
 
-   alert(data.product);''
+          var view = this.view();
+
+       /*  view.element.find("#btnCart").kendoMobileButton({ badge: 10 });*/
+  var badgeElement =   view.element.find("#btnCart").data("kendoMobileButton");
+ /*  alert(view.element.find("#btnCart").kendoMobileButton().badge());*/
+    
+  
+       
+   var badge = parseInt( badgeElement.badge()); //get badge value
+    badge++;
+    badgeElement.badge(badge); //set new badge value
+
+
+
+   
+   
+   /* badge++;
+    $("#btnCart").badge(badge); //set new badge value*/
+    
+ /*  alert(data.product);
       alert(data.id);
       alert(data.size);
-      alert(data.imageurl);
+      alert(data.imageurl);*/
 }
 
 function removeFromCart(e)

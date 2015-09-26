@@ -1,12 +1,52 @@
 'use strict';
 
 app.dataListView = kendo.observable({
-    onShow: function() {},
+    onShow: function() {
+        
+          var app = {};
+app.db = null;
+
+    
+/* start create data base*/
+app.openDb = function() {
+    if (window.sqlitePlugin !== undefined) {
+        app.db = window.sqlitePlugin.openDatabase("Himalaya_Lite_Database");
+    } else {
+        // For debugging in simulator fallback to native SQL Lite
+        app.db = window.openDatabase("Himalaya_Lite_Database", "1.0", "Cordova Demo", 200000);
+    }
+}
+/* end create data base*/
+/* start  select table*/
+app.selectAllRecords = function(fn) {
+    app.db.transaction(function(tx) {
+        tx.executeSql("SELECT * FROM CartTable ORDER BY id", [],
+                      fn,
+                      app.onError);
+    });
+}
+/* end  select table*/
+/* start  get table*/
+    var view = this.view();
+function getAllTheData() {
+    var render = function (tx, rs) {
+ var _cartcountrs =   parseInt(rs.rows.length);
+ view.element.find("#btnCart").kendoMobileButton({ badge: _cartcountrs });      
+    }
+
+    app.selectAllRecords(render);
+}
+    /* end  get table*/
+      app.openDb();  
+        getAllTheData();
+    },
     afterShow: function() {},
  
 });
 
 // START_CUSTOM_CODE_dataListView
+
+var cartFlag = false;
 function addToCart(e)
 {
  var app = {};
@@ -143,34 +183,18 @@ app.createTable();
     app.insertRecordUpdateRecord(data.product,parseInt(data.id) ,data.size ,data.imageurl ,'Personal Care');
    /* getAllTheData();*/
 
-          var view = this.view();
-
-       /*  view.element.find("#btnCart").kendoMobileButton({ badge: 10 });*/
+   var view = this.view();
   var badgeElement =   view.element.find("#btnCart").data("kendoMobileButton");
- /*  alert(view.element.find("#btnCart").kendoMobileButton().badge());*/
-    
-  
-       
    var badge = parseInt( badgeElement.badge()); //get badge value
     badge++;
     badgeElement.badge(badge); //set new badge value
 
 
-
-   
-   
-   /* badge++;
-    $("#btnCart").badge(badge); //set new badge value*/
-    
- /*  alert(data.product);
-      alert(data.id);
-      alert(data.size);
-      alert(data.imageurl);*/
 }
 
 function removeFromCart(e)
 {
-    alert();
+   
     var app = {};
 app.db = null;
 
@@ -202,8 +226,13 @@ app.insertRecord = function(ProductName, Catalogid ,size ,Image_URL ,Catalogy) {
                       app.onError);
     });
 }
+   var view = this.view();
 app.onSuccess = function(tx, r) {
-    console.log("Your SQLite query was successful!");
+ 
+  var badgeElement =   view.element.find("#btnCart").data("kendoMobileButton");
+   var badge = parseInt( badgeElement.badge()); //get badge value
+    badge--;
+    badgeElement.badge(badge); //set new badge value
 }
 
 app.onError = function(tx, e) {
@@ -232,10 +261,25 @@ app.deleteRecord = function(id) {alert(id);
 }
 /* end  delete table*/
 /* start  select table*/
-app.selectAllRecords = function(fn) {
+app.checkRecords = function(id) {
     app.db.transaction(function(tx) {
-        tx.executeSql("SELECT * FROM CartTable ORDER BY id", [],
-                      fn,
+        tx.executeSql("SELECT * FROM CartTable WHERE Catalogid = ?", [id],
+                                            function (tx, rs) {
+      
+        if ( rs.rows.length > 0) {
+         app.db.transaction(function(tx) {
+        tx.executeSql("DELETE FROM CartTable WHERE Catalogid = ?",
+                      [id],
+                      app.onSuccess,
+                      app.onError);
+    });
+        }
+            else
+                {
+                    
+                    
+                }
+    },
                       app.onError);
     });
 }
@@ -255,8 +299,14 @@ function getAllTheData() {
     /* end  get table*/
     app.openDb();
        var data = e.button.data();
-    alert(data.id);
-     app.deleteRecord(parseInt(data.id));
+    
+ app.checkRecords(parseInt(data.id));
+  
+   
+        
+             
+    
+   
 }
 // END_CUSTOM_CODE_dataListView
 (function(parent) {

@@ -1,13 +1,13 @@
-<div data-role="view" data-title="Personal Care" data-layout="main" data-model="app.dataListView" data-show="app.dataListView.onShow" data-after-show="app.dataListView.afterShow">
+<div id='divList' data-role="view" data-title="Personal Care" data-layout="main" data-model="app.dataListView" data-show="app.dataListView.onShow" data-after-show="app.dataListView.afterShow">
     <!-- START_CUSTOM_CODE_dataListView -->
 
     <!-- END_CUSTOM_CODE_dataListView -->
-    <ul data-role="listview" data-style="inset" data-template="dataListViewModelTemplate" data-bind="{ source: dataListViewModel.dataSource, events: {click: dataListViewModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
+    <ul id="listView" data-role="listview" data-style="inset" data-template="dataListViewModelTemplate" data-bind="{ source: dataListViewModel.dataSource, events: {click: dataListViewModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
     </ul>
     <!-- START_CUSTOM_CODE_dataListViewModel -->
     <!-- END_CUSTOM_CODE_dataListViewModel -->
     <script type="text/x-kendo-template" id="dataListViewModelTemplate">
-    <div style="width:100%;">
+    <div  style="width:100%;">
                  <div class="image-with-text left" style=" display: table;width:100%;" >
                  <div style="display: table-row;width:100%;">
                                              <a  href="\components/dataListView/details.html?uid=${uid}"> 
@@ -23,11 +23,11 @@
                                         				 <div style="display: table-cell;width:30%;vertical-align:top;">
                                           						<div style="float:right;">
                                           							<div style="float:right;">
-                                           								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="addToCart" data-title="test" >
+                                           								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="addToCart" data-title="test"  data-test="#: data['Test'] #" >
                                           									<img src="images/User-Interface-Minus-icon.png">
                                           								</a>
-                                          								<div class="left" style="padding-right:7px;padding-left:7px;padding-top:4px;" >
-                                           										<i id="Icount">0</i>
+                                          								<div  data-init="init"  class="left" style="padding-right:7px;padding-left:7px;padding-top:4px;" >
+                                           										0<i></i>
                                            								</div>
                                                                                <a data-id="#: data['Catalogid'] #" data-role="button" class="left round" data-click="removeFromCart" >
                                                                                <img  src="images/User-Interface-Plus-icon.png">

@@ -2,7 +2,8 @@
 
 app.dataListView = kendo.observable({
     onShow: function() {
-        
+          
+
           var app = {};
 app.db = null;
 
@@ -40,15 +41,26 @@ function getAllTheData() {
       app.openDb();  
         getAllTheData();
     },
-    afterShow: function() {},
+    afterShow: function() {
+ 
+    },
  
 });
+
+
 
 // START_CUSTOM_CODE_dataListView
 
 var cartFlag = false;
 function addToCart(e)
 {
+
+ var data = e.button.data();
+
+    alert( data.test);
+
+    
+    
  var app = {};
 app.db = null;
   
@@ -78,7 +90,7 @@ app.insertRecordUpdateRecord = function(ProductName, Catalogid ,size ,Image_URL 
                        function (tx, rs) {
       
         if ( rs.rows.length < 1) {
-            alert('insert');
+   
               app.db.transaction(function(tx) {
          tx.executeSql("INSERT INTO CartTable(ProductName, Catalogid ,size ,Image_URL ,Catalogy,count ) VALUES (?,?,?,?,?,?)",
                       [ProductName, Catalogid ,size ,Image_URL ,Catalogy,1],
@@ -124,8 +136,16 @@ app.insertRecord = function(ProductName, Catalogid ,size ,Image_URL ,Catalogy) {
                       app.onError);
     });
 }
+  var view = this.view();
 app.onSuccess = function(tx, r) {
-    console.log("Your SQLite query was successful!");
+ 
+  var badgeElement =   view.element.find("#btnCart").data("kendoMobileButton");
+   var badge = parseInt( badgeElement.badge()); //get badge value
+    badge++;
+    badgeElement.badge(badge); //set new badge value
+ var count1 =  parseInt(e.button.next().text());
+ count1++;
+e.button.next().text(count1);
 }
 
 app.onError = function(tx, e) {
@@ -183,13 +203,7 @@ app.createTable();
     app.insertRecordUpdateRecord(data.product,parseInt(data.id) ,data.size ,data.imageurl ,'Personal Care');
    /* getAllTheData();*/
 
-   var view = this.view();
-  var badgeElement =   view.element.find("#btnCart").data("kendoMobileButton");
-   var badge = parseInt( badgeElement.badge()); //get badge value
-    badge++;
-    badgeElement.badge(badge); //set new badge value
-
-
+   
 }
 
 function removeFromCart(e)
@@ -233,6 +247,11 @@ app.onSuccess = function(tx, r) {
    var badge = parseInt( badgeElement.badge()); //get badge value
     badge--;
     badgeElement.badge(badge); //set new badge value
+            var count1 =  parseInt(e.button.prev().text());
+    
+ count1--;
+e.button.prev().text(count1);
+
 }
 
 app.onError = function(tx, e) {
@@ -301,8 +320,8 @@ function getAllTheData() {
        var data = e.button.data();
     
  app.checkRecords(parseInt(data.id));
-  
-   
+
+
         
              
     
@@ -352,9 +371,9 @@ function getAllTheData() {
 
             change: function(e) {
                 var data = this.data();
+            
                 for (var i = 0; i < data.length; i++) {
                     var dataItem = data[i];
-
                     dataItem['ImageUrlUrl'] =
                         processImage(dataItem['ImageUrl']);
 
@@ -363,6 +382,7 @@ function getAllTheData() {
             },
             schema: {
                 model: {
+                    
                     fields: {
                         'ProductName': {
                             field: 'ProductName',
@@ -376,11 +396,20 @@ function getAllTheData() {
                             field: 'ImageUrl',
                             defaultValue: ''
                         },
+                         
+                         
                     }
+                    
+                    
+                    
                 }
+                
+                
             },
         },
+
         dataSource = new kendo.data.DataSource(dataSourceOptions),
+        
         dataListViewModel = kendo.observable({
             dataSource: dataSource,
           /*  itemClick: function(e) {
@@ -400,7 +429,11 @@ function getAllTheData() {
         });
 
     parent.set('dataListViewModel', dataListViewModel);
+    
+
 })(app.dataListView);
+
+
 
 // START_CUSTOM_CODE_dataListViewModel
 // END_CUSTOM_CODE_dataListViewModel

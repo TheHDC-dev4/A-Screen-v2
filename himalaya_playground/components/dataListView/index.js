@@ -374,6 +374,11 @@ function getAllTheData() {
             
                 for (var i = 0; i < data.length; i++) {
                     var dataItem = data[i];
+                    //
+                    //
+                  
+                    $.when(Database(dataItem['Catalogid'])).then(getCount);
+                    dataItem["Test"] =  ReturnCount;
                     dataItem['ImageUrlUrl'] =
                         processImage(dataItem['ImageUrl']);
 
@@ -432,8 +437,57 @@ function getAllTheData() {
     
 
 })(app.dataListView);
+  var ReturnCount = 0;
+function getCount(){
+ return ReturnCount;
+           
+}
 
+function Database(catid){
+         var app = {};
+app.db = null;
+  
+/* start create data base*/
+app.openDb = function() {
+    if (window.sqlitePlugin !== undefined) {
+        app.db = window.sqlitePlugin.openDatabase("Himalaya_Lite_Database");
+    } else {
+        // For debugging in simulator fallback to native SQL Lite
+        app.db = window.openDatabase("Himalaya_Lite_Database", "1.0", "Cordova Demo", 200000);
+    }
+}
+/* end create data base*/
+ /* start create table*/
+app.createTable = function() {
+    app.db.transaction(function(tx) {
+        tx.executeSql("CREATE TABLE IF NOT EXISTS CartTable (id INTEGER PRIMARY KEY ASC, ProductName TEXT, Catalogid INTEGER,size TEXT,Image_URL TEXT,Catalogy TEXT)", []);
+    });
+}
+ /* end  create table*/
 
+/* start  select table*/
+app.selectRecords = function(catid) {
+    app.db.transaction(function(tx) {
+        tx.executeSql("SELECT * FROM CartTable WHERE Catalogid = ?", [catid],
+                 app.onSuccess,
+                      app.onError);
+    });
+
+}
+/* end  select table*/
+/* start  get table*/
+app.onSuccess = function(tx, r) {
+
+  ReturnCount =  r.rows.length;
+   
+}
+    /* end  get table*/
+
+    app.openDb();
+app.createTable();
+app.selectRecords(catid);
+   
+}
 
 // START_CUSTOM_CODE_dataListViewModel
 // END_CUSTOM_CODE_dataListViewModel

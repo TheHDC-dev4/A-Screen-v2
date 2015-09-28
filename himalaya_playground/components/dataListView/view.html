@@ -23,13 +23,16 @@
                                         				 <div style="display: table-cell;width:30%;vertical-align:top;">
                                           						<div style="float:right;">
                                           							<div style="float:right;">
-                                           								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="addToCart" data-title="test"  data-test="#: data['Test'] #" >
+                                           								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#:
+                                                                        data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="removeFromCart"  data-title="test"  data-test="#: data['Test'] #" >
                                           									<img src="images/User-Interface-Minus-icon.png">
                                           								</a>
                                           								<div  data-init="init"  class="left" style="padding-right:7px;padding-left:7px;padding-top:4px;" >
                                            										0<i></i>
                                            								</div>
-                                                                               <a data-id="#: data['Catalogid'] #" data-role="button" class="left round" data-click="removeFromCart" >
+                                                                        
+                                                                               <a  data-role="button" class="left round"  data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="addToCart" data-title="test" 
+                                                                               data-test="#: data['Test'] #" >
                                                                                <img  src="images/User-Interface-Plus-icon.png">
                                                                                 </a>
                                            								</div>

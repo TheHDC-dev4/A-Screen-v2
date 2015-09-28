@@ -55,9 +55,9 @@ var cartFlag = false;
 function addToCart(e)
 {
 
- var data = e.button.data();
+/* var data = e.button.data();
 
-    alert( data.test);
+    alert( data.test);*/
 
     
     
@@ -84,7 +84,7 @@ app.createTable = function() {
 
  /* start  inser or update table*/
 app.insertRecordUpdateRecord = function(ProductName, Catalogid ,size ,Image_URL ,Catalogy) {
-    alert('insertRecordUpdateRecord');
+  /*  alert('insertRecordUpdateRecord');*/
      app.db.transaction(function(tx) {
         tx.executeSql("SELECT * FROM CartTable where Catalogid = ? ", [Catalogid],
                        function (tx, rs) {
@@ -99,7 +99,7 @@ app.insertRecordUpdateRecord = function(ProductName, Catalogid ,size ,Image_URL 
     });
         }
             else
-                {alert('update');
+                {
                         app.db.transaction(function(tx) {
                       tx.executeSql("UPDATE CartTable SET count = count + 1 WHERE Catalogid = ?",
                       [Catalogid],
@@ -143,9 +143,9 @@ app.onSuccess = function(tx, r) {
    var badge = parseInt( badgeElement.badge()); //get badge value
     badge++;
     badgeElement.badge(badge); //set new badge value
- var count1 =  parseInt(e.button.next().text());
+ var count1 =  parseInt(e.button.prev().text());
  count1++;
-e.button.next().text(count1);
+e.button.prev().text(count1);
 }
 
 app.onError = function(tx, e) {
@@ -188,7 +188,7 @@ function getAllTheData() {
         // rs contains our SQLite recordset, at this point you can do anything with it
         // in this case we'll just loop through it and output the results to the console
         for (var i = 0; i < rs.rows.length; i++) {
-            alert(JSON.stringify(rs.rows.item(i)));
+           /* alert(JSON.stringify(rs.rows.item(i)));*/
         }
     }
 
@@ -243,14 +243,7 @@ app.insertRecord = function(ProductName, Catalogid ,size ,Image_URL ,Catalogy) {
    var view = this.view();
 app.onSuccess = function(tx, r) {
  
-  var badgeElement =   view.element.find("#btnCart").data("kendoMobileButton");
-   var badge = parseInt( badgeElement.badge()); //get badge value
-    badge--;
-    badgeElement.badge(badge); //set new badge value
-            var count1 =  parseInt(e.button.prev().text());
-    
- count1--;
-e.button.prev().text(count1);
+ 
 
 }
 
@@ -270,7 +263,7 @@ app.updateRecord = function(id, t) {
 }
  /* end  update table*/
 /* start  delete table*/
-app.deleteRecord = function(id) {alert(id);
+app.deleteRecord = function(id) {
     app.db.transaction(function(tx) {
         tx.executeSql("DELETE FROM CartTable WHERE Catalogid = ?",
                       [id],
@@ -309,7 +302,7 @@ function getAllTheData() {
         // rs contains our SQLite recordset, at this point you can do anything with it
         // in this case we'll just loop through it and output the results to the console
         for (var i = 0; i < rs.rows.length; i++) {
-            alert(JSON.stringify(rs.rows.item(i)));
+           /* alert(JSON.stringify(rs.rows.item(i)));*/
         }
     }
 
@@ -321,6 +314,17 @@ function getAllTheData() {
     
  app.checkRecords(parseInt(data.id));
 
+    
+                var count1 =  parseInt(e.button.next().text());
+    if(count1 > 0)
+        {
+ count1--;
+e.button.next().text(count1);
+ var badgeElement =   view.element.find("#btnCart").data("kendoMobileButton");
+   var badge = parseInt( badgeElement.badge()); //get badge value
+    badge--;
+    badgeElement.badge(badge); //set new badge value
+        }
 
         
              

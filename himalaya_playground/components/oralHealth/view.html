@@ -1,0 +1,14 @@
+<div data-role="view" data-title="Oral Health" data-layout="main-nonav" data-model="app.oralHealth" data-show="app.oralHealth.onShow" data-after-show="app.oralHealth.afterShow">
+    <!-- START_CUSTOM_CODE_oralHealth -->
+    <!-- END_CUSTOM_CODE_oralHealth -->
+    <ul data-role="listview" data-style="inset" data-template="oralHealthModelTemplate" data-bind="{ source: oralHealthModel.dataSource, events: {click: oralHealthModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
+    </ul>
+    <!-- START_CUSTOM_CODE_oralHealthModel -->
+    <!-- END_CUSTOM_CODE_oralHealthModel -->
+    <script type="text/x-kendo-template" id="oralHealthModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['ProductName'] #</h3>
+
+        </div>
+    </script>
+</div>

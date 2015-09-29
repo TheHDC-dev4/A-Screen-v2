@@ -1,0 +1,14 @@
+<div data-role="view" data-title="Mens Health" data-layout="main-nonav" data-model="app.mensHealth" data-show="app.mensHealth.onShow" data-after-show="app.mensHealth.afterShow">
+    <!-- START_CUSTOM_CODE_mensHealth -->
+    <!-- END_CUSTOM_CODE_mensHealth -->
+    <ul data-role="listview" data-style="inset" data-template="mensHealthModelTemplate" data-bind="{ source: mensHealthModel.dataSource, events: {click: mensHealthModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
+    </ul>
+    <!-- START_CUSTOM_CODE_mensHealthModel -->
+    <!-- END_CUSTOM_CODE_mensHealthModel -->
+    <script type="text/x-kendo-template" id="mensHealthModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['ProductName'] #</h3>
+
+        </div>
+    </script>
+</div>

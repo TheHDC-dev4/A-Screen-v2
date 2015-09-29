@@ -1,0 +1,14 @@
+<div data-role="view" data-title="Pure Herbs" data-layout="main-nonav" data-model="app.pureHerbs" data-show="app.pureHerbs.onShow" data-after-show="app.pureHerbs.afterShow">
+    <!-- START_CUSTOM_CODE_pureHerbs -->
+    <!-- END_CUSTOM_CODE_pureHerbs -->
+    <ul data-role="listview" data-style="inset" data-template="pureHerbsModelTemplate" data-bind="{ source: pureHerbsModel.dataSource, events: {click: pureHerbsModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
+    </ul>
+    <!-- START_CUSTOM_CODE_pureHerbsModel -->
+    <!-- END_CUSTOM_CODE_pureHerbsModel -->
+    <script type="text/x-kendo-template" id="pureHerbsModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['ProductName'] #</h3>
+
+        </div>
+    </script>
+</div>

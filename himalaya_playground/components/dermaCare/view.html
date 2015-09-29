@@ -1,0 +1,14 @@
+<div data-role="view" data-title="Dream Care" data-layout="main-nonav" data-model="app.dermaCare" data-show="app.dermaCare.onShow" data-after-show="app.dermaCare.afterShow">
+    <!-- START_CUSTOM_CODE_dermaCare -->
+    <!-- END_CUSTOM_CODE_dermaCare -->
+    <ul data-role="listview" data-style="inset" data-template="dermaCareModelTemplate" data-bind="{ source: dermaCareModel.dataSource, events: {click: dermaCareModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
+    </ul>
+    <!-- START_CUSTOM_CODE_dermaCareModel -->
+    <!-- END_CUSTOM_CODE_dermaCareModel -->
+    <script type="text/x-kendo-template" id="dermaCareModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['ProductName'] #</h3>
+
+        </div>
+    </script>
+</div>

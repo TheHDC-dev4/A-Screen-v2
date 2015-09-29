@@ -143,6 +143,153 @@
       "name": "animalCare",
       "title": "Animal Care",
       "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "childernHealthModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "ChildernCare",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "childernHealth",
+      "title": "Children Health",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "dermaCareModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "DermaCare",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "dermaCare",
+      "title": "Dream Care",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "oralHealthModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "OralHealth",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "oralHealth",
+      "title": "Oral Health",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "mensHealthModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "MensHealth",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "mensHealth",
+      "title": "Mens Health",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "womensHealthModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "womensHealth",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "womensHealth",
+      "title": "Womens Health",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "pureHerbsModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "pureHerbs",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "pureHerbs",
+      "title": "Pure Herbs",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "generalModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "GenaralHealth",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "general",
+      "title": "general",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [

@@ -1,0 +1,14 @@
+<div data-role="view" data-title="Womens Health" data-layout="main-nonav" data-model="app.womensHealth" data-show="app.womensHealth.onShow" data-after-show="app.womensHealth.afterShow">
+    <!-- START_CUSTOM_CODE_womensHealth -->
+    <!-- END_CUSTOM_CODE_womensHealth -->
+    <ul data-role="listview" data-style="inset" data-template="womensHealthModelTemplate" data-bind="{ source: womensHealthModel.dataSource, events: {click: womensHealthModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
+    </ul>
+    <!-- START_CUSTOM_CODE_womensHealthModel -->
+    <!-- END_CUSTOM_CODE_womensHealthModel -->
+    <script type="text/x-kendo-template" id="womensHealthModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['ProductName'] #</h3>
+
+        </div>
+    </script>
+</div>

@@ -33,6 +33,30 @@
       "title": "Personal Care",
       "addToNavigation": true,
       "icon": "organize"
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "cartDetailsModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "PersonalCare",
+          "headerField": "ProductName",
+          "subHeaderField": "Price",
+          "filterField": "ImageUrl",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailSubHeaderField": "Price",
+          "detailDescriptionField": "ProdDescription",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": false,
+          "endlessScroll": false
+        }
+      ],
+      "name": "cartDetails",
+      "title": "My Cart",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [

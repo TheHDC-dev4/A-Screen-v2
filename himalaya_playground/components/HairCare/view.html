@@ -1,16 +1,19 @@
-<div id='divList' data-role="view" data-title="Personal Care" data-layout="PersonalCare" data-model="app.dataListView" data-show="app.dataListView.onShow" data-after-show="app.dataListView.afterShow">
+
+
+
+<div data-role="view" data-title="Hair Care" data-layout="main" data-model="app.cartDetails" data-show="app.cartDetails.onShow" data-after-show="app.cartDetails.afterShow">
     <!-- START_CUSTOM_CODE_dataListView -->
 
     <!-- END_CUSTOM_CODE_dataListView -->
-    <ul id="listView" data-role="listview" data-style="inset" data-template="dataListViewModelTemplate" data-bind="{ source: dataListViewModel.dataSource, events: {click: dataListViewModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
+    <ul data-role="listview" data-style="inset" data-template="cartDetailsModelTemplate" data-bind="{ source: cartDetailsModel.dataSource, events: {click: cartDetailsModel.itemClick}}" data-pull-to-refresh="false" data-endless-scroll="false" data-filterable="{field: 'ImageUrl', operator: 'contains'}">
     </ul>
     <!-- START_CUSTOM_CODE_dataListViewModel -->
     <!-- END_CUSTOM_CODE_dataListViewModel -->
-    <script type="text/x-kendo-template" id="dataListViewModelTemplate">
+    <script type="text/x-kendo-template" id="cartDetailsModelTemplate">
     <div  style="width:100%;">
                  <div class="image-with-text left" style=" display: table;width:100%;" >
                  <div style="display: table-row;width:100%;">
-                                             <a  href="\#components/dataListView/details.html?uid=${uid}"> 
+                                             <a  href="\#components/cartDetails/details.html?uid=${uid}"> 
                                                      <div style="display: table-cell;width:30%;vertical-align:top;float:left;">
                                                       <img src="#: data['ImageUrl'] #" width="100%" >
                                                       </div>

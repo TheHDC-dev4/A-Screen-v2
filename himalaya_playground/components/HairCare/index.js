@@ -1,8 +1,8 @@
 'use strict';
 
-app.dataListView = kendo.observable({
+app.cartDetails = kendo.observable({
     onShow: function() {
-       
+
          $("#CartBack").attr("href","#divList");
           var app = {};
 app.db = null;
@@ -370,7 +370,7 @@ e.button.next().text(count1);
         dataSourceOptions = {
             type: 'everlive',
             transport: {
-                typeName: 'PersonalCare',
+                typeName: 'HairCare',
                 dataProvider: dataProvider
             },
 
@@ -382,7 +382,7 @@ e.button.next().text(count1);
                     //
                     //
                   
-                 
+                   
                     dataItem["Test"] =  ReturnCount;
                     dataItem['ImageUrlUrl'] =
                         processImage(dataItem['ImageUrl']);
@@ -417,83 +417,28 @@ e.button.next().text(count1);
                 
             },
         },
-
+     
         dataSource = new kendo.data.DataSource(dataSourceOptions),
-        
-        dataListViewModel = kendo.observable({
+        cartDetailsModel = kendo.observable({
             dataSource: dataSource,
-          /*  itemClick: function(e) {
-                app.mobileApp.navigate('#components/dataListView/details.html?uid=' + e.dataItem.uid);
+           /* itemClick: function(e) {
+                app.mobileApp.navigate('#components/cartDetails/details.html?uid=' + e.dataItem.uid);
             },*/
             detailsShow: function(e) {
                 var item = e.view.params.uid,
-                    dataSource = dataListViewModel.get('dataSource'),
+                    dataSource = cartDetailsModel.get('dataSource'),
                     itemModel = dataSource.getByUid(item);
-                itemModel.ImageUrlUrl = processImage(itemModel.ImageUrl);
-                if (!itemModel.ProductName) {
-                    itemModel.ProductName = String.fromCharCode(160);
+                itemModel.PictureUrl = processImage(itemModel.Picture);
+                if (!itemModel.Text) {
+                    itemModel.Text = String.fromCharCode(160);
                 }
-                dataListViewModel.set('currentItem', itemModel);
+                cartDetailsModel.set('currentItem', itemModel);
             },
             currentItem: null
         });
 
-    parent.set('dataListViewModel', dataListViewModel);
-    
-
-})(app.dataListView);
-  var ReturnCount = 0;
-function getCount(){
- return ReturnCount;
-           
-}
-
-function Database(catid){
-         var app = {};
-app.db = null;
-  
-/* start create data base*/
-app.openDb = function() {
-    if (window.sqlitePlugin !== undefined) {
-        app.db = window.sqlitePlugin.openDatabase("Himalaya_Lite_Database");
-    } else {
-        // For debugging in simulator fallback to native SQL Lite
-        app.db = window.openDatabase("Himalaya_Lite_Database", "1.0", "Cordova Demo", 200000);
-    }
-}
-/* end create data base*/
- /* start create table*/
-app.createTable = function() {
-    app.db.transaction(function(tx) {
-        tx.executeSql("CREATE TABLE IF NOT EXISTS CartTable (id INTEGER PRIMARY KEY ASC, ProductName TEXT, Catalogid INTEGER,size TEXT,Image_URL TEXT,Catalogy TEXT)", []);
-    });
-}
- /* end  create table*/
-
-/* start  select table*/
-app.selectRecords = function(catid) {
-    app.db.transaction(function(tx) {
-        tx.executeSql("SELECT * FROM CartTable WHERE Catalogid = ?", [catid],
-                 app.onSuccess,
-                      app.onError);
-    });
-
-}
-/* end  select table*/
-/* start  get table*/
-app.onSuccess = function(tx, r) {
-
-  ReturnCount =  r.rows.length;
-   
-}
-    /* end  get table*/
-
-    app.openDb();
-app.createTable();
-app.selectRecords(catid);
-   
-}
-
+    parent.set('cartDetailsModel', cartDetailsModel);
+})(app.cartDetails);
 // START_CUSTOM_CODE_dataListViewModel
     function addTo(e)
     {

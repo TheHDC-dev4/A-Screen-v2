@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <link href="bower_components/kendo-ui-appbuilder-core/styles/kendo.mobile.all.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
-  <link href="fontello-codes.css" rel="stylesheet">
+    <link href="fontello-codes.css" rel="stylesheet">
 
 
     <!-- cordova script (this will be a 404 during development if served with `grunt serve`) -->
@@ -19,46 +19,55 @@
     <script src="app.js"></script>
     <script src="dataProviders/defaultProvider.js"></script>
     <script src="dataProviders/himalayaPlaygroundBackend.js"></script>
-     <script src="kendo/js/jquery-1.7.1.min.js"></script>
-   
-<style>
-    @font-face {
-        font-family: "plus";
-        src: url("images/fontello.woff") format("woff"),
-             url("images/fontello.ttf") format("truetype");
-    }
-</style>
+    <script src="kendo/js/jquery-1.7.1.min.js"></script>
+
+    <style>
+        @font-face {
+            font-family: "plus";
+            src: url("images/fontello.woff") format("woff"), url("images/fontello.ttf") format("truetype");
+        }
+    </style>
 </head>
 
 <body id="kendoUiMobileApp">
+    <script src="components/cartDetails/index.js"></script>
     <script src="components/dataListView/index.js"></script>
     <script src="components/home/index.js"></script>
-    <div data-role="layout" data-id="main">
+    <div data-role="layout" data-id="PersonalCare">
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
                 <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             </div>
+            <div data-role="tabstrip">
+            <a href="#" >Skin Care
+            </a><a href="#" >Hair Care
+            </a><a href="#" >Oral Care
+            </a><a href="#" >Men's care</a>
+                
+                 </div>
         </header>
 
         <!-- application views will be rendered here -->
-        <footer data-role="footer"> 
-            <div class="left" style="width:32%;" >
-                
-           
-             <a href="#view-transitions-Cart" id="btnCart" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="0">
-               
-            </a>
-                 </div>
+        <footer data-role="footer">
+            
+       
+            <div class="left" style="width:32%;">
+
+
+                <a href="#view-transitions-welcome" id="btnCart" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="0">
+
+                </a>
+            </div>
             <div class="left" style="width:32%;height: auto;">
-                
-            <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
-            <span >
+
+                <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
+                    <span>
                 Rs:250.00
             </span>
-</div>
                 </div>
-            <div  style="width:32%;height: auto;float:right">
+            </div>
+            <div style="width:32%;height: auto;float:right">
                 <a data-role="button" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
             </div>
         </footer>
@@ -72,23 +81,23 @@
         </header>
 
         <!-- application views will be rendered here -->
-         <footer data-role="footer"> 
-            <div class="left" style="width:32%;" >
-                
-           
-             <a data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="3">
-               
-            </a>
-                 </div>
+        <footer data-role="footer">
+            <div class="left" style="width:32%;">
+
+
+                <a href="#view-transitions-welcome"  data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="3">
+
+                </a>
+            </div>
             <div class="left" style="width:32%;height: auto;">
-                
-            <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
-            <span >
+
+                <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
+                    <span>
                 Rs:250.00
             </span>
-</div>
                 </div>
-            <div  style="width:32%;height: auto;float:right">
+            </div>
+            <div style="width:32%;height: auto;float:right">
                 <a data-role="button" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
             </div>
         </footer>
@@ -105,7 +114,17 @@
         </ul>
     </div>
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
+    
+
     <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
 </body>
-
+<script>
+    window.myTouch = {
+        touchstart: function(e) { kendoConsole.log("touch start"); },
+        swipe: function(e) { kendoConsole.log("swipe " + e.direction); },
+        tap: function(e) { kendoConsole.log("tap"); },
+        doubletap: function(e) { kendoConsole.log("double tap"); },
+        hold: function(e) { kendoConsole.log("hold"); }
+    }
+</script>
 </html>

@@ -39,7 +39,8 @@ app.finalOrder = kendo.observable({
                 var data = this.data();
                 for (var i = 0; i < data.length; i++) {
                     var dataItem = data[i];
-
+                      dataItem["totalPrice"] = parseFloat(dataItem["Price"]).toFixed(2) * 3;
+            
                     flattenLocationProperties(dataItem);
                 }
             },

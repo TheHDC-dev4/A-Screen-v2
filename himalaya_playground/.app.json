@@ -122,6 +122,27 @@
       "name": "mensCare",
       "title": "Mens Care",
       "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "animalCareModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "AnimalCare",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "animalCare",
+      "title": "Animal Care",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [

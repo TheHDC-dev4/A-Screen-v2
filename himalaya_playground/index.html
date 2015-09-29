@@ -30,6 +30,7 @@
 </head>
 
 <body id="kendoUiMobileApp">
+    <script src="components/authenticationView/index.js"></script>
     <script src="components/prebath/index.js"></script>
     <script src="components/bath/index.js"></script>
     <script src="components/postbath/index.js"></script>
@@ -51,7 +52,7 @@
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
-               <a data-role="button" href="components/home/view.html"   data-align="left" data-icon="arrow-e"></a>
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
             </div>
             <div data-role="tabstrip">
                 <a href="components/dataListView/view.html">Skin Care
@@ -91,7 +92,7 @@
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
-              <a data-role="button" href="components/home/view.html"   data-align="left" data-icon="arrow-e"></a>
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
             </div>
 
         </header>
@@ -121,20 +122,19 @@
         </footer>
     </div>
 
-    
-    
+
     <div data-role="layout" data-id="Pharma">
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
-                <a data-role="button" href="components/home/view.html"   data-align="left" data-icon="arrow-e"></a>
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
             </div>
             <div data-role="tabstrip">
                 <a href="components/childernHealth/view.html">Childern's health
             </a><a href="components/dermaCare/view.html">Derma Care
             </a><a href="components/mensHealth/view.html">Men's Health
             </a><a href="components/oralHealth/view.html">Oral Health</a>
-              <a href="components/womensHealth/view.html">Women's Health</a>
+                <a href="components/womensHealth/view.html">Women's Health</a>
             </div>
         </header>
 
@@ -162,18 +162,18 @@
             </div>
         </footer>
     </div>
-     
+
     <div data-role="layout" data-id="Baby">
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
-               <a data-role="button" href="components/home/view.html"   data-align="left" data-icon="arrow-e"></a>
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
             </div>
             <div data-role="tabstrip">
                 <a href="components/postbath/view.html">Post Bath
             </a><a href="components/prebath/view.html">Pre Bath
                 </a><a href="components/bath/view.html">Bath</a>
-           
+
             </div>
         </header>
 
@@ -201,19 +201,19 @@
             </div>
         </footer>
     </div>
-          
+
     <div data-role="layout" data-id="Wellness">
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
-              <!--  <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>-->
-                  <a data-role="button" href="components/home/view.html"   data-align="left" data-icon="arrow-e"></a>
+                <!--  <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>-->
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
             </div>
             <div data-role="tabstrip">
                 <a href="components/pureHerbs/view.html">Pure Herbs
             </a><a href="components/general/view.html">General
             </a>
-           
+
             </div>
         </header>
 
@@ -241,11 +241,11 @@
             </div>
         </footer>
     </div>
-      <div data-role="layout" data-id="Mycart">
+    <div data-role="layout" data-id="Mycart">
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
-            
+
             </div>
 
         </header>
@@ -257,7 +257,7 @@
             <div class="left" style="width:32%;">
 
 
-                <a  id="btnCart" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="backbutton" data-badge="0">
+                <a id="btnCart" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="backbutton" data-badge="0">
 
                 </a>
             </div>
@@ -275,7 +275,19 @@
         </footer>
     </div>
 
-    
+    <div data-role="layout" data-id="Verification">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="backbutton" data-align="left" ></a>
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+     
+    </div>
+
     <div data-role="layout" data-id="main-nonav">
         <header data-role="header">
             <div data-role="navbar">
@@ -314,20 +326,33 @@
             </div>
         </header>
         <ul id="navigation-container" data-role="listview">
-             <li><a href="components/home/view.html" data-icon="details">Home</a></li>
+            <li><a href="components/home/view.html" data-icon="details">Home</a></li>
             <li><a href="components/dataListView/view.html" data-icon="details">Personal Care</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="info">Offers</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="details">Featured Products</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="info">New Launches</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="details">My Orders</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="details">Wish list</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="details">Rate the App</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="info">Help Centre</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="info">FAQ</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="details">Customer Services</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="info">Terms  & Conditions</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="info">Privacy Policy</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="info">Social Media</a>
+            </li>
             <li><a href="components/dataListView/view.html" data-icon="contacts">Login</a>
 
             </li>

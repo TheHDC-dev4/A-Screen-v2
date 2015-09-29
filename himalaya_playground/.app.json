@@ -153,7 +153,7 @@
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "ChildernCare",
           "headerField": "ProductName",
-          "filterField": "ProductName",
+          "filterField": "ImageUrl",
           "masterDetails": true,
           "detailHeaderField": "ProductName",
           "detailImageField": "ImageUrl",
@@ -289,6 +289,69 @@
       ],
       "name": "general",
       "title": "general",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "postbathModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "BabyPostBath",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "postbath",
+      "title": "post bath",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "bathModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "BabyBath",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "bath",
+      "title": "bath",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "prebathModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "PreBathandDipers",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "prebath",
+      "title": "Pre bath and diapers",
       "addToNavigation": false
     }
   ],

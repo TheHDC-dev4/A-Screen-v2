@@ -1,0 +1,14 @@
+<div data-role="view" data-title="bath" data-layout="main-nonav" data-model="app.bath" data-show="app.bath.onShow" data-after-show="app.bath.afterShow">
+    <!-- START_CUSTOM_CODE_bath -->
+    <!-- END_CUSTOM_CODE_bath -->
+    <ul data-role="listview" data-style="inset" data-template="bathModelTemplate" data-bind="{ source: bathModel.dataSource, events: {click: bathModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
+    </ul>
+    <!-- START_CUSTOM_CODE_bathModel -->
+    <!-- END_CUSTOM_CODE_bathModel -->
+    <script type="text/x-kendo-template" id="bathModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['ProductName'] #</h3>
+
+        </div>
+    </script>
+</div>

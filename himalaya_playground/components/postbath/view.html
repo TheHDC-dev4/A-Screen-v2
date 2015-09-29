@@ -1,0 +1,14 @@
+<div data-role="view" data-title="post bath" data-layout="main-nonav" data-model="app.postbath" data-show="app.postbath.onShow" data-after-show="app.postbath.afterShow">
+    <!-- START_CUSTOM_CODE_postbath -->
+    <!-- END_CUSTOM_CODE_postbath -->
+    <ul data-role="listview" data-style="inset" data-template="postbathModelTemplate" data-bind="{ source: postbathModel.dataSource, events: {click: postbathModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
+    </ul>
+    <!-- START_CUSTOM_CODE_postbathModel -->
+    <!-- END_CUSTOM_CODE_postbathModel -->
+    <script type="text/x-kendo-template" id="postbathModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['ProductName'] #</h3>
+
+        </div>
+    </script>
+</div>

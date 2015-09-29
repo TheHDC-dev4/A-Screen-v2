@@ -1,0 +1,14 @@
+<div data-role="view" data-title="Pre bath and diapers" data-layout="main-nonav" data-model="app.prebath" data-show="app.prebath.onShow" data-after-show="app.prebath.afterShow">
+    <!-- START_CUSTOM_CODE_prebath -->
+    <!-- END_CUSTOM_CODE_prebath -->
+    <ul data-role="listview" data-style="inset" data-template="prebathModelTemplate" data-bind="{ source: prebathModel.dataSource, events: {click: prebathModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
+    </ul>
+    <!-- START_CUSTOM_CODE_prebathModel -->
+    <!-- END_CUSTOM_CODE_prebathModel -->
+    <script type="text/x-kendo-template" id="prebathModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['ProductName'] #</h3>
+
+        </div>
+    </script>
+</div>

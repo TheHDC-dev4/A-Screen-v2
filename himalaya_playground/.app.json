@@ -57,6 +57,71 @@
       "name": "cartDetails",
       "title": "My Cart",
       "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "hariCaresModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "HairCare",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailSubHeaderField": "Price",
+          "detailDescriptionField": "ProdDescription",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "hariCares",
+      "title": "Hair Care",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "oralCareModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "OralCare",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "oralCare",
+      "title": "Oral Care",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "mensCareModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "MensCare",
+          "headerField": "ProductName",
+          "filterField": "ProductName",
+          "masterDetails": true,
+          "detailHeaderField": "ProductName",
+          "detailImageField": "ImageUrl",
+          "pullToRefresh": true,
+          "endlessScroll": false
+        }
+      ],
+      "name": "mensCare",
+      "title": "Mens Care",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [

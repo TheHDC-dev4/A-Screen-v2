@@ -30,6 +30,9 @@
 </head>
 
 <body id="kendoUiMobileApp">
+    <script src="components/mensCare/index.js"></script>
+    <script src="components/oralCare/index.js"></script>
+    <script src="components/hariCares/index.js"></script>
     <script src="components/cartDetails/index.js"></script>
     <script src="components/dataListView/index.js"></script>
     <script src="components/home/index.js"></script>
@@ -40,18 +43,18 @@
                 <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             </div>
             <div data-role="tabstrip">
-            <a href="#" >Skin Care
-            </a><a href="#" >Hair Care
-            </a><a href="#" >Oral Care
-            </a><a href="#" >Men's care</a>
-                
-                 </div>
+                <a href="components/dataListView/view.html">Skin Care
+            </a><a href="components/hariCares/view.html">Hair Care
+            </a><a href="components/oralCare/view.html">Oral Care
+            </a><a href="components/mensCare/view.html">Men's care</a>
+
+            </div>
         </header>
 
         <!-- application views will be rendered here -->
         <footer data-role="footer">
-            
-       
+
+
             <div class="left" style="width:32%;">
 
 
@@ -85,7 +88,7 @@
             <div class="left" style="width:32%;">
 
 
-                <a href="#view-transitions-welcome"  data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="3">
+                <a href="#view-transitions-welcome" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="3">
 
                 </a>
             </div>
@@ -114,17 +117,28 @@
         </ul>
     </div>
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
-    
+
 
     <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
 </body>
 <script>
     window.myTouch = {
-        touchstart: function(e) { kendoConsole.log("touch start"); },
-        swipe: function(e) { kendoConsole.log("swipe " + e.direction); },
-        tap: function(e) { kendoConsole.log("tap"); },
-        doubletap: function(e) { kendoConsole.log("double tap"); },
-        hold: function(e) { kendoConsole.log("hold"); }
+        touchstart: function(e) {
+            kendoConsole.log("touch start");
+        },
+        swipe: function(e) {
+            kendoConsole.log("swipe " + e.direction);
+        },
+        tap: function(e) {
+            kendoConsole.log("tap");
+        },
+        doubletap: function(e) {
+            kendoConsole.log("double tap");
+        },
+        hold: function(e) {
+            kendoConsole.log("hold");
+        }
     }
 </script>
+
 </html>

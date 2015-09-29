@@ -1,9 +1,9 @@
 'use strict';
 
-app.dataListView = kendo.observable({
-    onShow: function() {
-       
-       
+app.hariCares = kendo.observable({
+     onShow: function() {
+
+        
           var app = {};
 app.db = null;
    
@@ -42,16 +42,10 @@ function getAllTheData() {
       app.openDb();  
         getAllTheData();
     },
-    afterShow: function() {
- 
-    },
- 
+    afterShow: function() {}
 });
 
-
-
-// START_CUSTOM_CODE_dataListView
-
+// START_CUSTOM_CODE_hariCares
 var cartFlag = false;
 function addToCart(e)
 {
@@ -332,7 +326,7 @@ e.button.next().text(count1);
     
    
 }
-// END_CUSTOM_CODE_dataListView
+// END_CUSTOM_CODE_hariCares
 (function(parent) {
     var dataProvider = app.data.himalayaPlaygroundBackend,
         processImage = function(img) {
@@ -370,132 +364,53 @@ e.button.next().text(count1);
         dataSourceOptions = {
             type: 'everlive',
             transport: {
-                typeName: 'PersonalCare',
+                typeName: 'HairCare',
                 dataProvider: dataProvider
             },
 
             change: function(e) {
                 var data = this.data();
-            
                 for (var i = 0; i < data.length; i++) {
                     var dataItem = data[i];
-                    //
-                    //
-                  
-                 
-                    dataItem["Test"] =  ReturnCount;
-                    dataItem['ImageUrlUrl'] =
-                        processImage(dataItem['ImageUrl']);
 
                     flattenLocationProperties(dataItem);
                 }
             },
             schema: {
                 model: {
-                    
                     fields: {
                         'ProductName': {
                             field: 'ProductName',
                             defaultValue: ''
                         },
-                        'Price': {
-                            field: 'Price',
-                            defaultValue: ''
-                        },
-                        'ImageUrl': {
-                            field: 'ImageUrl',
-                            defaultValue: ''
-                        },
-                         
-                         
                     }
-                    
-                    
-                    
                 }
-                
-                
             },
         },
-
         dataSource = new kendo.data.DataSource(dataSourceOptions),
-        
-        dataListViewModel = kendo.observable({
+        hariCaresModel = kendo.observable({
             dataSource: dataSource,
-          /*  itemClick: function(e) {
-                app.mobileApp.navigate('#components/dataListView/details.html?uid=' + e.dataItem.uid);
+           /* itemClick: function(e) {
+                app.mobileApp.navigate('#components/hariCares/details.html?uid=' + e.dataItem.uid);
             },*/
             detailsShow: function(e) {
                 var item = e.view.params.uid,
-                    dataSource = dataListViewModel.get('dataSource'),
+                    dataSource = hariCaresModel.get('dataSource'),
                     itemModel = dataSource.getByUid(item);
                 itemModel.ImageUrlUrl = processImage(itemModel.ImageUrl);
                 if (!itemModel.ProductName) {
                     itemModel.ProductName = String.fromCharCode(160);
                 }
-                dataListViewModel.set('currentItem', itemModel);
+                hariCaresModel.set('currentItem', itemModel);
             },
             currentItem: null
         });
 
-    parent.set('dataListViewModel', dataListViewModel);
-    
+    parent.set('hariCaresModel', hariCaresModel);
+})(app.hariCares);
 
-})(app.dataListView);
-  var ReturnCount = 0;
-function getCount(){
- return ReturnCount;
-           
-}
-
-function Database(catid){
-         var app = {};
-app.db = null;
-  
-/* start create data base*/
-app.openDb = function() {
-    if (window.sqlitePlugin !== undefined) {
-        app.db = window.sqlitePlugin.openDatabase("Himalaya_Lite_Database");
-    } else {
-        // For debugging in simulator fallback to native SQL Lite
-        app.db = window.openDatabase("Himalaya_Lite_Database", "1.0", "Cordova Demo", 200000);
-    }
-}
-/* end create data base*/
- /* start create table*/
-app.createTable = function() {
-    app.db.transaction(function(tx) {
-        tx.executeSql("CREATE TABLE IF NOT EXISTS CartTable (id INTEGER PRIMARY KEY ASC, ProductName TEXT, Catalogid INTEGER,size TEXT,Image_URL TEXT,Catalogy TEXT)", []);
-    });
-}
- /* end  create table*/
-
-/* start  select table*/
-app.selectRecords = function(catid) {
-    app.db.transaction(function(tx) {
-        tx.executeSql("SELECT * FROM CartTable WHERE Catalogid = ?", [catid],
-                 app.onSuccess,
-                      app.onError);
-    });
-
-}
-/* end  select table*/
-/* start  get table*/
-app.onSuccess = function(tx, r) {
-
-  ReturnCount =  r.rows.length;
-   
-}
-    /* end  get table*/
-
-    app.openDb();
-app.createTable();
-app.selectRecords(catid);
-   
-}
-
-// START_CUSTOM_CODE_dataListViewModel
-    function addTo(e)
+// START_CUSTOM_CODE_hariCaresModel
+  function addTo(e)
     {
     
        var count1 =  parseInt($(e).prev().text());
@@ -513,5 +428,4 @@ function removecart(e)
 $(e).next().text(count1);
             }
 }
-   
-// END_CUSTOM_CODE_dataListViewModel
+// END_CUSTOM_CODE_hariCaresModel

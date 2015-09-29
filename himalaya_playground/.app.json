@@ -378,6 +378,108 @@
       "name": "authenticationView",
       "title": "Mobile Verification",
       "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "authentication",
+          "name": "authenticationOtpModel",
+          "dataProvider": "defaultProvider",
+          "emailLabel": "Email",
+          "passwordLabel": "Password",
+          "signinLabel": "Sign In",
+          "signinRedirect": "home",
+          "enableRegistration": true,
+          "gotoRegisterLabel": "Register",
+          "registerEmailLabel": "Email",
+          "registerPasswordLabel": "Password",
+          "registerNameLabel": "Name",
+          "registerLabel": "Register",
+          "registerRedirect": "home",
+          "gotoSigninLabel": "Sign In"
+        }
+      ],
+      "name": "authenticationOtp",
+      "title": "Required OTP",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "form",
+          "components": [
+            {
+              "type": "field",
+              "name": "address",
+              "title": "Address",
+              "inputType": "text"
+            },
+            {
+              "type": "field",
+              "name": "city",
+              "title": "city",
+              "inputType": "text"
+            },
+            {
+              "type": "field",
+              "name": "state",
+              "title": "State",
+              "inputType": "text"
+            },
+            {
+              "type": "field",
+              "name": "pincode",
+              "title": "Pincode",
+              "inputType": "text",
+              "placeholder": "Zip"
+            },
+            {
+              "type": "field",
+              "name": "title",
+              "title": "Title",
+              "inputType": "dropdownlist"
+            },
+            {
+              "type": "field",
+              "name": "name",
+              "title": "Name",
+              "inputType": "text"
+            },
+            {
+              "type": "field",
+              "name": "email",
+              "title": "Email",
+              "inputType": "email",
+              "placeholder": "example@example.com"
+            }
+          ],
+          "name": "addNewAddressModel",
+          "submitButton": "Save Address"
+        }
+      ],
+      "name": "addNewAddress",
+      "title": "Address",
+      "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "finalOrderModel",
+          "dataProvider": "himalayaPlaygroundBackend",
+          "collection": "PersonalCare",
+          "headerField": "ProductName",
+          "masterDetails": false,
+          "pullToRefresh": false,
+          "endlessScroll": false
+        }
+      ],
+      "name": "finalOrder",
+      "title": "CheckOut",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [

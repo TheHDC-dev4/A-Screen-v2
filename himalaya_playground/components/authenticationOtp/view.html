@@ -1,14 +1,14 @@
-<div data-role="view" data-title="Mobile Verification" data-layout="Verification" data-model="app.authenticationView" data-show="app.authenticationView.onShow" data-after-show="app.authenticationView.afterShow">
-    <div class="signin-view">
+<div data-role="view" data-title="Required OTP" data-layout="Verification" data-model="app.authenticationOtp" data-show="app.authenticationOtp.onShow" data-after-show="app.authenticationOtp.afterShow">
+   <div class="signin-view">
         <form>
             <ul data-role="listview" data-style="inset">
                 <li>
-                    <h4>We need your mobile number to keep you updated on your orders and delivery status.
+                    <h4>Please enter OTP sent as SMS.
                      
                     </h4>
                 </li>
                 <li>
-                    <label>Mobile Number +91-
+                    <label>OTP-
                         <input style="color:green;" type="email"  required autofocus>
                     </label>
                 </li>
@@ -16,7 +16,7 @@
             </ul>
 
             <div class="button-group button-group-vertical">
-                <a href="components/authenticationOtp/view.html" style="background-color:#FF6600" data-role="button" class="primary" >Go</a>
+                <a style="background-color:#FF6600" data-role="button" class="primary" >Verify</a>
 
  
 

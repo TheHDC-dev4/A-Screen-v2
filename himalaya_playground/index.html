@@ -30,6 +30,9 @@
 </head>
 
 <body id="kendoUiMobileApp">
+    <script src="components/finalOrder/index.js"></script>
+    <script src="components/addNewAddress/index.js"></script>
+    <script src="components/authenticationOtp/index.js"></script>
     <script src="components/authenticationView/index.js"></script>
     <script src="components/prebath/index.js"></script>
     <script src="components/bath/index.js"></script>
@@ -279,15 +282,26 @@
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
-                <a data-role="backbutton" data-align="left" ></a>
+                <a data-role="backbutton" data-align="left"></a>
             </div>
 
         </header>
 
         <!-- application views will be rendered here -->
-     
-    </div>
 
+    </div>
+    <div data-role="layout" data-id="Address">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+
+    </div>
     <div data-role="layout" data-id="main-nonav">
         <header data-role="header">
             <div data-role="navbar">

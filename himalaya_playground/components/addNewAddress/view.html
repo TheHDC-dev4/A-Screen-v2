@@ -1,0 +1,56 @@
+<div data-role="view" data-title="Address" data-layout="Address" data-model="app.addNewAddress" data-show="app.addNewAddress.onShow" data-after-show="app.addNewAddress.afterShow">
+    <div id="addNewAddressModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li>
+                    <label>Address
+                        <input data-bind="value: addNewAddressModel.fields.address" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>city
+                        <input data-bind="value: addNewAddressModel.fields.city" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>State
+                        <input data-bind="value: addNewAddressModel.fields.state" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>Pincode
+                        <input data-bind="value: addNewAddressModel.fields.pincode" placeholder="Zip" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>Title
+                        <select data-bind="value: addNewAddressModel.fields.title" data-role="dropdownlist">
+                            <option value="Mr.">Mr.</option>
+                            <option value="Ms.">Ms.</option>
+                            <option value="Dr.">Dr.</option>
+                             <option value="Miss.">Miss.</option>
+                        </select>
+                    </label>
+                </li>
+                <li>
+                    <label>Name
+                        <input data-bind="value: addNewAddressModel.fields.name" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>Email
+                        <input data-bind="value: addNewAddressModel.fields.email" placeholder="example@example.com" type="email">
+                    </label>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a class="primary" style="background-color:#FF6600" data-role="button" >Save Address</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_addNewAddressModel -->
+        <!-- END_CUSTOM_CODE_addNewAddressModel -->
+    </div>
+    <!-- START_CUSTOM_CODE_addNewAddress -->
+    <!-- END_CUSTOM_CODE_addNewAddress -->
+</div>

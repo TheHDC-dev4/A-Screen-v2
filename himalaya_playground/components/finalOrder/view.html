@@ -1,0 +1,14 @@
+<div data-role="view" data-title="CheckOut" data-layout="main-nonav" data-model="app.finalOrder" data-show="app.finalOrder.onShow" data-after-show="app.finalOrder.afterShow">
+    <!-- START_CUSTOM_CODE_finalOrder -->
+    <!-- END_CUSTOM_CODE_finalOrder -->
+    <ul data-role="listview" data-style="inset" data-template="finalOrderModelTemplate" data-bind="{ source: finalOrderModel.dataSource}" data-pull-to-refresh="false" data-endless-scroll="false">
+    </ul>
+    <!-- START_CUSTOM_CODE_finalOrderModel -->
+    <!-- END_CUSTOM_CODE_finalOrderModel -->
+    <script type="text/x-kendo-template" id="finalOrderModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['ProductName'] #</h3>
+
+        </div>
+    </script>
+</div>

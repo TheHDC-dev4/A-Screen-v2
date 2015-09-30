@@ -488,6 +488,14 @@
       "title": "Payment Option",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "view",
+      "components": [],
+      "name": "thankyou",
+      "title": "Order Comfirmed",
+      "addToNavigation": true,
+      "icon": "home"
     }
   ],
   "dataProviders": [

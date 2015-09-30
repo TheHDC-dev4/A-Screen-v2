@@ -480,6 +480,14 @@
       "name": "finalOrder",
       "title": "CheckOut",
       "addToNavigation": false
+    },
+    {
+      "type": "view",
+      "components": [],
+      "name": "paymentOptiion",
+      "title": "Payment Option",
+      "addToNavigation": true,
+      "icon": "home"
     }
   ],
   "dataProviders": [

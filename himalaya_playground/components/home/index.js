@@ -1,13 +1,7 @@
 'use strict';
 
 app.home = kendo.observable({
-    onShow: function() {
-        
-      var view = this.view();
-/* $("#appDrawer").data("kendoMobileDrawer").show();*/
-           /* view.header.hide();*/
-       
-    },
+    onShow: function() {},
     afterShow: function() {}
 });
 

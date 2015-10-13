@@ -1,24 +1,23 @@
-<div data-role="view" data-title="Required OTP" data-layout="Verification" data-model="app.authenticationOtp" data-show="app.authenticationOtp.onShow" data-after-show="app.authenticationOtp.afterShow">
-   <div class="signin-view">
+<div data-role="view" data-title="Required OTP" data-layout="main-nonav" data-model="app.authenticationOtp" data-show="app.authenticationOtp.onShow" data-after-show="app.authenticationOtp.afterShow">
+    <div class="signin-view">
         <form>
             <ul data-role="listview" data-style="inset">
                 <li>
-                    <h4>Please enter OTP sent as SMS.
-                     
-                    </h4>
-                </li>
-                <li>
-                    <label>OTP-
-                        <input style="color:green;" type="email"  required autofocus>
+                    <label>Email
+                        <input type="email" data-bind="value: authenticationOtpModel.email" required autofocus>
                     </label>
                 </li>
-                
+                <li>
+                    <label>Password
+                        <input type="password" data-bind="value: authenticationOtpModel.password" required>
+                    </label>
+                </li>
             </ul>
 
             <div class="button-group button-group-vertical">
-                <a style="background-color:#FF6600" data-role="button" href="components/addNewAddress/view.html" class="primary" >Verify</a>
+                <a data-role="button" class="primary" data-bind="events: { click: authenticationOtpModel.signin }">Sign In</a>
 
- 
+                <a data-role="button" data-bind="events: { click: authenticationOtpModel.toggleView }">Register</a>
 
             </div>
         </form>
@@ -28,31 +27,36 @@
             <ul data-role="listview" data-style="inset">
                 <li>
                     <label>Email
-                        <input type="email" data-bind="value: authenticationViewModel.email" required>
+                        <input type="email" data-bind="value: authenticationOtpModel.email" required>
                     </label>
                 </li>
                 <li>
                     <label>Password
-                        <input type="password" data-bind="value: authenticationViewModel.password">
+                        <input type="password" data-bind="value: authenticationOtpModel.password">
                     </label>
                 </li>
                 <li>
                     <label>Name
-                        <input type="text" data-bind="value: authenticationViewModel.displayName">
+                        <input type="text" data-bind="value: authenticationOtpModel.displayName">
                     </label>
                 </li>
             </ul>
             <div class="button-group button-group-vertical">
-                <a class="primary" data-role="button" data-bind="events: { click: authenticationViewModel.register }">Register</a>
-                <a data-role="button" data-bind="events: { click: authenticationViewModel.toggleView }">Sign In</a>
+                <a class="primary" data-role="button" data-bind="events: { click: authenticationOtpModel.register }">Register</a>
+                <a data-role="button" data-bind="events: { click: authenticationOtpModel.toggleView }">Sign In</a>
             </div>
         </form>
-        <!-- START_CUSTOM_CODE_authenticationViewModel -->
-        <!-- END_CUSTOM_CODE_authenticationViewModel -->
+        <!-- START_CUSTOM_CODE_authenticationOtpModel -->
+        <!-- END_CUSTOM_CODE_authenticationOtpModel -->
     </div>
     <div class="offline" align="center" style="display:none;">
         You are currently offline. Before using this app in offline mode you must initialize it while you are online
     </div>
-    <!-- START_CUSTOM_CODE_authenticationView -->
-    <!-- END_CUSTOM_CODE_authenticationView -->
+    <!-- START_CUSTOM_CODE_authenticationOtp -->
+    <!-- END_CUSTOM_CODE_authenticationOtp -->
 </div>
+
+<!-- START_CUSTOM_CODE_authenticationViewModel -->
+<!-- END_CUSTOM_CODE_authenticationViewModel -->
+<!-- START_CUSTOM_CODE_authenticationView -->
+<!-- END_CUSTOM_CODE_authenticationView -->

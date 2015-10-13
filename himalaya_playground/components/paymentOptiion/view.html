@@ -1,20 +1,20 @@
-<div data-role="view" data-title="Payment Option" data-layout="CheckOut" data-model="app.paymentOptiion" data-show="app.paymentOptiion.onShow" data-after-show="app.paymentOptiion.afterShow">
+<div data-role="view" data-title="Payment Option" data-layout="main" data-model="app.paymentOptiion" data-show="app.paymentOptiion.onShow" data-after-show="app.paymentOptiion.afterShow">
     <!-- START_CUSTOM_CODE_paymentOptiion -->
-      <ul data-role="listview" data-style="inset">
-                <li>
-                    <lable>COD</lable>
-    <input type="radio" value="Red"   name="color" data-bind="checked: selectedColor" />
-          </li>
-          <li>
-               <lable>BILL DESK</lable>
-<input type="radio" value="Green" name="color" data-bind="checked: selectedColor" />
-              </li>
-          <li>
-                 <lable>BANK</lable>
-<input type="radio" value="Blue"  name="color" data-bind="checked: selectedColor" />
-              </li>
-    <li>
-                                <a  href="components/thankyou/view.html" style="background-color:#FF6600;color:#fff;text-align:center;" data-role="button"  >Checkout</a>
-                         </li>
-    <!-- END_CUSTOM_CODE_paymentOptiion -->
+    <ul data-role="listview" data-style="inset">
+        <li>
+            <lable>COD</lable>
+            <input type="radio" value="Red" name="color" data-bind="checked: selectedColor" />
+        </li>
+        <li>
+            <lable>BILL DESK</lable>
+            <input type="radio" value="Green" name="color" data-bind="checked: selectedColor" />
+        </li>
+        <li>
+            <lable>BANK</lable>
+            <input type="radio" value="Blue" name="color" data-bind="checked: selectedColor" />
+        </li>
+        <li>
+            <a href="components/thankyou/view.html" style="background-color:#FF6600;color:#fff;text-align:center;" data-role="button">Checkout</a>
+        </li>
+        <!-- END_CUSTOM_CODE_paymentOptiion -->
 </div>

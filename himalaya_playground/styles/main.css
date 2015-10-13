@@ -1,7 +1,7 @@
 #kendoUiMobileApp .image-with-text img {
     float: left;
     margin-right: 15px;
-}left
+}
 
 #kendoUiMobileApp .block {
     display: block;
@@ -130,27 +130,4 @@
 
 #kendoUiMobileApp #navigation-container .active:after {
     color: #fff;
-}
-#kendoUiMobileApp .containerdivNewLine { clear: both; float: left; display: block; position: relative; } 
-#kendoUiMobileApp h5 {color:#FF6600;width:220px;}
-#kendoUiMobileApp h2{color:#FF6600;}
-#kendoUiMobileApp .left{float:left;vertical-align: top;}
-#kendoUiMobileApp .round{border-radius:60px;border:1px solid grey;width:30px;height:30px;padding:5px}
-#kendoUiMobileApp .home_tile{width:180px;height:180px;}
-    .km-arrow-e:after,
-    .km-arrow-e:before
-    {
-        content: "\e013";
-    }
-
-#kendoUiMobileApp .tb10 {
-	background-image:url(images/form_bg.jpg);
-	background-repeat:repeat-x;
-	border:1px solid #d1c7ac;
-	width: 80%;
-	color:#333333;
-	padding:3px;
-	margin-right:4px;
-	margin-bottom:8px;
-	font-family:tahoma, arial, sans-serif;
 }

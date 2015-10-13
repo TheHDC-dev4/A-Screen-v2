@@ -1,48 +1,20 @@
-
-
-
-<div data-role="view" data-title="My Cart" data-layout="Mycart" data-model="app.cartDetails" data-show="app.cartDetails.onShow" data-after-show="app.cartDetails.afterShow">
-    <!-- START_CUSTOM_CODE_dataListView -->
-
-    <!-- END_CUSTOM_CODE_dataListView -->
+<div data-role="view" data-title="My Cart" data-layout="main-nonav" data-model="app.cartDetails" data-show="app.cartDetails.onShow" data-after-show="app.cartDetails.afterShow">
+    <!-- START_CUSTOM_CODE_cartDetails -->
+    <!-- END_CUSTOM_CODE_cartDetails -->
     <ul data-role="listview" data-style="inset" data-template="cartDetailsModelTemplate" data-bind="{ source: cartDetailsModel.dataSource, events: {click: cartDetailsModel.itemClick}}" data-pull-to-refresh="false" data-endless-scroll="false" data-filterable="{field: 'ImageUrl', operator: 'contains'}">
     </ul>
-    <!-- START_CUSTOM_CODE_dataListViewModel -->
-    <!-- END_CUSTOM_CODE_dataListViewModel -->
+    <!-- START_CUSTOM_CODE_cartDetailsModel -->
+    <!-- END_CUSTOM_CODE_cartDetailsModel -->
     <script type="text/x-kendo-template" id="cartDetailsModelTemplate">
-    <div  style="width:100%;">
-                 <div class="image-with-text left" style=" display: table;width:100%;" >
-                 <div style="display: table-row;width:100%;">
-                                             <a  href="\#components/cartDetails/details.html?uid=${uid}"> 
-                                                     <div style="display: table-cell;width:30%;vertical-align:top;float:left;">
-                                                      <img src="#: data['ImageUrl'] #" width="100%" >
-                                                      </div>
-                                                       <div style="display: table-cell;vertical-align:top;width:30%;" >
-                                                       <h5 style="width:100%;">#: data['ProductName'] #</h5>
-                                                        <h6>Rs:#: data['Price'] #</h6>
-                                                         <h6 style="color:\#a8a8a8">#: data['size'] #</h6>
-                                                        </div>
-                                                 </a>   
-                                        				 <div style="display: table-cell;width:30%;vertical-align:top;">
-                                          						<div style="float:right;">
-                                          							<div style="float:right;">
-                                           								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#:
-                                                                        data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="removeFromCart"  data-title="test"  data-test="#: data['Test'] #" >
-                                          									<img src="images/User-Interface-Minus-icon.png">
-                                          								</a>
-                                          								<div  data-init="init"  class="left" style="padding-right:7px;padding-left:7px;padding-top:4px;" >
-                                           										0<i></i>
-                                           								</div>
-                                                                        
-                                                                               <a  data-role="button" class="left round"  data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="addToCart" data-title="test" 
-                                                                               data-test="#: data['Test'] #" >
-                                                                               <img  src="images/User-Interface-Plus-icon.png">
-                                                                                </a>
-                                           								</div>
-                                           							</div>
-                                           					</div>
-                                            </div>
-                      </div>
-       </div>
+        <div class="image-with-text">
+            <h3>#: data['ProductName'] #</h3>
+            <p>#: data['Price'] #</p>
+        </div>
     </script>
 </div>
+
+<!-- START_CUSTOM_CODE_dataListView -->
+
+<!-- END_CUSTOM_CODE_dataListView -->
+<!-- START_CUSTOM_CODE_dataListViewModel -->
+<!-- END_CUSTOM_CODE_dataListViewModel -->

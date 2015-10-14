@@ -2,18 +2,17 @@
   "type": "kendo-ui-mobile",
   "views": [
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "home",
+      "type": "view",
       "components": [],
-      "title": "Home View",
+      "name": "home",
+      "title": "Home",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "dataListView",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "dataListViewModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "PersonalCare",
@@ -30,16 +29,16 @@
           "endlessScroll": false
         }
       ],
+      "name": "dataListView",
       "title": "Personal Care",
       "addToNavigation": true,
       "icon": "organize"
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "cartDetails",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "cartDetailsModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "PersonalCare",
@@ -55,15 +54,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "cartDetails",
       "title": "My Cart",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "hariCares",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "hariCaresModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "HairCare",
@@ -78,15 +77,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "hariCares",
       "title": "Hair Care",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "oralCare",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "oralCareModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "OralCare",
@@ -99,15 +98,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "oralCare",
       "title": "Oral Care",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "mensCare",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "mensCareModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "MensCare",
@@ -120,15 +119,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "mensCare",
       "title": "Mens Care",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "animalCare",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "animalCareModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "AnimalCare",
@@ -141,15 +140,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "animalCare",
       "title": "Animal Care",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "childernHealth",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "childernHealthModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "ChildernCare",
@@ -162,15 +161,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "childernHealth",
       "title": "Children Health",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "dermaCare",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "dermaCareModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "DermaCare",
@@ -183,15 +182,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "dermaCare",
       "title": "Dream Care",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "oralHealth",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "oralHealthModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "OralHealth",
@@ -204,15 +203,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "oralHealth",
       "title": "Oral Health",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "mensHealth",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "mensHealthModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "MensHealth",
@@ -225,15 +224,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "mensHealth",
       "title": "Mens Health",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "womensHealth",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "womensHealthModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "womensHealth",
@@ -246,15 +245,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "womensHealth",
       "title": "Womens Health",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "pureHerbs",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "pureHerbsModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "pureHerbs",
@@ -267,15 +266,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "pureHerbs",
       "title": "Pure Herbs",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "general",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "generalModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "GenaralHealth",
@@ -288,15 +287,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "general",
       "title": "general",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "postbath",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "postbathModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "BabyPostBath",
@@ -309,15 +308,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "postbath",
       "title": "post bath",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "bath",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "bathModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "BabyBath",
@@ -330,15 +329,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "bath",
       "title": "bath",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "prebath",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "prebathModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "PreBathandDipers",
@@ -351,15 +350,15 @@
           "endlessScroll": false
         }
       ],
+      "name": "prebath",
       "title": "Pre bath and diapers",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "authenticationView",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:authentication",
+          "type": "authentication",
           "name": "authenticationViewModel",
           "dataProvider": "defaultProvider",
           "emailLabel": "Mobile Number",
@@ -376,15 +375,15 @@
           "gotoSigninLabel": "Sign In"
         }
       ],
+      "name": "authenticationView",
       "title": "Mobile Verification",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "authenticationOtp",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:authentication",
+          "type": "authentication",
           "name": "authenticationOtpModel",
           "dataProvider": "defaultProvider",
           "emailLabel": "Email",
@@ -401,55 +400,55 @@
           "gotoSigninLabel": "Sign In"
         }
       ],
+      "name": "authenticationOtp",
       "title": "Required OTP",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "addNewAddress",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:form",
+          "type": "form",
           "components": [
             {
-              "type": "kendo-ui-mobile:field",
+              "type": "field",
               "name": "address",
               "title": "Address",
               "inputType": "text"
             },
             {
-              "type": "kendo-ui-mobile:field",
+              "type": "field",
               "name": "city",
               "title": "city",
               "inputType": "text"
             },
             {
-              "type": "kendo-ui-mobile:field",
+              "type": "field",
               "name": "state",
               "title": "State",
               "inputType": "text"
             },
             {
-              "type": "kendo-ui-mobile:field",
+              "type": "field",
               "name": "pincode",
               "title": "Pincode",
               "inputType": "text",
               "placeholder": "Zip"
             },
             {
-              "type": "kendo-ui-mobile:field",
+              "type": "field",
               "name": "title",
               "title": "Title",
               "inputType": "dropdownlist"
             },
             {
-              "type": "kendo-ui-mobile:field",
+              "type": "field",
               "name": "name",
               "title": "Name",
               "inputType": "text"
             },
             {
-              "type": "kendo-ui-mobile:field",
+              "type": "field",
               "name": "email",
               "title": "Email",
               "inputType": "email",
@@ -457,19 +456,18 @@
             }
           ],
           "name": "addNewAddressModel",
-          "submitButton": "Save Address",
-          "cancelButton": "Cancel"
+          "submitButton": "Save Address"
         }
       ],
+      "name": "addNewAddress",
       "title": "Address",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "finalOrder",
+      "type": "view",
       "components": [
         {
-          "type": "kendo-ui-mobile:list",
+          "type": "list",
           "name": "finalOrderModel",
           "dataProvider": "himalayaPlaygroundBackend",
           "collection": "PersonalCare",
@@ -479,21 +477,22 @@
           "endlessScroll": false
         }
       ],
+      "name": "finalOrder",
       "title": "CheckOut",
       "addToNavigation": false
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "paymentOptiion",
+      "type": "view",
       "components": [],
+      "name": "paymentOptiion",
       "title": "Payment Option",
       "addToNavigation": true,
       "icon": "home"
     },
     {
-      "type": "kendo-ui-mobile:view",
-      "name": "thankyou",
+      "type": "view",
       "components": [],
+      "name": "thankyou",
       "title": "Order Comfirmed",
       "addToNavigation": true,
       "icon": "home"
@@ -501,18 +500,18 @@
   ],
   "dataProviders": [
     {
-      "type": "kendo-ui-mobile:dataProvider",
-      "name": "defaultProvider",
+      "type": "dataProvider",
       "everliveUrl": "//platform.telerik.com/bs-api/v1/",
+      "name": "defaultProvider",
       "title": "DefaultProvider",
       "source": "everlive",
       "everliveKey": "XHCIpaaWiYSClh6w",
       "offlineStorage": true
     },
     {
-      "type": "kendo-ui-mobile:dataProvider",
-      "name": "himalayaPlaygroundBackend",
+      "type": "dataProvider",
       "everliveUrl": "//platform.telerik.com/bs-api/v1/",
+      "name": "himalayaPlaygroundBackend",
       "title": "hemanth / himalaya_playground Backend",
       "source": "everlive",
       "everliveKey": "XHCIpaaWiYSClh6w",

@@ -18,8 +18,7 @@ app.addNewAddress = kendo.observable({
             city: '',
             address: '',
         },
-        submit: function() {},
-        cancel: function() {}
+        submit: function() {}
     });
 
     parent.set('addNewAddressModel', addNewAddressModel);

@@ -1,4 +1,18 @@
-<div data-role="view" data-title="CheckOut" data-layout="main-nonav" data-model="app.finalOrder" data-show="app.finalOrder.onShow" data-after-show="app.finalOrder.afterShow">
+<div data-role="splitview" data-style="vertical">
+  <div data-role="pane" >
+       <div data-role="layout" data-id="CheckOut">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="backbutton" data-align="left"></a>
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+
+    </div>
+<div data-use-native-scrolling="true"  data-role="view" data-title="CheckOut" data-layout="CheckOut" data-model="app.finalOrder" data-show="app.finalOrder.onShow" data-after-show="app.finalOrder.afterShow">
     <!-- START_CUSTOM_CODE_finalOrder -->
     <!-- END_CUSTOM_CODE_finalOrder -->
     <ul data-role="listview" data-style="inset" data-template="finalOrderModelTemplate" data-bind="{ source: finalOrderModel.dataSource}" data-pull-to-refresh="false" data-endless-scroll="false">
@@ -6,9 +20,121 @@
     <!-- START_CUSTOM_CODE_finalOrderModel -->
     <!-- END_CUSTOM_CODE_finalOrderModel -->
     <script type="text/x-kendo-template" id="finalOrderModelTemplate">
-        <div class="image-with-text">
-            <h3>#: data['ProductName'] #</h3>
-
+         <div  style="width:100%;">
+                 <div class="image-with-text left" style=" display: table;width:100%;" >
+                 <div style="display: table-row;width:100%;">
+                                           <div>
+                                                     <div style="display: table-cell;width:30%;vertical-align:top;float:left;">
+                                                      <img src="#: data['ImageUrl'] #" width="100%" >
+                                                      </div>
+                                                       <div style="display: table-cell;vertical-align:top;width:30%;" >
+                                                       <h5 style="width:100%;">#: data['ProductName'] #</h5>
+                                                        <h6>Rs:#: data['Price'] #</h6>
+                                                        <div style="float:left;"> <h6 style="color:\#a8a8a8">#: data['size'] #</h6></div> <div style="float:left;padding-left:10%"> <h6 > X</h6></div>
+                                                        <div  style="float:left;padding-left:5px;"><h6 style="color:red;"> 3</h6></div>
+                                                        </div>
+                                               </div>
+                                        				 <div style="display: table-cell;width:30%;vertical-align:top;">
+                                          						<div style="float:right;">
+                                          							<div style="float:right;">
+                                           								 <h6 style="font-weight:bold">Rs:#: data['totalPrice'] #</h6>
+                                           								</div>
+                                           							</div>
+                                           					</div>
+                                            </div>
+                      </div>
+       </div>
         </div>
     </script>
+</div>
+    </div>
+     <div data-role="pane">
+          
+         <div data-role="view"  data-title="Promotion and redemption">
+             <div style="border-top: 1px solid green;padding-bottom:5%">
+                
+             </div>
+             <div>
+                
+             
+               
+                     <ul data-role="listview" data-style="inset">
+                <li>
+                      
+                     
+                            <input class="tb10" placeholder="Redeem points"  required autofocus>
+                     
+                   <a style="background-color:#FF6600" data-role="button" class="km-small" >Apply</a>
+                         </li>
+                         <li>
+                           <input class="tb10" placeholder="Coupon Code"  required autofocus>
+                     
+                   <a style="background-color:#FF6600" data-role="button" class="km-small" >Apply</a>
+                         </li>
+                         <li><div class="left">
+                             
+                           
+                             <h6>
+                                 Total
+                             </h6>
+                               </div>
+                             <div style="float:right;">
+                                 
+                         
+                             <h6>
+                                 Rs:2750.00
+                             </h6>
+                                     </div>
+                         </li>
+                          <li><div class="left">
+                             
+                           
+                             <h6>
+                                 Shipping
+                             </h6>
+                               </div>
+                             <div style="float:right;">
+                                 
+                         
+                             <h6>
+                                 Rs:00.00
+                             </h6>
+                                     </div>
+                         </li>
+                          <li><div class="left">
+                             
+                           
+                             <h6>
+                                 coupon Code discount
+                             </h6>
+                               </div>
+                             <div style="float:right;">
+                                 
+                         
+                             <h6>
+                                 Rs:110.00
+                             </h6>
+                                     </div>
+                         </li>
+                         <li><div class="left">
+                             
+                           
+                             <h3 style="font-weight:bold;">
+                                 Payable Amount
+                             </h3>
+                               </div>
+                             <div style="float:right;">
+                                 
+                         
+                             <h4 style="font-weight:bold;color:Green;">
+                                 Rs:2640.00
+                             </h4>
+                                     </div>
+                         </li>
+                         <li>
+                                <a href="components/paymentOption/view.html" style="background-color:#FF6600;color:#fff;text-align:center;" data-role="button"  >Continue Checkout</a>
+                         </li>
+             </div>
+         </div>
+    </div>
 </div>

@@ -1,7 +1,47 @@
 'use strict';
 
 app.pureHerbs = kendo.observable({
-    onShow: function() {},
+     onShow: function() {
+
+        
+          var app = {};
+app.db = null;
+   
+
+    
+/* start create data base*/
+app.openDb = function() {
+    if (window.sqlitePlugin !== undefined) {
+        app.db = window.sqlitePlugin.openDatabase("Himalaya_Lite_Database");
+    } else {
+        // For debugging in simulator fallback to native SQL Lite
+        app.db = window.openDatabase("Himalaya_Lite_Database", "1.0", "Cordova Demo", 200000);
+    }
+}
+/* end create data base*/
+/* start  select table*/
+app.selectAllRecords = function(fn) {
+    app.db.transaction(function(tx) {
+        tx.executeSql("SELECT * FROM CartTable ORDER BY id", [],
+                      fn,
+                      app.onError);
+    });
+}
+/* end  select table*/
+/* start  get table*/
+  
+function getAllTheData() {
+    var render = function (tx, rs) {
+ var _cartcountrs =   parseInt(rs.rows.length);
+ view.element.find("#btnCart").kendoMobileButton({ badge: _cartcountrs });      
+    }
+
+    app.selectAllRecords(render);
+}
+    /* end  get table*/
+      app.openDb();  
+        getAllTheData();
+    },
     afterShow: function() {}
 });
 
@@ -70,9 +110,9 @@ app.pureHerbs = kendo.observable({
         dataSource = new kendo.data.DataSource(dataSourceOptions),
         pureHerbsModel = kendo.observable({
             dataSource: dataSource,
-            itemClick: function(e) {
+           /* itemClick: function(e) {
                 app.mobileApp.navigate('#components/pureHerbs/details.html?uid=' + e.dataItem.uid);
-            },
+            },*/
             detailsShow: function(e) {
                 var item = e.view.params.uid,
                     dataSource = pureHerbsModel.get('dataSource'),
@@ -90,19 +130,22 @@ app.pureHerbs = kendo.observable({
 })(app.pureHerbs);
 
 // START_CUSTOM_CODE_pureHerbsModel
-function addTo(e) {
-
-    var count1 = parseInt($(e).prev().text());
-    count1++;
-    $(e).prev().text(count1);
-}
-
-function removecart(e) {
-    var count1 = parseInt($(e).next().text());
-
-    if (count1 > 0) {
-        count1--;
-        $(e).next().text(count1);
+ function addTo(e)
+    {
+    
+       var count1 =  parseInt($(e).prev().text());
+ count1++;
+$(e).prev().text(count1);
     }
+
+function removecart(e)
+{
+          var count1 =  parseInt($(e).next().text());
+
+    if(count1 > 0)
+        {
+ count1--;
+$(e).next().text(count1);
+            }
 }
 // END_CUSTOM_CODE_pureHerbsModel

@@ -1,4 +1,4 @@
-<div data-role="view" data-title="Address" data-layout="main-nonav" data-model="app.addNewAddress" data-show="app.addNewAddress.onShow" data-after-show="app.addNewAddress.afterShow">
+<div data-role="view" data-title="Address" data-layout="Address" data-model="app.addNewAddress" data-show="app.addNewAddress.onShow" data-after-show="app.addNewAddress.afterShow">
     <div id="addNewAddressModel" class="form-view">
         <form>
             <ul class="form-content" data-role="listview" data-style="inset">
@@ -25,9 +25,10 @@
                 <li>
                     <label>Title
                         <select data-bind="value: addNewAddressModel.fields.title" data-role="dropdownlist">
-                            <option value="First Option">First Option</option>
-                            <option value="Second Option">Second Option</option>
-                            <option value="Third Option">Third Option</option>
+                            <option value="Mr.">Mr.</option>
+                            <option value="Ms.">Ms.</option>
+                            <option value="Dr.">Dr.</option>
+                             <option value="Miss.">Miss.</option>
                         </select>
                     </label>
                 </li>
@@ -44,8 +45,7 @@
             </ul>
 
             <div class="button-group">
-                <a data-role="button" data-bind="events: { click: addNewAddressModel.cancel }">Cancel</a>
-                <a class="primary" data-role="button" data-bind="events: { click: addNewAddressModel.submit }">Save Address</a>
+                <a class="primary" style="background-color:#FF6600"  href="components/finalOrder/view.html" data-role="button" >Save Address</a>
             </div>
         </form>
         <!-- START_CUSTOM_CODE_addNewAddressModel -->

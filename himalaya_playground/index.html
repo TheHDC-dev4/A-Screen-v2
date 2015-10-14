@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <link href="bower_components/kendo-ui-appbuilder-core/styles/kendo.mobile.all.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
+    <link href="fontello-codes.css" rel="stylesheet">
+
 
     <!-- cordova script (this will be a 404 during development if served with `grunt serve`) -->
     <script src="cordova.js"></script>
@@ -17,6 +19,14 @@
     <script src="app.js"></script>
     <script src="dataProviders/defaultProvider.js"></script>
     <script src="dataProviders/himalayaPlaygroundBackend.js"></script>
+    <script src="kendo/js/jquery-1.7.1.min.js"></script>
+
+    <style>
+        @font-face {
+            font-family: "plus";
+            src: url("images/fontello.woff") format("woff"), url("images/fontello.ttf") format("truetype");
+        }
+    </style>
 </head>
 
 <body id="kendoUiMobileApp">
@@ -40,10 +50,274 @@
     <script src="components/mensCare/index.js"></script>
     <script src="components/oralCare/index.js"></script>
     <script src="components/hariCares/index.js"></script>
-    <script src="components/cartDetails/index.js"></script>
+    <script src="components/cartDetails/index.js"></script>b
     <script src="components/dataListView/index.js"></script>
     <script src="components/home/index.js"></script>
-    <div data-role="layout" data-id="main">
+    <div data-role="layout" data-id="PersonalCare">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
+            </div>
+            <div data-role="tabstrip">
+                <a href="components/dataListView/view.html">Skin Care
+            </a><a href="components/hariCares/view.html">Hair Care
+            </a><a href="components/oralCare/view.html">Oral Care
+            </a><a href="components/mensCare/view.html">Men's care</a>
+
+            </div>
+        </header>
+
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+
+
+            <div class="left" style="width:32%;">
+
+
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="0">
+
+                </a>
+            </div>
+            <div class="left" style="width:32%;height: auto;">
+
+                <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
+                    <span>
+                Rs:250.00
+            </span>
+                </div>
+            </div>
+            <div style="width:32%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            </div>
+        </footer>
+    </div>
+
+    <div data-role="layout" data-id="AnimalCare">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+
+
+            <div class="left" style="width:32%;">
+
+
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="0">
+
+                </a>
+            </div>
+            <div class="left" style="width:32%;height: auto;">
+
+                <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
+                    <span>
+                Rs:250.00
+            </span>
+                </div>
+            </div>
+            <div style="width:32%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            </div>
+        </footer>
+    </div>
+
+
+    <div data-role="layout" data-id="Pharma">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
+            </div>
+            <div data-role="tabstrip">
+                <a href="components/childernHealth/view.html">Childern's health
+            </a><a href="components/dermaCare/view.html">Derma Care
+            </a><a href="components/mensHealth/view.html">Men's Health
+            </a><a href="components/oralHealth/view.html">Oral Health</a>
+                <a href="components/womensHealth/view.html">Women's Health</a>
+            </div>
+        </header>
+
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+
+
+            <div class="left" style="width:32%;">
+
+
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="0">
+
+                </a>
+            </div>
+            <div class="left" style="width:32%;height: auto;">
+
+                <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
+                    <span>
+                Rs:250.00
+            </span>
+                </div>
+            </div>
+            <div style="width:32%;height: auto;float:right">
+                <a data-role="button" class="km-primary" href="components/authenticationView/view.html" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            </div>
+        </footer>
+    </div>
+
+    <div data-role="layout" data-id="Baby">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
+            </div>
+            <div data-role="tabstrip">
+                <a href="components/postbath/view.html">Post Bath
+            </a><a href="components/prebath/view.html">Pre Bath
+                </a><a href="components/bath/view.html">Bath</a>
+
+            </div>
+        </header>
+
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+
+
+            <div class="left" style="width:32%;">
+
+
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="0">
+
+                </a>
+            </div>
+            <div class="left" style="width:32%;height: auto;">
+
+                <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
+                    <span>
+                Rs:250.00
+            </span>
+                </div>
+            </div>
+            <div style="width:32%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            </div>
+        </footer>
+    </div>
+
+    <div data-role="layout" data-id="Wellness">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <!--  <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>-->
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
+            </div>
+            <div data-role="tabstrip">
+                <a href="components/pureHerbs/view.html">Pure Herbs
+            </a><a href="components/general/view.html">General
+            </a>
+
+            </div>
+        </header>
+
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+
+
+            <div class="left" style="width:32%;">
+
+
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="0">
+
+                </a>
+            </div>
+            <div class="left" style="width:32%;height: auto;">
+
+                <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
+                    <span>
+                Rs:250.00
+            </span>
+                </div>
+            </div>
+            <div style="width:32%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            </div>
+        </footer>
+    </div>
+    <div data-role="layout" data-id="Mycart">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+
+
+            <div class="left" style="width:32%;">
+
+
+                <a id="btnCart" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="backbutton" data-badge="0">
+
+                </a>
+            </div>
+            <div class="left" style="width:32%;height: auto;">
+
+                <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
+                    <span>
+                Rs:250.00
+            </span>
+                </div>
+            </div>
+            <div style="width:32%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            </div>
+        </footer>
+    </div>
+
+    <div data-role="layout" data-id="Verification">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="backbutton" data-align="left"></a>
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+
+    </div>
+
+    <div data-role="layout" data-id="CheckOut">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="backbutton" data-align="left"></a>
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+
+    </div>
+    <div data-role="layout" data-id="Address">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" href="components/home/view.html" data-align="left" data-icon="arrow-e"></a>
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+
+    </div>
+    <div data-role="layout" data-id="main-nonav">
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
@@ -52,16 +326,26 @@
         </header>
 
         <!-- application views will be rendered here -->
-    </div>
+        <footer data-role="footer">
+            <div class="left" style="width:32%;">
 
-    <div data-role="layout" data-id="main-nonav">
-        <header data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
+
+                <a href="components/cartDetails/view.html" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="3">
+
+                </a>
             </div>
-        </header>
+            <div class="left" style="width:32%;height: auto;">
 
-        <!-- application views will be rendered here -->
+                <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
+                    <span>
+                Rs:250.00
+            </span>
+                </div>
+            </div>
+            <div style="width:32%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            </div>
+        </footer>
     </div>
 
     <div id="appDrawer" data-role="drawer" data-title="Navigation">
@@ -71,7 +355,36 @@
             </div>
         </header>
         <ul id="navigation-container" data-role="listview">
-            <li><a href="components/dataListView/view.html" data-icon="organize">Personal Care</a></li>
+            <li><a href="components/home/view.html" data-icon="details">Home</a></li>
+            <li><a href="components/dataListView/view.html" data-icon="details">Personal Care</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="info">Offers</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="details">Featured Products</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="info">New Launches</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="details">My Orders</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="details">Wish list</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="details">Rate the App</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="info">Help Centre</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="info">FAQ</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="details">Customer Services</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="info">Terms  & Conditions</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="info">Privacy Policy</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="info">Social Media</a>
+            </li>
+            <li><a href="components/dataListView/view.html" data-icon="contacts">Login</a>
+
+            </li>
             <li><a href="components/paymentOptiion/view.html" data-icon="home">Payment Option</a></li>
             <li><a href="components/thankyou/view.html" data-icon="home">Order Comfirmed</a></li>
         </ul>
@@ -81,5 +394,24 @@
 
     <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
 </body>
+<script>
+    window.myTouch = {
+        touchstart: function(e) {
+            kendoConsole.log("touch start");
+        },
+        swipe: function(e) {
+            kendoConsole.log("swipe " + e.direction);
+        },
+        tap: function(e) {
+            kendoConsole.log("tap");
+        },
+        doubletap: function(e) {
+            kendoConsole.log("double tap");
+        },
+        hold: function(e) {
+            kendoConsole.log("hold");
+        }
+    }
+</script>
 
 </html>

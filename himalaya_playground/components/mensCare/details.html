@@ -5,9 +5,84 @@
             <span data-bind="text: currentItem.ProductName" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;"></span>
         </div>
     </header>
-
-
+     <div id="divOuter">
+        
+ 
+<div style="margin: auto;width: 60%;padding-botom:10px;">
+    
+  
+    <h2 data-bind="text: currentItem.ProductName"></h2>
+  </div>
+    <div style="border-bottom:1px solid #d3d3d3;">
+        
+  
     <img data-bind="attr: { src: currentItem.ImageUrlUrl }" width="100%" height="auto">
-    <!-- START_CUSTOM_CODE_mensCareModel -->
-    <!-- END_CUSTOM_CODE_mensCareModel -->
+          </div>
+       <div style="border-bottom:1px solid #d3d3d3;padding-left:20px;">
+           <div>
+               
+         
+          <h2 style="float:left;">
+             &#8377;:
+           </h2>  <h2 style="float:left;" data-bind="text: currentItem.Price"></h2>  
+               
+      <br style="clear:both" />
+               <div style="float:right;margin-top:-15px;">
+                                           								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#:
+                                                                        data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" onclick="removecart(this);"  data-title="test"  data-test="#: data['Test'] #" >
+                                          									<img src="images/User-Interface-Minus-icon.png">
+                                          								</a>
+                                          								<div  data-init="init"  class="left" style="padding-right:7px;padding-left:7px;padding-top:4px;" >
+                                           										0<i></i>
+                                           								</div>
+                                                                        
+                                                                               <a  data-role="button" class="left round"   class="left round" onclick="addTo(this);"  >
+                                                                               <img  src="images/User-Interface-Plus-icon.png">
+                                                                                </a>
+                                           								</div>
+            <h3 style="float:left;color:#a8a8a8">
+            Size:
+           </h3>  <h3 style="width:100%;color:#a8a8a8" data-bind="text: currentItem.size"></h3>
+           
+             </div>
+           
+        </div>
+        <div  data-role="collapsible">
+           <h2 >
+            Description:
+           </h2>  
+             <br style="clear:both" />
+            <span data-bind="text: currentItem.ProdDescription"></span>
+        </div>
+             <div data-role="collapsible">
+           <h2 >
+            Key ingredients:
+           </h2>  
+          
+            <p data-bind="text: currentItem.ingredients"></p>
+        </div>
+           </div>
+    
+    <!-- START_CUSTOM_CODE_dataListViewModel -->
+     <footer data-role="footer">
+            <div class="left" style="width:32%;">
+
+
+                 <a href="#view-transitions-welcome" id="btnCart" data-icon="cart" class="km-small" style="border-radius:40%;" data-role="button" data-badge="4">
+
+                </a>
+            </div>
+            <div class="left" style="width:32%;height: auto;">
+
+                <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
+                    <span>
+                Rs:250.00
+            </span>
+                </div>
+            </div>
+            <div style="width:32%;height: auto;float:right">
+                <a data-role="button" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            </div>
+        </footer>
+    <!-- END_CUSTOM_CODE_dataListViewModel ProdDescription-->
 </div>

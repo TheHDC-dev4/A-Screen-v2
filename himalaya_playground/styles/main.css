@@ -107,7 +107,12 @@
 
 
 /* START_CUSTOM_CODE_kendoUiMobileApp */
-
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+   .home_tile{width:200px;height:200px;}
+}
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */
 
@@ -136,7 +141,7 @@
 #kendoUiMobileApp h2{color:#FF6600;}
 #kendoUiMobileApp .left{float:left;vertical-align: top;}
 #kendoUiMobileApp .round{border-radius:60px;border:1px solid grey;width:30px;height:30px;padding:5px}
-#kendoUiMobileApp .home_tile{width:180px;height:180px;}
+#kendoUiMobileApp .home_tile{width:100%;height:100%;}
     .km-arrow-e:after,
     .km-arrow-e:before
     {

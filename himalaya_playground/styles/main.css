@@ -1,8 +1,77 @@
-#kendoUiMobileApp .image-with-text img {
-    float: left;
-    margin-right: 15px;
-}left
+.km-nova .km-header .km-navbar  .km-view-title{
+    background-color: rgb(255, 255, 255);
+    color:#000000;
+}
+   .km-ios #left-drawer .km-list li > .km-icon, .km-ios7 #left-drawer .km-list li > .km-icon, .km-android #left-drawer .km-list li > .km-icon, .km-blackberry #left-drawer .km-list li > .km-icon,
+    #right-drawer .km-content
+    {
+        background-color: #4e4e4e;
+        color: #fff;
+    }
+.km-nova .km-header .km-navbar
+{
+    color:#000000;
+}
 
+.km-nova  .km-drawer
+{
+     background-color: #000000;
+    color:#000000;
+}
+
+
+.km-nova .km-view  {
+    background-color: rgb(255, 255, 255);
+}
+
+
+.km-flat .km-view .km-content {
+    background-color: rgb(255, 255, 255);
+}
+.km-flat .km-view .km-navbar {
+    background-color: rgb(255, 255, 255);
+}
+.km-flat .km-view .km-navbar .km-button {
+  background-color: rgb(255, 255, 255);
+}
+.km-flat .km-view .km-navbar .km-button.km-state-active {
+   background-color: rgb(255, 255, 255);
+}
+.km-flat .km-view .km-navbar .km-button .km-text {
+    color: rgb(255, 255, 255);
+}
+.km-flat .km-view .km-content .km-list .km-state-active .km-listview-link {
+     background-color: rgb(255, 255, 255);
+}
+.km-flat .km-view .km-content .km-list > li {
+    background-color: rgb(255, 255, 255);
+     border:1px solid #FFF;
+    border-bottom:1px solid #ccc;
+}
+.km-flat .km-view .km-content {
+    padding:0;
+}
+.km-flat .km-view .km-tabstrip .km-button.km-state-active {
+    background-color: rgb(255, 102, 0);
+}
+.km-flat .km-view .km-content .km-button.km-state-active {
+    background-color: rgb(255, 102, 0);
+}
+
+.km-flat .km-view .km-content .km-button {
+    background-color: rgb(255, 255, 255);
+     padding: 0;
+
+    margin: 0;
+}
+.km-flat .km-view  {
+    background-color: #FF9819;
+}
+ .km-right-e:after,
+    .km-right-e:before
+    {
+        content: "\e316";
+    }
 #kendoUiMobileApp .block {
     display: block;
     margin: 1em;
@@ -107,11 +176,28 @@
 
 
 /* START_CUSTOM_CODE_kendoUiMobileApp */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-   .home_tile{width:200px;height:200px;}
+#kendoUiMobileApp .image-home img {
+
+
+   
+}
+
+#kendoUiMobileApp .home-button{
+border:none;
+    margin:0;
+    padding:0;
+}
+
+#kendoUiMobileApp .image-with-text img {
+  
+ 
+
+}
+#kendoUiMobileApp  .home-image-a{
+ border:1px solid #FF6600;
+width:50%;
+   
+ float:left;
 }
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */

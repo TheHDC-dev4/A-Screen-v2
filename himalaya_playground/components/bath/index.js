@@ -1,11 +1,5 @@
 'use strict';
 
-function AddtowishList(e)
-{
-   $('#'+e).next().show();
-    $('#'+e).hide();
-}
-
 app.bath = kendo.observable({
     onShow: function() {
 
@@ -136,13 +130,6 @@ function getAllTheData() {
 })(app.bath);
 
 // START_CUSTOM_CODE_bathModel
-function AddtowishListDetails(e)
-{
- 
-   $('#'+e).next().show();
-    $('#'+e).hide();
-}
-
  function addTo(e)
     {
     

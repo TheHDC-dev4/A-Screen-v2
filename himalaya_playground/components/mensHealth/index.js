@@ -1,9 +1,4 @@
 'use strict';
-function AddtowishList(e)
-{
-   $('#'+e).next().show();
-    $('#'+e).hide();
-}
 
 app.mensHealth = kendo.observable({
     onShow: function() {
@@ -415,14 +410,7 @@ e.button.next().text(count1);
     parent.set('mensHealthModel', mensHealthModel);
 })(app.mensHealth);
 
-// START_CUSTOM_CODE_bathModel
-function AddtowishListDetails(e)
-{
- 
-   $('#'+e).next().show();
-    $('#'+e).hide();
-}
-
+// START_CUSTOM_CODE_mensHealthModel
     function addTo(e)
     {
     

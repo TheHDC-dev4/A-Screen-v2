@@ -1,45 +1,33 @@
 <div data-role="view" data-title="Details" data-model="app.animalCare.animalCareModel" data-bind="events: { show: detailsShow }">
     <header data-role="header">
         <div data-role="navbar" class="header-text">
-            <div style="display: inline-block;width:100%;">
-           
-                 <span style="margin-left:50px;margin-top:15px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;"  data-align="left"   >Animal Care</span>
-              <a data-role="backbutton" class="detail-back" data-align="left" data-icon="play-e" ></a>
-            
-                <a data-role="button"  href="#appDrawer" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
-                     
-                    </a>
-                  <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
-                </div>
+            <a data-role="backbutton" data-align="left">Back</a>
+            <span data-bind="text: currentItem.ProductName" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;"></span>
         </div>
     </header>
      <div id="divOuter">
         
  
-<div style="margin: auto;width: 100%;padding-botom:10px;padding-left:10px;">
+<div style="margin: auto;width: 60%;padding-botom:10px;">
     
   
-    <h3 data-bind="text: currentItem.ProductName"></h3>
-    <span class="tagline" data-bind="text: currentItem.tagline"></span>
+    <h2 data-bind="text: currentItem.ProductName"></h2>
   </div>
-    <div style="">
+    <div style="border-bottom:1px solid #d3d3d3;">
         
   
     <img data-bind="attr: { src: currentItem.ImageUrlUrl }" width="100%" height="auto">
           </div>
-       <div style="padding-left:20px;">
+       <div style="border-bottom:1px solid #d3d3d3;padding-left:20px;">
            <div>
                
-         <span style="float:left;padding-top:10px;padding-right:10px;font-style:italic">Price:</span>
-          <span style="float:left;font-weight:bold;padding-top:10px;padding-right:5px;">
-             &#8377;
-           </span>  <span style="float:left;font-weight:bold;padding-top:10px;" data-bind="text: currentItem.Price"></span>  
+         
+          <h2 style="float:left;">
+             &#8377;:
+           </h2>  <h2 style="float:left;" data-bind="text: currentItem.Price"></h2>  
                
       <br style="clear:both" />
-               <div style="float:right;margin-top:-30px;padding-right:15px;">
-                   <div>
-                       
-                 
+               <div style="float:right;margin-top:-15px;">
                                            								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#:
                                                                         data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" onclick="removecart(this);"  data-title="test"  data-test="#: data['Test'] #" >
                                           									<img src="images/User-Interface-Minus-icon.png">
@@ -52,35 +40,26 @@
                                                                                <img  src="images/User-Interface-Plus-icon.png">
                                                                                 </a>
                                            								</div>
-                   <div style="float:right;margin-top:15px;min-height:30px;">
-                                                                        <a data-role = "button" style="width:90px; font-size:10px;" id=  "btnAddtoWishlist"   class="km-small" onclick="AddtowishListDetails(this.id);">Add to wishlist</a>
-                                                                        <span style="font-size:12px;display:none;color:#FF6600;white-space:nowrap;">Added to wishlist</span>
-                                                                        </div>
-                     </div>
-               <div style="padding-top:20px;">
-                   
-               <span style="width:100%;color:#a8a8a8;font-style:italic">Size:</span>
-           <span style="width:100%;color:#a8a8a8;font-weight:bold" data-bind="text: currentItem.size"></span>
-            </div>
+            <h3 style="float:left;color:#a8a8a8">
+            Size:
+           </h3>  <h3 style="width:100%;color:#a8a8a8" data-bind="text: currentItem.size"></h3>
+           
              </div>
            
         </div>
-        <div style="padding:15px;"  >
-<hr>
-           <h3 style="font-style:italic" >
+        <div  data-role="collapsible">
+           <h2 >
             Description:
-           </h3>  
-            
-            <span style="text-align:justif;" data-bind="text: currentItem.ProdDescription"></span>
+           </h2>  
+             <br style="clear:both" />
+            <span data-bind="text: currentItem.ProdDescription"></span>
         </div>
-        
-            <div style="padding:15px;"  >
-                 <hr>
-           <h3 style="font-style:italic" >
+             <div data-role="collapsible">
+           <h2 >
             Key ingredients:
-           </h3>  
+           </h2>  
           
-            <span  style="text-align:justif;" data-bind="text: currentItem.ingredients"></span>
+            <p data-bind="text: currentItem.ingredients"></p>
         </div>
            </div>
     

@@ -130,14 +130,7 @@ function getAllTheData() {
     parent.set('oralHealthModel', oralHealthModel);
 })(app.oralHealth);
 
-// START_CUSTOM_CODE_bathModel
-function AddtowishListDetails(e)
-{
- 
-   $('#'+e).next().show();
-    $('#'+e).hide();
-}
-
+// START_CUSTOM_CODE_oralHealthModel
   function addTo(e)
     {
     

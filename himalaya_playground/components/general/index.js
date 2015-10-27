@@ -1,11 +1,5 @@
 'use strict';
 
-function AddtowishList(e)
-{
-   $('#'+e).next().show();
-    $('#'+e).hide();
-}
-
 app.general = kendo.observable({
      onShow: function() {
 
@@ -135,14 +129,7 @@ function getAllTheData() {
     parent.set('generalModel', generalModel);
 })(app.general);
 
-// START_CUSTOM_CODE_bathModel
-function AddtowishListDetails(e)
-{
- 
-   $('#'+e).next().show();
-    $('#'+e).hide();
-}
-
+// START_CUSTOM_CODE_generalModel
  function addTo(e)
     {
     

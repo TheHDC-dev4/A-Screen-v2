@@ -1,9 +1,4 @@
 'use strict';
-function AddtowishList(e)
-{
-   $('#'+e).next().show();
-    $('#'+e).hide();
-}
 
 app.cartDetails = kendo.observable({
     onShow: function() {

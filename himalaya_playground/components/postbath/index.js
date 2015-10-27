@@ -1,9 +1,4 @@
 'use strict';
-function AddtowishList(e)
-{
-   $('#'+e).next().show();
-    $('#'+e).hide();
-}
 
 app.postbath = kendo.observable({
     onShow: function() {
@@ -414,14 +409,7 @@ e.button.next().text(count1);
     parent.set('postbathModel', postbathModel);
 })(app.postbath);
 
-// START_CUSTOM_CODE_bathModel
-function AddtowishListDetails(e)
-{
- 
-   $('#'+e).next().show();
-    $('#'+e).hide();
-}
-
+// START_CUSTOM_CODE_postbathModel
  function addTo(e)
     {
     

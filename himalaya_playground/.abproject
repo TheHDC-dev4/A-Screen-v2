@@ -4,7 +4,7 @@
   "projectVersion": 1,
   "AppIdentifier": "com.telerik.himalayaplayground",
   "DisplayName": "himalaya_playground",
-  "Author": "hemanth kumar",
+  "Author": "",
   "Description": "himalaya_playground",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
@@ -19,7 +19,8 @@
     "android.permission.INTERNET"
   ],
   "DeviceOrientations": [
-    "Portrait"
+    "Portrait",
+    "Landscape"
   ],
   "AndroidHardwareAcceleration": "false",
   "iOSStatusBarStyle": "Default",

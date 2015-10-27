@@ -1,5 +1,11 @@
 'use strict';
 
+function AddtowishList(e)
+{
+   $('#'+e).next().show();
+    $('#'+e).hide();
+}
+
 app.prebath = kendo.observable({
     onShow: function() {
 
@@ -409,7 +415,14 @@ e.button.next().text(count1);
     parent.set('prebathModel', prebathModel);
 })(app.prebath);
 
-// START_CUSTOM_CODE_prebathModel
+// START_CUSTOM_CODE_bathModel
+function AddtowishListDetails(e)
+{
+ 
+   $('#'+e).next().show();
+    $('#'+e).hide();
+}
+
  function addTo(e)
     {
     

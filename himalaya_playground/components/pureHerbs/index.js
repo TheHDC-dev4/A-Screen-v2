@@ -1,4 +1,9 @@
 'use strict';
+function AddtowishList(e)
+{
+   $('#'+e).next().show();
+    $('#'+e).hide();
+}
 
 app.pureHerbs = kendo.observable({
      onShow: function() {
@@ -129,7 +134,14 @@ function getAllTheData() {
     parent.set('pureHerbsModel', pureHerbsModel);
 })(app.pureHerbs);
 
-// START_CUSTOM_CODE_pureHerbsModel
+// START_CUSTOM_CODE_bathModel
+function AddtowishListDetails(e)
+{
+ 
+   $('#'+e).next().show();
+    $('#'+e).hide();
+}
+
  function addTo(e)
     {
     

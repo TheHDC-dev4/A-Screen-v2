@@ -1,5 +1,11 @@
 'use strict';
 
+function AddtowishList(e)
+{
+   $('#'+e).next().show();
+    $('#'+e).hide();
+}
+
 app.dataListView = kendo.observable({
     onShow: function() {
        
@@ -494,7 +500,14 @@ app.selectRecords(catid);
    
 }
 
-// START_CUSTOM_CODE_dataListViewModel
+// START_CUSTOM_CODE_bathModel
+function AddtowishListDetails(e)
+{
+ 
+   $('#'+e).next().show();
+    $('#'+e).hide();
+}
+
     function addTo(e)
     {
     

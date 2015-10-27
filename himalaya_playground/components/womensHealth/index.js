@@ -1,4 +1,9 @@
 'use strict';
+function AddtowishList(e)
+{
+   $('#'+e).next().show();
+    $('#'+e).hide();
+}
 
 app.womensHealth = kendo.observable({
      onShow: function() {
@@ -129,7 +134,14 @@ function getAllTheData() {
     parent.set('womensHealthModel', womensHealthModel);
 })(app.womensHealth);
 
-// START_CUSTOM_CODE_womensHealthModel
+// START_CUSTOM_CODE_bathModel
+function AddtowishListDetails(e)
+{
+ 
+   $('#'+e).next().show();
+    $('#'+e).hide();
+}
+
   function addTo(e)
     {
     

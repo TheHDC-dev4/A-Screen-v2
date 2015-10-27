@@ -1,28 +1,27 @@
 .km-nova .km-header .km-navbar  .km-view-title{
     background-color: rgb(255, 255, 255);
-    color:#000000;
+ 
 }
-   .km-ios #left-drawer .km-list li > .km-icon, .km-ios7 #left-drawer .km-list li > .km-icon, .km-android #left-drawer .km-list li > .km-icon, .km-blackberry #left-drawer .km-list li > .km-icon,
-    #right-drawer .km-content
-    {
-        background-color: #4e4e4e;
-        color: #fff;
-    }
+
 .km-nova .km-header .km-navbar
 {
-    color:#000000;
+      color:#FF6600;
+     border-bottom:1px solid #FF6600;
 }
 
-.km-nova  .km-drawer
-{
-     background-color: #000000;
-    color:#000000;
+.km-nova .km-view .km-listview{
+     border-top:1px solid #FF6600;
 }
 
 
-.km-nova .km-view  {
-    background-color: rgb(255, 255, 255);
+
+.km-nova .km-view .km-header .km-navbar{
+    color:#FF6600;
+    border-bottom:1px solid #FF6600;
 }
+
+
+
 
 
 .km-flat .km-view .km-content {
@@ -72,6 +71,13 @@
     {
         content: "\e316";
     }
+
+#kendoUiMobileApp .rupee:after,
+#kendoUiMobileApp .rupee:before
+{
+
+}
+
 #kendoUiMobileApp .block {
     display: block;
     margin: 1em;
@@ -199,6 +205,26 @@ width:50%;
    
  float:left;
 }
+.km-play-e:after,
+.km-play-e:before{
+      content: "\e013"; 
+    font-size:25px;
+}
+
+#kendoUiMobileApp  .detail-back{
+margin-left:-30px;
+    margin-top:-10px;
+    color:#696969;
+     
+}
+
+#kendoUiMobileApp  .tagline{
+    color: #aeaeae;
+    display: block;
+    font-style: italic;
+    font-size:12px;
+    
+}
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */
 
@@ -225,6 +251,7 @@ width:50%;
 #kendoUiMobileApp .containerdivNewLine { clear: both; float: left; display: block; position: relative; } 
 #kendoUiMobileApp h5 {color:#FF6600;width:220px;}
 #kendoUiMobileApp h2{color:#FF6600;}
+#kendoUiMobileApp h3{color:#FF6600;}
 #kendoUiMobileApp .left{float:left;vertical-align: top;}
 #kendoUiMobileApp .round{border-radius:60px;border:1px solid grey;width:30px;height:30px;padding:5px}
 #kendoUiMobileApp .home_tile{width:100%;height:100%;}

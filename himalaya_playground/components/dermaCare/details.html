@@ -1,34 +1,45 @@
 <div data-role="view" data-title="Details" data-model="app.dermaCare.dermaCareModel" data-bind="events: { show: detailsShow }">
-    <header data-role="header">
+     <header data-role="header">
         <div data-role="navbar" class="header-text">
-            <a data-role="backbutton" data-align="left">Back</a>
-            <span data-bind="text: currentItem.ProductName" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;"></span>
+            <div style="display: inline-block;width:100%;">
+           
+                 <span style="margin-left:50px;margin-top:15px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;"  data-align="left"   >Phrmaceuticals</span>
+              <a data-role="backbutton" class="detail-back" data-align="left" data-icon="play-e" ></a>
+            
+                <a data-role="button"  href="#appDrawer" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                     
+                    </a>
+                  <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
+                </div>
         </div>
     </header>
-
- <div id="divOuter">
+     <div id="divOuter">
         
  
-<div style="margin: auto;width: 60%;padding-botom:10px;">
+<div style="margin: auto;width: 100%;padding-botom:10px;padding-left:10px;">
     
   
-    <h2 data-bind="text: currentItem.ProductName"></h2>
+    <h3 data-bind="text: currentItem.ProductName"></h3>
+    <span class="tagline" data-bind="text: currentItem.tagline"></span>
   </div>
-    <div style="border-bottom:1px solid #d3d3d3;">
+    <div style="">
         
   
     <img data-bind="attr: { src: currentItem.ImageUrlUrl }" width="100%" height="auto">
           </div>
-       <div style="border-bottom:1px solid #d3d3d3;padding-left:20px;">
+       <div style="padding-left:20px;">
            <div>
                
-         
-          <h2 style="float:left;">
-             &#8377;:
-           </h2>  <h2 style="float:left;" data-bind="text: currentItem.Price"></h2>  
+         <span style="float:left;padding-top:10px;padding-right:10px;font-style:italic">Price:</span>
+          <span style="float:left;font-weight:bold;padding-top:10px;padding-right:5px;">
+             &#8377;
+           </span>  <span style="float:left;font-weight:bold;padding-top:10px;" data-bind="text: currentItem.Price"></span>  
                
       <br style="clear:both" />
-               <div style="float:right;margin-top:-15px;">
+               <div style="float:right;margin-top:-30px;padding-right:15px;">
+                   <div>
+                       
+                 
                                            								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#:
                                                                         data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" onclick="removecart(this);"  data-title="test"  data-test="#: data['Test'] #" >
                                           									<img src="images/User-Interface-Minus-icon.png">
@@ -41,26 +52,35 @@
                                                                                <img  src="images/User-Interface-Plus-icon.png">
                                                                                 </a>
                                            								</div>
-            <h3 style="float:left;color:#a8a8a8">
-            Size:
-           </h3>  <h3 style="width:100%;color:#a8a8a8" data-bind="text: currentItem.size"></h3>
-           
+                   <div style="float:right;margin-top:15px;min-height:30px;">
+                                                                        <a data-role = "button" style="width:90px; font-size:10px;" id=  "btnAddtoWishlist"   class="km-small" onclick="AddtowishListDetails(this.id);">Add to wishlist</a>
+                                                                        <span style="font-size:12px;display:none;color:#FF6600;white-space:nowrap;">Added to wishlist</span>
+                                                                        </div>
+                     </div>
+               <div style="padding-top:20px;">
+                   
+               <span style="width:100%;color:#a8a8a8;font-style:italic">Size:</span>
+           <span style="width:100%;color:#a8a8a8;font-weight:bold" data-bind="text: currentItem.size"></span>
+            </div>
              </div>
            
         </div>
-        <div  data-role="collapsible">
-           <h2 >
+        <div style="padding:15px;"  >
+<hr>
+           <h3 style="font-style:italic" >
             Description:
-           </h2>  
-             <br style="clear:both" />
-            <span data-bind="text: currentItem.ProdDescription"></span>
+           </h3>  
+            
+            <span style="text-align:justif;" data-bind="text: currentItem.ProdDescription"></span>
         </div>
-             <div data-role="collapsible">
-           <h2 >
+        
+            <div style="padding:15px;"  >
+                 <hr>
+           <h3 style="font-style:italic" >
             Key ingredients:
-           </h2>  
+           </h3>  
           
-            <p data-bind="text: currentItem.ingredients"></p>
+            <span  style="text-align:justif;" data-bind="text: currentItem.ingredients"></span>
         </div>
            </div>
     

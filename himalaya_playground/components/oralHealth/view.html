@@ -1,7 +1,7 @@
 <div data-role="view" data-title="Oral Health" data-layout="Pharma" data-model="app.oralHealth" data-show="app.oralHealth.onShow" data-after-show="app.oralHealth.afterShow">
     <!-- START_CUSTOM_CODE_oralHealth -->
     <!-- END_CUSTOM_CODE_oralHealth -->
-    <ul data-role="listview" data-style="inset" data-template="oralHealthModelTemplate" data-bind="{ source: oralHealthModel.dataSource, events: {click: oralHealthModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" data-filterable="{field: 'ProductName', operator: 'contains'}">
+    <ul data-role="listview" data-style="inset" data-template="oralHealthModelTemplate" data-bind="{ source: oralHealthModel.dataSource, events: {click: oralHealthModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" >
     </ul>
     <!-- START_CUSTOM_CODE_oralHealthModel -->
     <!-- END_CUSTOM_CODE_oralHealthModel -->
@@ -15,7 +15,7 @@
                                                       </div>
                                                        <div style="display: table-cell;vertical-align:top;width:30%;" >
                                                        <h5 style="width:100%;">#: data['ProductName'] #</h5>
-                                                        <h6>Rs:#: data['Price'] #</h6>
+                                                                                                               <span style="font-size:10px;float:left;color:black;">&\#8377</span> <h6>#: data['Price'] #</h6>
                                                          <h6 style="color:\#a8a8a8">#: data['size'] #</h6>
                                                         </div>
                                                  </a>   
@@ -36,6 +36,12 @@
                                                                                 </a>
                                            								</div>
                                            							</div>
+                                                                     <div style="clear: both; float: left; display: block; position: relative;">
+                                                                    </div>
+                                                                    <div style="float:right;margin-top:25px;min-height:30px;">
+                                                                        <a data-role = "button" style="width:90px; font-size:10px;" id=  "btn#: data['Catalogid'] #"   class="km-small" onclick="AddtowishList(this.id);">Add to wishlist</a>
+                                                                        <span style="font-size:12px;display:none;color:\#FF6600;white-space:nowrap;">Added to wishlist</span>
+                                                                        </div>
                                            					</div>
                                             </div>
                       </div>

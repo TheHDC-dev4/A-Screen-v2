@@ -1,4 +1,10 @@
 'use strict';
+function AddtowishList(e)
+{
+    alert();
+   $('#'+e).next().show();
+    $('#'+e).hide();
+}
 
 app.animalCare = kendo.observable({
    onShow: function() {
@@ -410,6 +416,14 @@ function getAllTheData() {
 })(app.animalCare);
 
 // START_CUSTOM_CODE_animalCareModel
+function AddtowishListDetails(e)
+{
+ 
+   $('#'+e).next().show();
+    $('#'+e).hide();
+}
+
+
  function addTo(e)
     {
     

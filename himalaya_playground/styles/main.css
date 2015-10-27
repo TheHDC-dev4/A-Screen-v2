@@ -72,6 +72,11 @@
         content: "\e316";
     }
 
+::-webkit-input-placeholder { color:#FF6600;font-size:20px; }
+::-moz-placeholder { color:#FF6600;font-size:20px; } /* firefox 19+ */
+:-ms-input-placeholder { color:#FF6600;font-size:20px; } /* ie */
+input:-moz-placeholder { color:#FF6600;font-size:20px; }
+
 #kendoUiMobileApp .rupee:after,
 #kendoUiMobileApp .rupee:before
 {

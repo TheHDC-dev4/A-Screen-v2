@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 app.authenticationView = kendo.observable({
     onShow: function() {},
     afterShow: function() {}
@@ -12,8 +10,8 @@ app.authenticationView = kendo.observable({
 (function(parent) {
     var provider = app.data.defaultProvider,
         mode = 'signin',
-        registerRedirect = 'home',
-        signinRedirect = 'home',
+        registerRedirect = 'homeView',
+        signinRedirect = 'homeView',
         init = function(error) {
             if (error) {
                 if (error.message) {
@@ -101,31 +99,4 @@ app.authenticationView = kendo.observable({
 })(app.authenticationView);
 
 // START_CUSTOM_CODE_authenticationViewModel
-function aniPassword()
-{
-     $('#spanPassword').show();
-    $('#spanPassword').animate({top: '90px'}, "slow");
-}
-
-function aniEmail()
-{
-   
-     $('#spanEmail').show();
-    $('#spanEmail').animate({top: '5px'}, "slow");
-}
-
-function  upaniEmail(e)
-{
-if($("#" + e).val() == '') {
-        $('#spanEmail').css({"top": "30px", "display": "none"});
-    }
-}
-
-function  upaniPassword(e)
-{
-if($("#" + e).val() == '') {
-     $('#spanPassword').css({"top": "110px", "display": "none"});
-       
-    }
-}
 // END_CUSTOM_CODE_authenticationViewModel

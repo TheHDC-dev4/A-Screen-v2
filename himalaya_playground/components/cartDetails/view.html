@@ -1,7 +1,7 @@
 
 
 
-<div data-role="view" data-title="My Cart" data-layout="Mycart" data-model="app.cartDetails" data-show="app.cartDetails.onShow" data-after-show="app.cartDetails.afterShow">
+<div data-role="view" data-title="My Cart" data-layout="Mycart" data-model="app.cartDetails" data-show="app.cartDetails.onShow" data-transition="overlay:up" data-after-show="app.cartDetails.afterShow">
     <!-- START_CUSTOM_CODE_dataListView -->
 
     <!-- END_CUSTOM_CODE_dataListView -->
@@ -31,7 +31,7 @@
                                           									<img src="images/User-Interface-Minus-icon.png">
                                           								</a>
                                           								<div  data-init="init"  class="left" style="padding-right:7px;padding-left:7px;padding-top:4px;" >
-                                           										0<i></i>
+                                           										2<i></i>
                                            								</div>
                                                                         
                                                                                <a  data-role="button" class="left round"  data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="addToCart" data-title="test" 
@@ -43,8 +43,8 @@
                                                                      <div style="clear: both; float: left; display: block; position: relative;">
                                                                     </div>
                                                                    <div style="float:right;margin-top:25px;min-height:30px;">
-                                                                        <a data-role = "button" style="width:90px; font-size:10px;" id=  "btn#: data['Catalogid'] #"   class="km-small" onclick="AddtowishList(this.id);">Add to wishlist</a>
-                                                                        <span style="font-size:12px;display:none;color:\#FF6600;white-space:nowrap;">Added to wishlist</span>
+                                                                        <a data-role = "button" style="width:90px; font-size:10px;" id=  "btn#: data['Catalogid'] #"   class="km-small" onclick="RemoveFromCart(this.id);">Remove</a>
+                                                                        <span style="font-size:12px;display:none;color:\#FF6600;white-space:nowrap;">Remove</span>
                                                                         </div>
                                            					</div>
                                             </div>

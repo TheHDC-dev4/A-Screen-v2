@@ -5,6 +5,15 @@ function AddtowishList(e)
     $('#'+e).hide();
 }
 
+
+
+function RemoveFromCart(e)
+{
+   $('#'+e).parent().parent().parent().parent().parent().parent().hide();
+    $('#spanCartMsg').text('');
+    $('#spanCartMsg').html('Add &#8377 <b>30.00</b> more worth product<br> To avail free shipping!!');
+}
+
 app.cartDetails = kendo.observable({
     onShow: function() {
 

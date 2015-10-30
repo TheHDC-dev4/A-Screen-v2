@@ -1,14 +1,14 @@
 'use strict';
 
-app.FinalCart = kendo.observable({
+app.summary = kendo.observable({
     onShow: function() {},
     afterShow: function() {}
 });
 
-// START_CUSTOM_CODE_finalOrder
-// END_CUSTOM_CODE_finalOrder
+// START_CUSTOM_CODE_summary
+// END_CUSTOM_CODE_summary
 (function(parent) {
-    var dataProvider = app.data.himalayaPlaygroundBackend,
+    var dataProvider = app.data.defaultProvider,
         flattenLocationProperties = function(dataItem) {
             var propName, propValue,
                 isLocation = function(value) {
@@ -31,7 +31,7 @@ app.FinalCart = kendo.observable({
         dataSourceOptions = {
             type: 'everlive',
             transport: {
-                typeName: 'PersonalCare',
+                typeName: 'Activities',
                 dataProvider: dataProvider
             },
 
@@ -39,16 +39,15 @@ app.FinalCart = kendo.observable({
                 var data = this.data();
                 for (var i = 0; i < data.length; i++) {
                     var dataItem = data[i];
-                      dataItem["totalPrice"] = parseFloat(dataItem["Price"]).toFixed(2) * 3;
-            
+
                     flattenLocationProperties(dataItem);
                 }
             },
             schema: {
                 model: {
                     fields: {
-                        'ProductName': {
-                            field: 'ProductName',
+                        'Text': {
+                            field: 'Text',
                             defaultValue: ''
                         },
                     }
@@ -56,12 +55,25 @@ app.FinalCart = kendo.observable({
             },
         },
         dataSource = new kendo.data.DataSource(dataSourceOptions),
-        finalOrderModel = kendo.observable({
-            dataSource: dataSource
+        summaryModel = kendo.observable({
+            dataSource: dataSource,
+            itemClick: function(e) {
+                app.mobileApp.navigate('#components/summary/details.html?uid=' + e.dataItem.uid);
+            },
+            detailsShow: function(e) {
+                var item = e.view.params.uid,
+                    dataSource = summaryModel.get('dataSource'),
+                    itemModel = dataSource.getByUid(item);
+                if (!itemModel.Text) {
+                    itemModel.Text = String.fromCharCode(160);
+                }
+                summaryModel.set('currentItem', itemModel);
+            },
+            currentItem: null
         });
 
-    parent.set('finalOrderModel', finalOrderModel);
-})(app.finalOrder);
+    parent.set('summaryModel', summaryModel);
+})(app.summary);
 
-// START_CUSTOM_CODE_finalOrderModel
-// END_CUSTOM_CODE_finalOrderModel
+// START_CUSTOM_CODE_summaryModel
+// END_CUSTOM_CODE_summaryModel

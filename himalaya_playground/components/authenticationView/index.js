@@ -89,6 +89,11 @@ app.authenticationView = kendo.observable({
                 provider.Users.register(email, password, attrs, successHandler, init);
             },
             toggleView: function() {
+                
+          
+  
+
+ 
                 mode = mode === 'signin' ? 'register' : 'signin';
                 init();
             }
@@ -125,6 +130,46 @@ function  upaniPassword(e)
 {
 if($("#" + e).val() == '') {
      $('#spanPassword').css({"top": "110px", "display": "none"});
+       
+    }
+}
+
+
+
+
+function aniRegEmail(){
+     $('#spaninputRegEmail').show();
+    $('#spaninputRegEmail').animate({top: '5px'}, "slow");
+}
+function aniRegPassword(){
+    $('#spaninputRegPassword').show();
+    $('#spaninputRegPassword').animate({top: '80px'}, "slow"); 
+}
+function  aniRegConf(){
+     $('#spaninputRegConf').show();
+    $('#spaninputRegConf').animate({top: '160px'}, "slow");
+}
+
+function upaniRegConf(e){
+    if($("#" + e).val() == '') {
+     $('#spaninputRegConf').css({"top": "180px", "display": "none"});
+       
+    } 
+}
+
+
+function upaniRegPassworde(e){
+     if($("#" + e).val() == '') {
+     $('#spaninputRegPassword').css({"top": "110px", "display": "none"});
+       
+    }
+    
+}
+
+
+function upaniRegEmail(e){
+    if($("#" + e).val() == '') {
+     $('#spaninputRegEmail').css({"top": "30px", "display": "none"});
        
     }
 }

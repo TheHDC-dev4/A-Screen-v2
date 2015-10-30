@@ -1,12 +1,12 @@
-<div data-role="view" data-title="Mobile Verification" data-layout="Verification" data-model="app.authenticationView" data-show="app.authenticationView.onShow" data-after-show="app.authenticationView.afterShow">
+<div data-role="view" data-title="Authentication" data-layout="Verification" data-model="app.authenticationView" data-show="app.authenticationView.onShow" data-after-show="app.authenticationView.afterShow">
     <div class="signin-view">
         <form>
             <ul style="list-style-type: none;">
                 <li>
-                    <span id="spanEmail" style="color:#006400;position:absolute;top:30px;display:none;">Email/Mobile</span>
-                   <div style="width:100%; border-bottom:1px solid #FF6600;border-left:2px solid #FF6600;height:50px;margin-left:-30px;">
+                    <span id="spanEmail" style="color:#006C6F;position:absolute;top:30px;display:none;">Email/Mobile</span>
+                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
                        
-                         <input id="inputEmail" onkeypress="aniEmail();"  onkeyup = "upaniEmail(this.id);" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" placeholder="Email/Mobile" type="email" data-bind="value: authenticationViewModel.email" required autofocus>
+                         <input id="inputEmail" onkeypress="aniEmail();"  onkeyup = "upaniEmail(this.id);" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" placeholder="Email/Mobile" type="email" data-bind="value: authenticationViewModel.email" >
                     </div>
                       
                  
@@ -17,43 +17,57 @@
                     </div>
                 </li>
                 <li>
-                                        <span id="spanPassword" style="color:#006400;position:absolute;top:110px;display:none;">Password</span>
-                 <div style=" width:100%; border-bottom:1px solid #FF6600;border-left:2px solid #FF6600;height:50px;margin-left:-30px;">
+                                        <span id="spanPassword" style="color:#006C6F;position:absolute;top:110px;display:none;">Password</span>
+                 <div style=" width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
                         <input id="inputPassword" onkeypress="aniPassword();"  onkeyup = "upaniPassword(this.id);" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" placeholder="Password"  type="password" data-bind="value: authenticationViewModel.password" required>
                   </div>
                 </li>
             </ul>
 
             <div class="button-group button-group-vertical">
-                <a data-role="button" class="primary" data-bind="events: { click: authenticationViewModel.signin }">Sign In</a>
+                <a data-role="button" class="primary"  style="background-color:#006C6F;color:white;" href="components/addNewAddress/view.html"   >Sign In</a>
 
-                <a data-role="button" data-bind="events: { click: authenticationViewModel.toggleView }">Register</a>
+                <a data-role="button" style="background-color:#FF6600;color:white;" data-bind="events: { click: authenticationViewModel.toggleView }">Register</a>
 
             </div>
         </form>
     </div>
     <div class="signup-view" style="display:none;">
         <form>
-            <ul data-role="listview" data-style="inset">
+            <ul style="list-style-type: none;"  data-style="inset">
+                
                 <li>
-                    <label>Email/mobile
-                        <input type="email" data-bind="value: authenticationViewModel.email" required>
-                    </label>
+                     <span id="spaninputRegEmail" style="color:#006C6F;position:absolute;top:30px;display:none;">Email/Mobile</span>
+                                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                        <input onkeypress="aniRegEmail();"  onkeyup = "upaniRegEmail(this.id);" id="inputRegEmail" placeholder="Email/Password" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" type="email" data-bind="value: authenticationViewModel.email" required>
+                    </div>
+                </li>
+                 <li>
+                    <div style="padding-top:30px;">
+                        
+                    </div>
                 </li>
                 <li>
-                    <label>Password
-                        <input type="password" data-bind="value: authenticationViewModel.password">
-                    </label>
+                     <span id="spaninputRegPassword" style="color:#006C6F;position:absolute;top:110px;display:none;">Password</span>
+                                      <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                        <input onkeypress="aniRegPassword();"  onkeyup = "upaniRegPassworde(this.id);" id="inputRegPassword" placeholder="Password" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" type="password" data-bind="value: authenticationViewModel.password">
+                    </div>
                 </li>
-                <li>
-                    <label>Name
-                        <input type="text" data-bind="value: authenticationViewModel.displayName">
-                    </label>
+                 <li>
+                    <div style="padding-top:30px;">
+                        
+                    </div>
+                </li>
+            <li>
+                 <span id="spaninputRegConf" style="color:#006C6F;position:absolute;top:180px;display:none;">Confirm Password</span>
+                                      <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                        <input onkeypress="aniRegConf();"  onkeyup = "upaniRegConf(this.id);" id="inputRegConf" placeholder= "Confirm Password" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;text-security: disc;-moz-text-security: disc;-webkit-text-security: disc;"  >
+                    </div>
                 </li>
             </ul>
             <div class="button-group button-group-vertical">
-                <a class="primary" data-role="button" data-bind="events: { click: authenticationViewModel.register }">Register</a>
-                <a data-role="button" data-bind="events: { click: authenticationViewModel.toggleView }">Sign In</a>
+                <a  style="background-color:#006C6F;color:white;" class="primary" data-role="button" href="components/addNewAddress/view.html" >Register</a>
+                <a  style="background-color:#FF6600;color:white;" data-role="button" data-bind="events: { click: authenticationViewModel.toggleView }">Sign In</a>
             </div>
         </form>
         <!-- START_CUSTOM_CODE_authenticationViewModel -->

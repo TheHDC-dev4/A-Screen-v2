@@ -1,51 +1,137 @@
 <div data-role="view" data-title="Address" data-layout="Address" data-model="app.addNewAddress" data-show="app.addNewAddress.onShow" data-after-show="app.addNewAddress.afterShow">
     <div id="addNewAddressModel" class="form-view">
         <form>
-            <ul class="form-content" data-role="listview" data-style="inset">
+            <ul class="form-content"  data-style="inset" style="list-style-type: none;">
                 <li>
-                    <label>Address
-                        <input data-bind="value: addNewAddressModel.fields.address" type="text">
-                    </label>
+                  <span id="spanAddress" style="color:#006C6F;position:absolute;top:30px;display:none;">Address</span>
+                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                        <input onkeypress="aniAddress();"  onkeyup = "upaniAddress(this.id);" id="inputAddress" placeholder="Address"  style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" data-bind="value: addNewAddressModel.fields.address" type="text">
+                    </div>
+                </li>
+                 <li>
+                    <div style="padding-top:20px;">
+                        
+                    </div>
                 </li>
                 <li>
-                    <label>city
-                        <input data-bind="value: addNewAddressModel.fields.city" type="text">
-                    </label>
+                    <span id="spanCity" style="color:#006C6F;position:absolute;top:100px;display:none;">City</span>
+                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                        <input placeholder="City" onkeypress="aniCity();"  onkeyup = "upaniCity(this.id);" id="inputCity" data-bind="value: addNewAddressModel.fields.city" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" type="text">
+                    </div>
+                </li>
+                 <li>
+                    <div style="padding-top:20px;">
+                        
+                    </div>
                 </li>
                 <li>
-                    <label>State
-                        <input data-bind="value: addNewAddressModel.fields.state" type="text">
-                    </label>
+                    <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                   <select  style="padding-top:10px;border:none;width:100%;height:45px;font-size:20px;"  data-role="dropdownlist">
+                         	<option value="0" selected="selected">State / UT</option>
+		<option value="AN">Andaman &amp; Nicobar Islands</option>
+		<option value="AP">Andhra Pradesh</option>
+		<option value="AR">Arunachal Pradesh</option>
+		<option value="AS">Assam</option>
+		<option value="BR">Bihar</option>
+		<option value="CH">Chandigarh</option>
+		<option value="CT">Chhattisgarh</option>
+		<option value="DN">Dadra and Nagar Haveli</option>
+		<option value="DD">Daman and Diu</option>
+		<option value="DL">Delhi</option>
+		<option value="GA">Goa</option>
+		<option value="GJ">Gujarat</option>
+		<option value="HR">Haryana</option>
+		<option value="HP">Himachal Pradesh</option>
+		<option value="JK">Jammu &amp; Kashmir</option>
+		<option value="JH">Jharkhand</option>
+		<option value="KA">Karnataka</option>
+		<option value="KL">Kerala</option>
+		<option value="LD">Lakshadweep</option>
+		<option value="MP">Madhya Pradesh</option>
+		<option value="MH">Maharashtra</option>
+		<option value="MN">Manipur</option>
+		<option value="ML">Meghalaya</option>
+		<option value="MZ">Mizoram</option>
+		<option value="NL">Nagaland</option>
+		<option value="OR">Orissa</option>
+		<option value="PY">Puducherry</option>
+		<option value="PB">Punjab</option>
+		<option value="RJ">Rajasthan</option>
+		<option value="SK">Sikkim</option>
+		<option value="TN">Tamil Nadu</option>
+		<option value="TS">Telangana</option>
+		<option value="TR">Tripura</option>
+		<option value="UP">Uttar Pradesh</option>
+		<option value="UL">Uttarakhand</option>
+		<option value="WB">West Bengal</option>
+                        </select>
+                    </div>
+                </li>
+                 <li>
+                    <div style="padding-top:20px;">
+                        
+                    </div>
                 </li>
                 <li>
-                    <label>Pincode
-                        <input data-bind="value: addNewAddressModel.fields.pincode" placeholder="Zip" type="text">
-                    </label>
+                     <span id="spanPincode" style="color:#006C6F;position:absolute;top:240px;display:none;">Pincode</span>
+                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                        <input onkeypress="aniPincode();"  onkeyup = "upaniPincode(this.id);" id="inputPincode" data-bind="value: addNewAddressModel.fields.pincode" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" placeholder="Pincode" type="text">
+                    </div>
+                </li>
+                 <li>
+                    <div style="padding-top:20px;">
+                        
+                    </div>
                 </li>
                 <li>
-                    <label>Title
-                        <select data-bind="value: addNewAddressModel.fields.title" data-role="dropdownlist">
+                 
+                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                        <select style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" data-role="dropdownlist">
+                             <option value="0" selected="selected">Title.</option>
                             <option value="Mr.">Mr.</option>
                             <option value="Ms.">Ms.</option>
                             <option value="Dr.">Dr.</option>
                              <option value="Miss.">Miss.</option>
                         </select>
-                    </label>
+                    </div>
+                </li>
+                 <li>
+                    <div style="padding-top:20px;">
+                        
+                    </div>
                 </li>
                 <li>
-                    <label>Name
-                        <input data-bind="value: addNewAddressModel.fields.name" type="text">
-                    </label>
+                    <span id="spanName" style="color:#006C6F;position:absolute;top:380px;display:none;">Name</span>
+                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                        <input onkeypress="aniName();"  onkeyup = "upaniName(this.id);" id="inputName" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" data-bind="value: addNewAddressModel.fields.name" type="text" placeholder="Name">
+                    </div>
+                </li>
+                 <li>
+                    <div style="padding-top:20px;">
+                        
+                    </div>
                 </li>
                 <li>
-                    <label>Email
-                        <input data-bind="value: addNewAddressModel.fields.email" placeholder="example@example.com" type="email">
-                    </label>
+                     <span id="spanAddEmail" style="color:#006C6F;position:absolute;top:450px;display:none;">Email</span>
+                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                               <input id="inputAddEmail" onkeypress="aniAddEmail();"  onkeyup = "upaniAddEmail(this.id);"  style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" data-bind="value: addNewAddressModel.fields.email" placeholder="example@example.com" type="email">
+                    </div>
+                </li>
+                <li>
+                    <div style="padding-top:20px;">
+                        
+                    </div>
+                </li>
+                <li>
+                     <span id="spanAddMobile" style="color:#006C6F;position:absolute;top:520px;display:none;">Mobile</span>
+                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                               <input id="inputAddMobile" onkeypress="aniAddMobile();"  onkeyup = "upaniAddMobile(this.id);"  style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;"  placeholder="Mobile Number" >
+                    </div>
                 </li>
             </ul>
 
             <div class="button-group">
-                <a class="primary" style="background-color:#FF6600"  href="components/finalOrder/view.html" data-role="button" >Save Address</a>
+                <a class="primary" style="background-color:#006C6F;color:white;"  href="components/Summary/view.html" data-role="button" >Save Address</a>
             </div>
         </form>
         <!-- START_CUSTOM_CODE_addNewAddressModel -->

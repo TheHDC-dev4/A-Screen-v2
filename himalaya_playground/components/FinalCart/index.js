@@ -1,6 +1,6 @@
 'use strict';
 
-app.FinalCart = kendo.observable({
+app.finalOrder = kendo.observable({
     onShow: function() {},
     afterShow: function() {}
 });

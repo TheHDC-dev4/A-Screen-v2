@@ -72,10 +72,12 @@
         content: "\e316";
     }
 
-::-webkit-input-placeholder { color:#FF6600;font-size:20px; }
-::-moz-placeholder { color:#FF6600;font-size:20px; } /* firefox 19+ */
-:-ms-input-placeholder { color:#FF6600;font-size:20px; } /* ie */
-input:-moz-placeholder { color:#FF6600;font-size:20px; }
+::-webkit-input-placeholder { color:#7f8c8d;font-size:20px; }
+::-moz-placeholder { color:#7f8c8d;font-size:20px; } /* firefox 19+ */
+:-ms-input-placeholder { color:#7f8c8d;font-size:20px; } /* ie */
+input:-moz-placeholder { color:#7f8c8d;font-size:20px; }
+
+
 
 #kendoUiMobileApp .rupee:after,
 #kendoUiMobileApp .rupee:before
@@ -213,12 +215,38 @@ width:50%;
 .km-play-e:after,
 .km-play-e:before{
       content: "\e013"; 
-    font-size:25px;
+   
+}
+
+.km-up-e:after,
+.km-up-e:before{
+      content: "\e011"; 
+    font-weight:bold;
+    font-size:20px;
+   
+}
+
+
+.km-down-e:after,
+.km-down-e:before{
+      content: "\e012"; 
+   
+}
+
+#kendoUiMobileApp  .Cart-back{
+ -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+
+    color:#696969;
+     
 }
 
 #kendoUiMobileApp  .detail-back{
-margin-left:-30px;
-    margin-top:-10px;
+ -ms-transform: rotate(1809deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+
     color:#696969;
      
 }

@@ -1,5 +1,17 @@
 'use strict';
-
+window.myTouchMensCare = {
+        touchstart: function(e)  {  },
+        swipe: function(e) { var router = new kendo.Router(); 
+                            if(e.direction == 'right')
+                                {
+                            router.navigate("components/oralCare/view.html");
+                                }
+                            
+                                },
+        tap: function(e) {  },
+        doubletap: function(e) {  },
+        hold: function(e) { }
+    }
 function AddtowishList(e)
 {
    $('#'+e).next().show();

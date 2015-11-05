@@ -1,5 +1,17 @@
 'use strict';
-
+window.myTouch = {
+        touchstart: function(e)  {  },
+        swipe: function(e) { var router = new kendo.Router(); 
+                            if(e.direction == 'left')
+                                {
+                            router.navigate("components/hariCares/view.html");
+                                }
+                            
+                                },
+        tap: function(e) {  },
+        doubletap: function(e) {  },
+        hold: function(e) { }
+    }
 function AddtowishList(e)
 {
    $('#'+e).next().show();

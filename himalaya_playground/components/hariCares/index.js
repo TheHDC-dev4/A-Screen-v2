@@ -1,4 +1,20 @@
 'use strict';
+window.myTouchHaircare = {
+        touchstart: function(e)  {  },
+        swipe: function(e) { var router = new kendo.Router(); 
+                            if(e.direction == 'left')
+                                {
+                            router.navigate("components/oralCare/view.html");
+                                }
+                            else  if(e.direction == 'right')
+                                 {
+                            router.navigate("components/dataListView/view.html");
+                                }
+                                },
+        tap: function(e) {  },
+        doubletap: function(e) {  },
+        hold: function(e) { }
+    }
 function AddtowishList(e)
 {
    $('#'+e).next().show();

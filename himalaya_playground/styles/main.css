@@ -3,26 +3,45 @@
  
 }
 
+.km-nova .km-header .km-tabstrip .km-button{
+    background-color:#16a085;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    font-size:20px;
+}
+
+.km-nova .km-header .km-tabstrip {
+    background-color:#16a085;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+}
+.km-nova .km-header .km-tabstrip .km-button.km-state-active  {
+   
+    background-color:#16a085;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    border-bottom:5px solid #FFF;
+}
+
+
+
 .km-nova .km-header .km-navbar
 {
       color:#FF6600;
-     border-bottom:1px solid #FF6600;
+   
 }
 
 .km-nova .km-view .km-listview{
-     border-top:1px solid #FF6600;
+    
 }
-
-
 
 .km-nova .km-view .km-header .km-navbar{
     color:#FF6600;
-    border-bottom:1px solid #FF6600;
+   
 }
-
-
-
-
 
 .km-flat .km-view .km-content {
     background-color: rgb(255, 255, 255);

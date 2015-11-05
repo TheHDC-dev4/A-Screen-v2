@@ -1,6 +1,17 @@
 <div data-role="view" data-title="Hair Care" data-layout="PersonalCare" data-model="app.hariCares" data-show="app.hariCares.onShow" data-after-show="app.hariCares.afterShow">
-    <!-- START_CUSTOM_CODE_hariCares -->
-    <!-- END_CUSTOM_CODE_hariCares -->
+   <!-- START_CUSTOM_CODE_dataListView -->
+  
+    <!-- END_CUSTOM_CODE_dataListView -->
+     <div
+        id="touchSurface"
+        data-role="touch"
+        data-enable-swipe="1"
+        data-touchstart="myTouchHaircare.touchstart"
+        data-swipe="myTouchHaircare.swipe"
+        data-tap="myTouchHaircare.tap"
+        data-doubletap="myTouchHaircare.doubletap"
+        data-hold="myTouchHaircare.hold"
+        >
     <ul data-role="listview" data-style="inset" data-template="hariCaresModelTemplate" data-bind="{ source: hariCaresModel.dataSource, events: {click: hariCaresModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" >
     </ul>
     <!-- START_CUSTOM_CODE_hariCaresModel -->
@@ -46,6 +57,9 @@
                                             </div>
                       </div>
        </div>
-        </div>
+   
     </script>
+      
+    </div>       
+    
 </div>

@@ -21,6 +21,7 @@
     <script src="dataProviders/defaultProvider.js"></script>
     <script src="dataProviders/himalayaPlaygroundBackend.js"></script>
     <script src="kendo/js/jquery-1.7.1.min.js"></script>
+  
 
     <style>
         @font-face {
@@ -58,7 +59,7 @@
     
     
     <script src="components/home/index.js"></script>
-    <div data-role="layout" data-id="PersonalCare">
+   <div data-role="layout" data-id="PersonalCare">
         <header data-role="header">
             <div data-role="navbar">
                 <div style="display: inline-block;width:100%;">
@@ -74,13 +75,18 @@
             
             </div>
      
-            <div data-role="tabstrip">
+          <div style="width:100%;" data-elastic="false" data-role="scroller"  >
+         
+           
+
+                <div data-role="tabstrip" style="width:200%;"   >
                 <a href="components/dataListView/view.html">Skin Care
             </a><a href="components/hariCares/view.html">Hair Care
             </a><a href="components/oralCare/view.html">Oral Care
             </a><a href="components/mensCare/view.html">Men's care</a>
 
             </div>
+               </div>
         </header>
 
         <!-- application views will be rendered here -->
@@ -116,7 +122,7 @@
                  <span style="margin-left:50px;margin-top:15px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;"  data-align="left"   data-role="view-title"></span>
               <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             
-                <a data-role="button"  href="#appDrawer" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                <a  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
                      
                     </a>
                   <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
@@ -160,19 +166,24 @@
                 <span style="margin-left:50px;margin-top:27px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;font-size:12px;color:#696969;"  data-align="left"   data-role="view-title"></span>
               <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             
-                <a data-role="button"  href="#appDrawer" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                <a  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
                      
                     </a>
                    <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
                 </div>
             </div>
-            <div data-role="tabstrip">
+            <div style="width:100%;" data-elastic="false" data-role="scroller"  >
+         
+           
+
+                <div data-role="tabstrip" style="width:200%;"   >
                 <a href="components/childernHealth/view.html">Childern's health
             </a><a href="components/dermaCare/view.html">Derma Care
             </a><a href="components/mensHealth/view.html">Men's Health
             </a><a href="components/oralHealth/view.html">Oral Health</a>
                 <a href="components/womensHealth/view.html">Women's Health</a>
             </div>
+                 </div>
         </header>
 
         <!-- application views will be rendered here -->
@@ -208,17 +219,22 @@
                 <span style="margin-left:50px;margin-top:27px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;font-size:12px;color:#696969;"  data-align="left"   data-role="view-title"></span>
               <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             
-                <a data-role="button"  href="#appDrawer" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                <a  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
                      
                     </a>
                  <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
                 </div>
             </div>
-            <div data-role="tabstrip">
+           <div style="width:100%;" data-elastic="false" data-role="scroller"  >
+         
+           
+
+                <div data-role="tabstrip" style="width:200%;"   >
                 <a href="components/postbath/view.html">Post Bath
             </a><a href="components/prebath/view.html">Pre Bath
                 </a><a href="components/bath/view.html">Bath</a>
 
+            </div>
             </div>
         </header>
 
@@ -256,18 +272,23 @@
                 <span style="margin-left:50px;margin-top:27px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;font-size:12px;color:#696969;"  data-align="left"   data-role="view-title"></span>
               <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             
-                <a data-role="button"  href="#appDrawer" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                <a  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
                      
                     </a>
                   <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
                 </div>
             </div>
-            <div data-role="tabstrip">
+          
+         
+           
+
+                <div data-role="tabstrip"   >
                 <a href="components/pureHerbs/view.html">Pure Herbs
             </a><a href="components/general/view.html">General
             </a>
 
             </div>
+         
         </header>
 
         <!-- application views will be rendered here -->
@@ -381,7 +402,20 @@
 
     </div>
     
-    
+     <div data-role="layout" data-id="Thanku">
+        <header data-role="header">
+            <div data-role="navbar">
+                  <span style="margin-left:50px;margin-top:10px; position:absolute;display: inline-block;white-space:nowrap;font-size:20px;"  data-align="left"   >Order Confirmed</span>
+               
+                  <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+                     <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+
+    </div>
     
      <div data-role="layout" data-id="finalOrder">
         <header data-role="header">
@@ -456,7 +490,7 @@
                 <div style="margin-left:50px;margin-top:15px; position:absolute;font-size:100%;"  data-align="left"   data-role="view-title"></div>
               <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             
-                <a data-role="button"  href="#appDrawer" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                <a  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
                      
                     </a>
                      
@@ -527,11 +561,11 @@
     <div data-role="drawer"  id="rightdrawer" style="width: 7em" data-title="Share" data-position="right"  data-stretch="true">
     <div data-role="tabstrip" class="km-vertical-tabstrip">
        
-        </a><a href="#drawer/two-way-drawers" data-icon="history">Order History
+        </a><a href="components/home/view.html" data-icon="history">Order History
       
-        </a><a href="#drawer/two-way-drawers" data-icon="favorites">Wishlist
-           <a href="#drawer/two-way-drawers" data-icon="contacts">Redeem Points
-        </a><a href="#drawer/two-way-drawers" data-icon="settings">E-Gift Card </a>
+        </a><a href="components/home/view.html" data-icon="favorites">Wishlist
+           <a href="components/home/view.html" data-icon="contacts">Redeem Points
+        </a><a href="components/home/view.html" data-icon="settings">E-Gift Card </a>
     </div>
 </div>
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
@@ -539,24 +573,10 @@
 
     <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
 </body>
+
+
+
 <script>
-    window.myTouch = {
-        touchstart: function(e) {
-            kendoConsole.log("touch start");
-        },
-        swipe: function(e) {
-            kendoConsole.log("swipe " + e.direction);
-        },
-        tap: function(e) {
-            kendoConsole.log("tap");
-        },
-        doubletap: function(e) {
-            kendoConsole.log("double tap");
-        },
-        hold: function(e) {
-            kendoConsole.log("hold");
-        }
-    }
-</script>
+
 
 </html>

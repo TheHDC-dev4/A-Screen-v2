@@ -2,8 +2,17 @@
 
 
 <div data-role="view" data-title="Hair Care" data-layout="main" data-model="app.cartDetails" data-show="app.cartDetails.onShow" data-after-show="app.cartDetails.afterShow">
-    <!-- START_CUSTOM_CODE_dataListView -->
-
+     <!-- START_CUSTOM_CODE_dataListView -->
+     <div   
+        id="touchSurface"
+        data-role="touch"
+        data-enable-swipe="1"
+        data-touchstart="myTouch.touchstart"
+        data-swipe="myTouch.swipe"
+        data-tap="myTouch.tap"
+        data-doubletap="myTouch.doubletap"
+        data-hold="myTouch.hold" >
+<!--data-filterable="{field: 'ProductName', operator: 'contains'}" -->
     <!-- END_CUSTOM_CODE_dataListView -->
     <ul  data-role="listview" data-style="inset" data-template="cartDetailsModelTemplate" data-bind="{ source: cartDetailsModel.dataSource, events: {click: cartDetailsModel.itemClick}}" data-pull-to-refresh="false" data-endless-scroll="false" >
     </ul>
@@ -56,4 +65,5 @@
                       </div>
        </div>
     </script>
+    </div>
 </div>

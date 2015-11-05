@@ -1,4 +1,22 @@
 'use strict';
+
+window.myTouch = {
+        touchstart: function(e)  {  },
+        swipe: function(e) { var router = new kendo.Router(); 
+                            if(e.direction == 'left')
+                                {
+                         
+                                      router.navigate("components/dataListView/view.html");
+                                }
+                            else
+                                {
+                                       router.navigate("components/oralCare/view.html");
+                                }
+                                },
+        tap: function(e) { alert("tap"); },
+        doubletap: function(e) { alert("double tap"); },
+        hold: function(e) {alert("hold"); }
+    }
 function AddtowishList(e)
 {
    $('#'+e).next().show();

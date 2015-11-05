@@ -2,6 +2,16 @@
     <!-- START_CUSTOM_CODE_dataListView -->
 <!--data-filterable="{field: 'ProductName', operator: 'contains'}" -->
     <!-- END_CUSTOM_CODE_dataListView -->
+     <div
+        id="touchSurface"
+        data-role="touch"
+        data-enable-swipe="1"
+        data-touchstart="myTouch.touchstart"
+        data-swipe="myTouch.swipe"
+        data-tap="myTouch.tap"
+        data-doubletap="myTouch.doubletap"
+        data-hold="myTouch.hold"
+        >
     <ul id="listView" data-role="listview" data-style="inset" data-template="dataListViewModelTemplate" data-bind="{ source: dataListViewModel.dataSource, events: {click: dataListViewModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" >
     </ul>
     <!-- START_CUSTOM_CODE_dataListViewModel -->
@@ -51,4 +61,5 @@
                       </div>
        </div>
     </script>
+    </div>
 </div>

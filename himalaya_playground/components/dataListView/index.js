@@ -1,10 +1,14 @@
 'use strict';
 window.myTouch = {
         touchstart: function(e)  {  },
-        swipe: function(e) { var router = new kendo.Router(); 
+        swipe: function(e) {   var router = new kendo.Router(); 
                             if(e.direction == 'left')
                                 {
-                            router.navigate("components/hariCares/view.html");
+                                          router.navigate("components/hariCares/view.html");
+                                  $("#scroller").css('left','300');
+                                      
+                                
+                           
                                 }
                             
                                 },
@@ -20,6 +24,7 @@ function AddtowishList(e)
 
 app.dataListView = kendo.observable({
     onShow: function() {
+         
        
        
           var app = {};

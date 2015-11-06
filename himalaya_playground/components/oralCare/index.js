@@ -5,6 +5,7 @@ window.myTouchOralCare = {
                             if(e.direction == 'left')
                                 {
                             router.navigate("components/mensCare/view.html");
+                                  
                                 }
                             else  if(e.direction == 'right')
                                 { 
@@ -65,7 +66,9 @@ function getAllTheData() {
       app.openDb();  
         getAllTheData();
     },
-    afterShow: function() {}
+    afterShow: function() {
+              $('.startLink').removeClass('startLink'); 
+    }
 });
 
 // START_CUSTOM_CODE_oralCare

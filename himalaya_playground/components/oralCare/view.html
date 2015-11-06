@@ -1,16 +1,7 @@
 <div data-role="view" data-title="Oral Care" data-layout="PersonalCare" data-model="app.oralCare" data-show="app.oralCare.onShow" data-after-show="app.oralCare.afterShow">
     <!-- START_CUSTOM_CODE_oralCare -->
     <!-- END_CUSTOM_CODE_oralCare -->
-    <div
-        id="touchSurface"
-        data-role="touch"
-        data-enable-swipe="1"
-        data-touchstart="myTouchOralCare.touchstart"
-        data-swipe="myTouchOralCare.swipe"
-        data-tap="myTouchOralCare.tap"
-        data-doubletap="myTouchOralCare.doubletap"
-        data-hold="myTouchOralCare.hold"
-        >
+   
     <ul data-role="listview" data-style="inset" data-template="oralCareModelTemplate" data-bind="{ source: oralCareModel.dataSource, events: {click: oralCareModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" >
     </ul>
     <!-- START_CUSTOM_CODE_oralCareModel -->
@@ -57,5 +48,5 @@
                       </div>
        </div>
     </script>
-    </div>
+
 </div>

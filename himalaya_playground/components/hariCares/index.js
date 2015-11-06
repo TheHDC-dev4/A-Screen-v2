@@ -1,10 +1,18 @@
 'use strict';
+
+
+
 window.myTouchHaircare = {
         touchstart: function(e)  {  },
         swipe: function(e) { var router = new kendo.Router(); 
                             if(e.direction == 'left')
                                 {
+                                     
                             router.navigate("components/oralCare/view.html");
+                                       
+                       $("#scroller").animate({
+            scrollLeft: -50
+        }, 800);
                                 }
                             else  if(e.direction == 'right')
                                  {
@@ -15,6 +23,8 @@ window.myTouchHaircare = {
         doubletap: function(e) {  },
         hold: function(e) { }
     }
+
+
 function AddtowishList(e)
 {
    $('#'+e).next().show();
@@ -63,7 +73,9 @@ function getAllTheData() {
       app.openDb();  
         getAllTheData();
     },
-    afterShow: function() {}
+    afterShow: function() {
+      $('.startLink').removeClass('startLink');  
+    }
 });
 
 // START_CUSTOM_CODE_hariCares

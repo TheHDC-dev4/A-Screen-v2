@@ -48,7 +48,7 @@ function getAllTheData() {
         getAllTheData();
     },
     afterShow: function() {
- 
+       $('.startLink').removeClass('startLink'); 
     },
 });
 

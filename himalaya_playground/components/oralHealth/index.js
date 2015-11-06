@@ -42,7 +42,9 @@ function getAllTheData() {
       app.openDb();  
         getAllTheData();
     },
-    afterShow: function() {}
+    afterShow: function() {
+              $('.startLink').removeClass('startLink'); 
+    }
 
 });
 

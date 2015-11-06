@@ -7,8 +7,8 @@
     
     <link href="bower_components/kendo-ui-appbuilder-core/styles/kendo.mobile.all.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
-    <link href="fontello-codes.css" rel="stylesheet">
 
+  <link href="styles/font/fontello/css/fontello-codes.css" rel="stylesheet">
 
     <!-- cordova script (this will be a 404 during development if served with `grunt serve`) -->
     <script src="cordova.js"></script>
@@ -75,14 +75,17 @@
             
             </div>
      
-          <div style="width:100%;" data-elastic="false" data-role="scroller"  >
+          <div style="width:100%;" data-elastic="false" data-role="scroller" id="scroller"  >
          
            
 
-                <div data-role="tabstrip" style="width:200%;"   >
-                <a href="components/dataListView/view.html">Skin Care
+                <div data-role="tabstrip" id="oralCare" style="width:200%;"   >
+                <a id="askin" class="startLink"  href="components/dataListView/view.html">Skin Care
             </a><a href="components/hariCares/view.html">Hair Care
-            </a><a href="components/oralCare/view.html">Oral Care
+                    
+            </a>
+                    
+                    <a  href="components/oralCare/view.html">Oral Care
             </a><a href="components/mensCare/view.html">Men's care</a>
 
             </div>
@@ -177,7 +180,7 @@
            
 
                 <div data-role="tabstrip" style="width:200%;"   >
-                <a href="components/childernHealth/view.html">Childern's health
+                <a class="startLink" href="components/childernHealth/view.html">Childern's health
             </a><a href="components/dermaCare/view.html">Derma Care
             </a><a href="components/mensHealth/view.html">Men's Health
             </a><a href="components/oralHealth/view.html">Oral Health</a>
@@ -230,7 +233,7 @@
            
 
                 <div data-role="tabstrip" style="width:200%;"   >
-                <a href="components/postbath/view.html">Post Bath
+                <a class="startLink" href="components/postbath/view.html">Post Bath
             </a><a href="components/prebath/view.html">Pre Bath
                 </a><a href="components/bath/view.html">Bath</a>
 
@@ -283,7 +286,7 @@
            
 
                 <div data-role="tabstrip"   >
-                <a href="components/pureHerbs/view.html">Pure Herbs
+                <a class="startLink" href="components/pureHerbs/view.html">Pure Herbs
             </a><a href="components/general/view.html">General
             </a>
 

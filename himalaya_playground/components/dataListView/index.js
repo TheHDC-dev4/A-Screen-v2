@@ -1,4 +1,9 @@
 'use strict';
+$(document).ajaxStart(function(){
+    $(this).html("<img src='http://www.w3schools.com/jquery/demo_wait.gif'>");
+});
+
+
 window.myTouch = {
         touchstart: function(e)  {  },
         swipe: function(e) {   var router = new kendo.Router(); 
@@ -18,8 +23,9 @@ window.myTouch = {
     }
 function AddtowishList(e)
 {
-   $('#'+e).next().show();
-    $('#'+e).hide();
+ 
+   $('#'+e).css('color','#FF6600');
+  //  $('#'+e).hide();
 }
 
 app.dataListView = kendo.observable({
@@ -520,9 +526,8 @@ app.selectRecords(catid);
 // START_CUSTOM_CODE_bathModel
 function AddtowishListDetails(e)
 {
- 
-   $('#'+e).next().show();
-    $('#'+e).hide();
+
+   $('#'+e).css('color','#FF6600');
 }
 
     function addTo(e)

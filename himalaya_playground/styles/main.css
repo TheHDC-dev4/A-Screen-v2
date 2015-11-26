@@ -1,11 +1,65 @@
 .km-nova .km-header .km-navbar  .km-view-title{
     background-color: rgb(255, 255, 255);
  
+   
+  
+ 
 }
+
+.payment-option {
+   margin-left:-20px;
+}
+
+.payment-option li{
+    padding-top:20px;
+        padding-bottom:20px;
+  
+     list-style-type:none;
+}
+
+
+.payment-option li >div{
+    padding-right:20px;
+}
+.payment-option li input[type=radio]{
+transform: scale(2, 2); 
+-moz-transform:scale(2, 2); 
+-ms-transform: scale(2, 2); 
+-webkit-transform: scale(2, 2); 
+-o-transform: scale(2, 2); 
+    
+}
+.largebutton{
+    width:100%;
+   margin-left:-10px;
+}
+
 .km-nova .km-tabstrip .km-button
 {
      background-color:#006C6F;
    
+}
+
+
+
+#kendoUiMobileApp .checkout-button{
+    background-color:#FF6600;color:#fff;float:right;width:83%;margin-top:0px;border: none;border-radius: 0;
+}
+
+#rightdrawer .km-vertical-tabstrip{
+    background:#FFF
+}
+#rightdrawer .km-vertical-tabstrip .km-button{
+    background:#7f8c8d;
+    color:#fff;
+}
+
+#rightdrawer .km-vertical-tabstrip .km-button .km-state-active{
+    background:#000;
+}
+.km-nova .km-footer  {
+    background: #006C6F;
+    padding:0px;
 }
 
 
@@ -39,7 +93,7 @@
     background-image: none;
     background-image: none;
     background-image: none;
-    border-bottom:5px solid #FFF;
+    border-bottom:5px solid #FF6600;
 }
 
 
@@ -58,6 +112,13 @@
     color:#FF6600;
    
 }
+
+ .km-Wishlist-e:after,
+    .km-Wishlist-e:before
+    {
+        content: "\e044";
+    }
+
 
 .km-flat .km-view .km-content {
     background-color: rgb(255, 255, 255);
@@ -112,15 +173,113 @@
 :-ms-input-placeholder { color:#7f8c8d;font-size:20px; } /* ie */
 input:-moz-placeholder { color:#7f8c8d;font-size:20px; }
 
+
+#kendoUiMobileApp .inactive{
+      pointer-events: none;
+   cursor: default;
+    font-size:12px;
+   width:50%;
+}
 #kendoUiMobileApp .startLink{
-border-bottom:5px solid #FFF;
+border-bottom:5px solid #FF6600;
 }
 
-
+#kendoUiMobileApp .history-font{
+    font-size:15px;
+}
 #kendoUiMobileApp .rupee:after,
 #kendoUiMobileApp .rupee:before
 {
 
+}
+#kendoUiMobileApp .redeem-title{
+    color:#006C6F;
+    font-size:30px;
+    display:block;
+}
+#kendoUiMobileApp .redeem-point-display{
+    font-size:20px;
+    display:block;
+    font-weight:bold;
+}
+}
+#kendoUiMobileApp .one-third-order-hisrory{
+    padding-left:10px;
+    width:33%;
+    margin:auto;
+    display:block;
+    white-space:nowrap;
+}
+#kendoUiMobileApp .order-History-outerDiv
+{
+    width:100%;
+   
+}
+
+#kendoUiMobileApp .ruler{
+    display:block;
+    width:100%;
+      border-bottom:1px solid #bdc3c7;
+}
+
+#kendoUiMobileApp .left-status-left{
+    width:100%;
+    height:10px;
+  border-top-left-radius: 2em;
+ border-bottom-left-radius: 2em;
+ 
+    
+}
+#kendoUiMobileApp .green
+{
+    background-color:green;
+}
+
+#kendoUiMobileApp .gray
+{
+    background-color:#bdc3c7;
+}
+#kendoUiMobileApp .left-status-middle{
+   
+       
+   height:10px;
+    width:100%;
+  
+   
+   
+}
+
+
+
+
+.container {
+    display: table;
+         width:100%;
+    }
+
+  .row  {
+    display: table-row;
+      width:100%;
+    }
+
+  .leftcell, .rightcell, .middlecell {
+    display: table-cell;
+ border-right:1px solid #FFF;
+      white-space:nowrap;
+    }
+
+
+#kendoUiMobileApp .space:empty::after {
+    content: ".";
+    visibility: hidden;
+}
+#kendoUiMobileApp .left-status-Right{
+     height:10px;
+    width:100%;
+   
+     border-top-right-radius: 2em;
+ border-bottom-right-radius: 2em;
+    
 }
 
 #kendoUiMobileApp .block {
@@ -184,6 +343,39 @@ border-bottom:5px solid #FFF;
 #kendoUiMobileApp .view-title {
     text-align: center;
     font-weight: normal;
+}
+
+.km-nova .km-drawer .km-content{
+color:black;
+}
+
+.km-nova .km-drawer .km-content .km-listview li {
+    background-color:#bdc3c7;
+border:none;
+color:black;
+    
+}
+
+.km-nova .km-drawer .km-content .km-listview-link:after {
+     background-color:#bdc3c7;
+    display: none
+}
+
+
+
+.km-nova .km-drawer .km-content .km-listview {
+     background-color:#bdc3c7;
+    border:none;
+}
+.km-nova .km-drawer .km-listview li.km-state-active {
+     background-color:#bdc3c7;
+  border:none;
+}
+.km-nova .km-drawer,
+[data-role=view-title] {
+  
+   
+                                          
 }
 
 #kendoUiMobileApp .km-drawer-button:after,
@@ -311,14 +503,28 @@ width:50%;
     word-wrap: break-word;
 }
 
+#kendoUiMobileApp #navigation-container  {
+    background: #7f8c8d;
+    color: #000;
+}
+
 #kendoUiMobileApp #navigation-container .active {
-    background: #10c4b2;
-    color: #fff;
+    background: #7f8c8d;
+    color: #000;
+}
+#kendoUiMobileApp .km-listview-link  {
+    color: #000
+
+}
+
+#kendoUiMobileApp  .km-icon .km-home{
+color:#000;
 }
 
 #kendoUiMobileApp #navigation-container .active:after {
-    color: #fff;
+    color: #000;
 }
+
 #kendoUiMobileApp .containerdivNewLine { clear: both; float: left; display: block; position: relative; } 
 #kendoUiMobileApp h5 {color:#FF6600;width:220px;}
 #kendoUiMobileApp h2{color:#FF6600;}

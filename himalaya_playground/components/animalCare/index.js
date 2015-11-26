@@ -1,9 +1,7 @@
 'use strict';
 function AddtowishList(e)
 {
-    alert();
-   $('#'+e).next().show();
-    $('#'+e).hide();
+    $('#'+e).css('color','#FF6600');
 }
 
 app.animalCare = kendo.observable({

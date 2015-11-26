@@ -19,8 +19,7 @@ window.myTouch = {
     }
 function AddtowishList(e)
 {
-   $('#'+e).next().show();
-    $('#'+e).hide();
+    $('#'+e).css('color','#FF6600');
 }
 
 app.cartDetails = kendo.observable({

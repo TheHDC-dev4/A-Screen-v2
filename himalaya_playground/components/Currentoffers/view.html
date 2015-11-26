@@ -1,0 +1,15 @@
+<div data-role="view" data-title="Current Offers" data-layout="main-nonav" data-model="app.currentOffers" data-show="app.currentOffers.onShow" data-after-show="app.currentOffers.afterShow">
+    <!-- START_CUSTOM_CODE_currentOffers -->
+    <!-- END_CUSTOM_CODE_currentOffers -->
+    <ul data-role="listview" data-style="inset" data-template="currentOffersModelTemplate" data-bind="{ source: currentOffersModel.dataSource}" data-pull-to-refresh="true" data-endless-scroll="false">
+    </ul>
+    <!-- START_CUSTOM_CODE_currentOffersModel -->
+    <!-- END_CUSTOM_CODE_currentOffersModel -->
+    <script type="text/x-kendo-template" id="currentOffersModelTemplate">
+        <div class="image-with-text">
+            <img src="#: data['offer_image_urlUrl'] #" width="100%" height="25%" style="border:1px solid \#FF6600">
+            <h3>#: data['offer_name'] #</h3>
+            <p>#: data['offer_Terms'] #</p>
+        </div>
+    </script>
+</div>

@@ -56,7 +56,11 @@
     <script src="components/dataListView/index.js"></script>
     <script src="components/FinalCart/index.js"></script>
      <script src="components/Summary/index.js"></script>
-    
+      <script src="components/OrderHistory/index.js"></script>
+    <script src="components/Redeempoints/index.js"></script>
+      <script src="components/Currentoffers/index.js"></script>
+    <script src="components/egiftcard/index.js"></script>
+        <script src="components/Search/index.js"></script>
     
     <script src="components/home/index.js"></script>
    <div data-role="layout" data-id="PersonalCare">
@@ -67,7 +71,7 @@
                 <span style="margin-left:50px;margin-top:27px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;font-size:12px;color:#696969;"  data-align="left"   data-role="view-title"></span>
               <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             
-                <a data-role="button"  href="#appDrawer" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                <a data-role="button"  href="components/Search/view.html" href="components/Search/view.html" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
                      
                     </a>
                  <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
@@ -80,6 +84,7 @@
            
 
                 <div data-role="tabstrip" id="oralCare" style="width:200%;"   >
+                    <a class="inactive">< &nbsp;Slide&nbsp;></a>
                 <a id="askin" class="startLink"  href="components/dataListView/view.html">Skin Care
             </a><a href="components/hariCares/view.html">Hair Care
                     
@@ -96,14 +101,14 @@
         <footer data-role="footer">
 
 
-            <div class="left" style="width:32%;">
+            <div class="left" style="width:10%;">
 
 
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:green;" data-role="button" data-badge="0">
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:#FFF;background-color:#006C6F;font-size:20px;padding:5px 0px 0px 5px;border:none;" style="border:none;" data-role="button" data-badge="0">
 
                 </a>
             </div>
-            <div class="left" style="width:32%;height: auto;">
+            <div class="left" style="width:20%;height: auto;">
 
                 <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
                    <span style="display:inline block;white-space: nowrap;font-weight:bold;">
@@ -111,8 +116,8 @@
             </span>
                 </div>
             </div>
-            <div style="width:32%;height: auto;float:right">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            <div style="width:60%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button" >Check out</a>
             </div>
         </footer>
     </div>
@@ -125,7 +130,7 @@
                  <span style="margin-left:50px;margin-top:15px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;"  data-align="left"   data-role="view-title"></span>
               <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             
-                <a  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                <a data-role="button"   href="components/Search/view.html"  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
                      
                     </a>
                   <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
@@ -135,26 +140,26 @@
         </header>
 
         <!-- application views will be rendered here -->
-        <footer data-role="footer">
+      <footer data-role="footer">
 
 
-            <div class="left" style="width:32%;">
+            <div class="left" style="width:10%;">
 
 
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:green;" data-role="button" data-badge="0">
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:#FFF;background-color:#006C6F;font-size:20px;padding:5px 0px 0px 5px;border:none;" style="border:none;" data-role="button" data-badge="0">
 
                 </a>
             </div>
-            <div class="left" style="width:32%;height: auto;">
+            <div class="left" style="width:20%;height: auto;">
 
                 <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
-                  <span style="display:inline block;white-space: nowrap;font-weight:bold;">
+                   <span style="display:inline block;white-space: nowrap;font-weight:bold;">
                &#8377 680.00
             </span>
                 </div>
             </div>
-            <div style="width:32%;height: auto;float:right">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            <div style="width:60%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button" >Check out</a>
             </div>
         </footer>
     </div>
@@ -169,7 +174,7 @@
                 <span style="margin-left:50px;margin-top:27px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;font-size:12px;color:#696969;"  data-align="left"   data-role="view-title"></span>
               <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             
-                <a  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                <a data-role="button"  href="components/Search/view.html"  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
                      
                     </a>
                    <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
@@ -180,6 +185,7 @@
            
 
                 <div data-role="tabstrip" style="width:200%;"   >
+                     <a class="inactive">< &nbsp;Slide&nbsp;></a>
                 <a class="startLink" href="components/childernHealth/view.html">Childern's health
             </a><a href="components/dermaCare/view.html">Derma Care
             </a><a href="components/mensHealth/view.html">Men's Health
@@ -190,25 +196,26 @@
         </header>
 
         <!-- application views will be rendered here -->
-        <footer data-role="footer">
+           <footer data-role="footer">
 
 
-            <div class="left" style="width:32%;">
+            <div class="left" style="width:10%;">
 
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:green;" data-role="button" data-badge="0">
+
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:#FFF;background-color:#006C6F;font-size:20px;padding:5px 0px 0px 5px;border:none;" style="border:none;" data-role="button" data-badge="0">
 
                 </a>
             </div>
-            <div class="left" style="width:32%;height: auto;">
+            <div class="left" style="width:20%;height: auto;">
 
                 <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
-                    <span style="display:inline block;white-space: nowrap;font-weight:bold;">
+                   <span style="display:inline block;white-space: nowrap;font-weight:bold;">
                &#8377 680.00
             </span>
                 </div>
             </div>
-            <div style="width:32%;height: auto;float:right">
-                <a data-role="button" class="km-primary" href="components/authenticationView/view.html" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            <div style="width:60%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
             </div>
         </footer>
     </div>
@@ -222,7 +229,7 @@
                 <span style="margin-left:50px;margin-top:27px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;font-size:12px;color:#696969;"  data-align="left"   data-role="view-title"></span>
               <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             
-                <a  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                <a data-role="button"   href="components/Search/view.html"  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
                      
                     </a>
                  <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
@@ -233,6 +240,7 @@
            
 
                 <div data-role="tabstrip" style="width:200%;"   >
+                     <a class="inactive">< &nbsp;Slide&nbsp;></a>
                 <a class="startLink" href="components/postbath/view.html">Post Bath
             </a><a href="components/prebath/view.html">Pre Bath
                 </a><a href="components/bath/view.html">Bath</a>
@@ -242,26 +250,26 @@
         </header>
 
         <!-- application views will be rendered here -->
-        <footer data-role="footer">
+         <footer data-role="footer">
 
 
-            <div class="left" style="width:32%;">
+            <div class="left" style="width:10%;">
 
 
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:green;" data-role="button" data-badge="0">
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:#FFF;background-color:#006C6F;font-size:20px;padding:5px 0px 0px 5px;border:none;" style="border:none;" data-role="button" data-badge="0">
 
                 </a>
             </div>
-            <div class="left" style="width:32%;height: auto;">
+            <div class="left" style="width:20%;height: auto;">
 
                 <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
-                     <span style="display:inline block;white-space: nowrap;font-weight:bold;">
+                   <span style="display:inline block;white-space: nowrap;font-weight:bold;">
                &#8377 680.00
             </span>
                 </div>
             </div>
-            <div style="width:32%;height: auto;float:right">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            <div style="width:60%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
             </div>
         </footer>
     </div>
@@ -275,7 +283,7 @@
                 <span style="margin-left:50px;margin-top:27px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;font-size:12px;color:#696969;"  data-align="left"   data-role="view-title"></span>
               <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             
-                <a  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                <a  data-role="button"  href="components/Search/view.html" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
                      
                     </a>
                   <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
@@ -286,6 +294,7 @@
            
 
                 <div data-role="tabstrip"   >
+                    
                 <a class="startLink" href="components/pureHerbs/view.html">Pure Herbs
             </a><a href="components/general/view.html">General
             </a>
@@ -295,26 +304,26 @@
         </header>
 
         <!-- application views will be rendered here -->
-        <footer data-role="footer">
+       <footer data-role="footer">
 
 
-            <div class="left" style="width:32%;">
+            <div class="left" style="width:10%;">
 
 
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:green;" data-role="button" data-badge="0">
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:#FFF;background-color:#006C6F;font-size:20px;padding:5px 0px 0px 5px;border:none;" style="border:none;" data-role="button" data-badge="0">
 
                 </a>
             </div>
-            <div class="left" style="width:32%;height: auto;">
+            <div class="left" style="width:20%;height: auto;">
 
                 <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
-                    <span style="display:inline block;white-space: nowrap;font-weight:bold;">
+                   <span style="display:inline block;white-space: nowrap;font-weight:bold;">
                &#8377 680.00
             </span>
                 </div>
             </div>
-            <div style="width:32%;height: auto;float:right">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            <div style="width:60%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;width:83%;margin-top:0px;">Check out</a>
             </div>
         </footer>
     </div>
@@ -340,26 +349,26 @@
         </header>
 
         <!-- application views will be rendered here -->
-        <footer data-role="footer">
+     <footer data-role="footer">
 
 
-            <div class="left" style="width:32%;">
+            <div class="left" style="width:10%;">
 
 
-                <a id="btnCart" data-icon="cart"  style="color:green;" data-role="backbutton" data-badge="0">
+                <a  id="btnCart" data-icon="cart"  style="color:#FFF;background-color:#006C6F;font-size:20px;padding:5px 0px 0px 5px;border:none;" style="border:none;" data-role="backbutton" data-badge="0">
 
                 </a>
             </div>
-            <div class="left" style="width:32%;height: auto;">
+            <div class="left" style="width:20%;height: auto;">
 
                 <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
-                     <span style="display:inline block;white-space: nowrap;font-weight:bold;">
+                   <span style="display:inline block;white-space: nowrap;font-weight:bold;">
                &#8377 680.00
             </span>
                 </div>
             </div>
-            <div style="width:32%;height: auto;float:right">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            <div style="width:60%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
             </div>
         </footer>
     </div>
@@ -404,7 +413,39 @@
         <!-- application views will be rendered here -->
 
     </div>
-    
+   
+         <div data-role="layout" data-id="Search">
+        <header data-role="header">
+            <div data-role="navbar">
+                  <span style="margin-left:50px;margin-top:10px; position:absolute;display: inline-block;white-space:nowrap;font-size:20px;"  data-align="left"   >Search Product</span>
+                <a data-role="backbutton"  class="detail-back" data-align="left" data-icon="details"></a>
+                
+                 
+                                     
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+
+    </div>
+        
+        
+            <div data-role="layout" data-id="giftcard">
+        <header data-role="header">
+            <div data-role="navbar">
+                  <span style="margin-left:50px;margin-top:10px; position:absolute;display: inline-block;white-space:nowrap;font-size:20px;"  data-align="left"   >E Gift Card</span>
+                <a data-role="backbutton"  class="detail-back" data-align="left" data-icon="details"></a>
+                
+                 
+                                      <a href="components/finalOrder/view.html" data-role="button" data-icon="cart"  style="color:green;margin-right:10px;margin-top:5px;" data-role="button" data-badge="0" data-align="right" ></a>            
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+
+    </div>
      <div data-role="layout" data-id="Thanku">
         <header data-role="header">
             <div data-role="navbar">
@@ -490,10 +531,10 @@
             <div  data-role="navbar">
                  <div style="display: inline-block;width:100%;">
            
-                <div style="margin-left:50px;margin-top:15px; position:absolute;font-size:100%;"  data-align="left"   data-role="view-title"></div>
+                <div style="margin-left:50px;margin-top:15px; position:absolute;font-size:20px;white-space:nowrap;"  data-align="left"   data-role="view-title"></div>
               <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             
-                <a  style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                <a data-role="button"  href="components/Search/view.html" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
                      
                     </a>
                      
@@ -503,33 +544,55 @@
         </header>
 
         <!-- application views will be rendered here -->
-        <footer data-role="footer">
-            <div class="left" style="width:32%;">
+           <footer data-role="footer">
 
 
-                <a href="components/cartDetails/view.html"   data-icon="cart"  style="color:green;" data-role="button" data-badge="3">
+            <div class="left" style="width:10%;">
+
+
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:#FFF;background-color:#006C6F;font-size:20px;padding:5px 0px 0px 5px;border:none;" style="border:none;" data-role="button" data-badge="0">
 
                 </a>
             </div>
-            <div class="left" style="width:32%;height: auto;">
+            <div class="left" style="width:20%;height: auto;">
 
                 <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
-                    <span style="display:inline block;white-space: nowrap;font-weight:bold;">
+                   <span style="display:inline block;white-space: nowrap;font-weight:bold;">
                &#8377 680.00
             </span>
                 </div>
             </div>
-            <div style="width:32%;height: auto;float:right">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary" style="background-color:#FF6600;color:#fff;float:right;">Check out</a>
+            <div style="width:60%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
             </div>
         </footer>
     </div>
 
-    <div  id="appDrawer" data-role="drawer" data-title="Navigation">
+        
+        
+        
+        
+        
+        
+        
+        
+    <div  id="appDrawer" data-role="drawer" >
         <header data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-            </div>
+            <div style="width:100%;height:150px;background-color:#FFF;display:block;padding-top:10px;" align="center" >
+      <div style="width:100%;display:block;" >
+           <img src="images/20-X-20-logo.png" style="border:1px solid #FF6600;border-radius:40px;padding:8px;" />
+     </div>    
+     <div style="width:100%;display:block;"> 
+               <span style="margin-top:0px; color:#7f8c8d; white-space:nowrap;font-size:20px;"  data-align="left"   >+91-9738730067</span>
+     </div> 
+           <div style="width:100%;display:block;padding-top:10px;"> 
+               <a href="#" data-role="button" >Sign Out</a>
+             
+     </div>    
+                                                                                                                            </div>
+        
+             
+
         </header>
         <ul id="navigation-container" data-role="listview">
             <li><a href="components/home/view.html" data-icon="home">Home</a></li>
@@ -561,14 +624,61 @@
          
         </ul>
     </div>
+    
+    
+    
+    
+  <div data-role="layout" data-id="Wishlist">
+        <header data-role="header">
+            <div data-role="navbar">
+                 <div style="display: inline-block;width:100%;">
+           
+                 <span style="margin-left:50px;margin-top:15px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;"  data-align="left"   data-role="view-title"></span>
+              <a data-role="button" style="color:#696969;" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+            
+                <a  href="components/Search/view.html" style="background-image:url(images/search.png);background-color:#FFF;background-size: 100% 100%;background-repeat: no-repeat;width:100px;height:27px;border:none;"    data-align="right" >
+                     
+                    </a>
+                  <a data-role="button" style="color:#696969;" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
+                </div>
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+      <footer data-role="footer">
+
+
+            <div class="left" style="width:10%;">
+
+
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  style="color:#FFF;background-color:#006C6F;font-size:20px;padding:5px 0px 0px 5px;border:none;" style="border:none;" data-role="button" data-badge="0">
+
+                </a>
+            </div>
+            <div class="left" style="width:20%;height: auto;">
+
+                <div style="color:#fff;margin: 0 auto;width:32%;margin-top:10px;">
+                   <span style="display:inline block;white-space: nowrap;font-weight:bold;">
+               &#8377 680.00
+            </span>
+                </div>
+            </div>
+            <div style="width:60%;height: auto;float:right">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
+            </div>
+        </footer>
+    </div>
+    
+    
     <div data-role="drawer"  id="rightdrawer" style="width: 7em" data-title="Share" data-position="right"  data-stretch="true">
     <div data-role="tabstrip" class="km-vertical-tabstrip">
        
-        </a><a href="components/home/view.html" data-icon="history">Order History
+        </a><a href="components/OrderHistory/view.html" data-icon="history">Order History
       
-        </a><a href="components/home/view.html" data-icon="favorites">Wishlist
-           <a href="components/home/view.html" data-icon="contacts">Redeem Points
-        </a><a href="components/home/view.html" data-icon="settings">E-Gift Card </a>
+        </a><a href="components/Wishlist/view.html" data-icon="favorites">Wishlist
+           <a href="components/Redeempoints/view.html" data-icon="contacts">Redeem Points
+        </a><a href="https://www.woohoo.in/himalaya-e-gift-voucher/" data-role="button" data-rel="external" data-icon="settings">E-Gift Card </a>
     </div>
 </div>
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->

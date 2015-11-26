@@ -27,8 +27,7 @@ window.myTouchHaircare = {
 
 function AddtowishList(e)
 {
-   $('#'+e).next().show();
-    $('#'+e).hide();
+    $('#'+e).css('color','#FF6600');
 }
 
 app.hariCares = kendo.observable({

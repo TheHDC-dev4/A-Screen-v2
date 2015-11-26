@@ -2,7 +2,17 @@
 
 app.summary = kendo.observable({
     onShow: function() {},
-    afterShow: function() {}
+    afterShow: function() {},
+     onChange: function(e) {
+        
+           var router = new kendo.Router();
+         e.checked ? 
+        
+             router.navigate("components/thankyou/view.html")
+         
+         : "unchecked";
+        
+        }
 });
 
 // START_CUSTOM_CODE_summary

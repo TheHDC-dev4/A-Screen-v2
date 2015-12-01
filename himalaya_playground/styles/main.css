@@ -1,9 +1,9 @@
+
+
+
 .km-nova .km-header .km-navbar  .km-view-title{
     background-color: rgb(255, 255, 255);
- 
-   
-  
- 
+
 }
 
 .payment-option {
@@ -40,7 +40,58 @@ transform: scale(2, 2);
    
 }
 
+#kendoUiMobileApp .header-outer{
+display:inline-block;width:100%;
+}
 
+
+#kendoUiMobileApp .Catagory-header-title{
+    margin-left:50px;margin-top:5px; position:absolute;font-size:100%;
+    display: inline-block;white-space:nowrap;font-size:15px;
+}
+
+#kendoUiMobileApp .Catagory-Sub-header-title{
+margin-left:50px;margin-top:27px;
+position:absolute;font-size:100%;
+display: inline-block;white-space:nowrap;font-size:12px;color:#696969;
+}
+#kendoUiMobileApp .Catagory-title{
+margin-left:50px;margin-top:15px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;
+}
+#kendoUiMobileApp .header-search-link{
+background-image:url('../images/search.png');
+background-color:#FFF;background-size: 100% 100%;
+background-repeat: no-repeat;width:100px;height:27px;border:none;" 
+}
+
+#kendoUiMobileApp .Left-drawer{
+color:#696969;
+}
+#kendoUiMobileApp .Right-drawer{
+color:#696969;
+}
+
+#kendoUiMobileApp .footer-first-part{
+   width:10%; 
+}
+
+
+#kendoUiMobileApp .footer-second-part{
+    width:20%;height:auto;
+}
+
+#kendoUiMobileApp .footer-second-part div{
+color:#fff;margin: 0 auto;width:32%;margin-top:10px;
+}
+
+
+#kendoUiMobileApp .footer-second-part div span{
+    display:inline block;white-space: nowrap;font-weight:bold;
+}
+
+#kendoUiMobileApp .footer-third-part{
+   width:60%;height: auto;float:right
+}
 
 #kendoUiMobileApp .checkout-button{
     background-color:#FF6600;color:#fff;float:right;width:83%;margin-top:0px;border: none;border-radius: 0;

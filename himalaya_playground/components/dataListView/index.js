@@ -30,8 +30,6 @@ function AddtowishList(e)
 
 app.dataListView = kendo.observable({
     onShow: function() {
-         
-       
        
           var app = {};
 app.db = null;
@@ -338,8 +336,23 @@ function getAllTheData() {
 
     app.selectAllRecords(render);
 }
+    
+    
+    
+    app.Droptable = function() {
+  
+         app.db.transaction(function(tx) {
+        tx.executeSql("drop table CartTable", []);
+   
+      
+    });
+}
+    
     /* end  get table*/
     app.openDb();
+    
+    //app.Droptable();
+   // alert('table droped');
        var data = e.button.data();
     
  app.checkRecords(parseInt(data.id));

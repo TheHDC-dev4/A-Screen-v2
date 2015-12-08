@@ -6,27 +6,27 @@
     <!-- START_CUSTOM_CODE_mensHealthModel -->
     <!-- END_CUSTOM_CODE_mensHealthModel -->
     <script type="text/x-kendo-template" id="mensHealthModelTemplate">
-        <div  style="width:100%;">
-                 <div class="image-with-text left" style=" display: table;width:100%;" >
-                 <div style="display: table-row;width:100%;">
+        <div  class="class100">
+                 <div class="image-with-text left"  >
+                 <div class="View-Row">
                                              <a  href="\#components/mensHealth/details.html?uid=${uid}"> 
-                                                     <div style="display: table-cell;width:30%;vertical-align:top;float:left;">
+                                                     <div class="View-Cell left">
                                                       <img src="#: data['ImageUrl'] #" width="100%" >
                                                       </div>
-                                                       <div style="display: table-cell;vertical-align:top;width:30%;" >
-                                                       <h5 style="width:100%;">#: data['ProductName'] #</h5>
-                                                                                                               <span style="font-size:10px;float:left;color:black;">&\#8377</span> <h6>#: data['Price'] #</h6>
-                                                         <h6 style="color:\#a8a8a8">#: data['size'] #</h6>
+                                                      <div class="View-Cell-title left" >
+                                                       <h5 class="class100">#: data['ProductName'] #</h5>
+                                                      <span class="product-price-display">&\#8377</span> <h6>#: data['Price'] #</h6>
+                                                         <h6 class="Size-color">#: data['size'] #</h6>
                                                         </div>
                                                  </a>   
-                                        				 <div style="display: table-cell;width:30%;vertical-align:top;">
-                                          						<div style="float:right;">
-                                          							<div style="float:right;">
+                                        				 <div class="View-Cell">
+                                          						<div class="Right">
+                                          							<div class="Right">
                                            								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#:
                                                                         data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="removeFromCart"  data-title="test"  data-test="#: data['Test'] #" >
                                           									<img src="images/User-Interface-Minus-icon.png">
                                           								</a>
-                                          								<div  data-init="init"  class="left" style="padding-right:7px;padding-left:7px;padding-top:4px;" >
+                                          								<div  data-init="init"   class = "padding-befor-productcount left" >
                                            										0<i></i>
                                            								</div>
                                                                         
@@ -36,15 +36,16 @@
                                                                                 </a>
                                            								</div>
                                            							</div>
-                                                                     <div style="clear: both; float: left; display: block; position: relative;">
+                                                                     <div class="clear-after-product-count">
                                                                     </div>
-                                                                    <div style="float:right;min-height:30px;padding-right:25px;padding-top:10px;">
-                                                                        <a data-role = "button" data-icon="Wishlist-e" id=  "btn#: data['Catalogid'] #"  style="font-size:35px;border:none;padding:0px;color:\#ecf0f1;" class="km-small" onclick="AddtowishList(this.id);"></a>
+                                                                   <div class = "padding-befor-wishlist">
+                                                                        <a data-role = "button" data-icon="Wishlist-e" id=  "btn#: data['Catalogid'] #"  class= "wishlist-button" class="km-small" onclick="AddtowishList(this.id);"></a>
                                                                        
                                                                         </div>
                                            					</div>
                                             </div>
                       </div>
        </div>
+        </div>
     </script>
 </div>

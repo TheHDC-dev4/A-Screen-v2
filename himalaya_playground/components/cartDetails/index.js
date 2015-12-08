@@ -71,7 +71,6 @@ function addToCart(e)
 {
 
 /* var data = e.button.data();
-
     alert( data.test);*/
 
     

@@ -2,31 +2,64 @@
     <div id="addNewAddressModel" class="form-view">
         <form>
             <ul class="form-content"  data-style="inset" style="list-style-type: none;">
-                <li>
-                  <span id="spanAddress" style="color:#006C6F;position:absolute;top:30px;display:none;">Address</span>
-                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
-                        <input onkeypress="aniAddress();"  onkeyup = "upaniAddress(this.id);" id="inputAddress" placeholder="Address"  style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" data-bind="value: addNewAddressModel.fields.address" type="text">
+                    <li>
+                    <span id="spanName" class="animated-placholder"  style="top:30px;" >Name</span>
+                 <div class="authentication-textbox-div">
+                        <input onkeypress="aniName();"  onkeyup = "upaniName(this.id);" id="inputName" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" data-bind="value: addNewAddressModel.fields.name" type="text" placeholder="Name">
                     </div>
                 </li>
                  <li>
-                    <div style="padding-top:20px;">
+                    <div class="address-text-spacing">
                         
                     </div>
                 </li>
                 <li>
-                    <span id="spanCity" style="color:#006C6F;position:absolute;top:100px;display:none;">City</span>
-                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
-                        <input placeholder="City" onkeypress="aniCity();"  onkeyup = "upaniCity(this.id);" id="inputCity" data-bind="value: addNewAddressModel.fields.city" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" type="text">
+                     <span id="spanAddEmail" class="animated-placholder" style="top:100px;">Email</span>
+                   <div class="authentication-textbox-div">
+                               <input id="inputAddEmail" onkeypress="aniAddEmail();"  onkeyup = "upaniAddEmail(this.id);"  style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" data-bind="value: addNewAddressModel.fields.email" placeholder="example@example.com" type="email">
                     </div>
                 </li>
-                 <li>
-                    <div style="padding-top:20px;">
+                <li>
+                    <div class="address-text-spacing">
                         
                     </div>
                 </li>
                 <li>
-                    <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
-                   <select  style="padding-top:10px;border:none;width:100%;height:45px;font-size:20px;"  data-role="dropdownlist">
+                     <span id="spanAddMobile" class="animated-placholder" style="top:180px;">Mobile</span>
+                   <div class="authentication-textbox-div">
+                               <input id="inputAddMobile" onkeypress="aniAddMobile();"  onkeyup = "upaniAddMobile(this.id);"  style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;"  placeholder="Mobile Number" >
+                    </div>
+                </li>
+                                <li>
+                    <div class="address-text-spacing">
+                        
+                    </div>
+                </li>
+                <li>
+                  <span id="spanAddress" class="animated-placholder" style="top:260px;">Address</span>
+                   <div class="authentication-textbox-div">
+                        <input onkeypress="aniAddress();"  onkeyup = "upaniAddress(this.id);" id="inputAddress" placeholder="Address"   data-bind="value: addNewAddressModel.fields.address" type="text">
+                    </div>
+                </li>
+                 <li>
+                    <div class="address-text-spacing">
+                        
+                    </div>
+                </li>
+                <li>
+                    <span id="spanCity" class="animated-placholder"  style="top:310px;">City</span>
+                    <div class="authentication-textbox-div">
+                        <input placeholder="City" onkeypress="aniCity();"  onkeyup = "upaniCity(this.id);" id="inputCity" data-bind="value: addNewAddressModel.fields.city" type="text">
+                    </div>
+                </li>
+                 <li>
+                    <div class="address-text-spacing">
+                        
+                    </div>
+                </li>
+                <li>
+                   <div class="authentication-textbox-div">
+                   <select   data-role="dropdownlist">
                          	<option value="0" selected="selected">State / UT</option>
 		<option value="AN">Andaman &amp; Nicobar Islands</option>
 		<option value="AP">Andhra Pradesh</option>
@@ -68,70 +101,32 @@
                     </div>
                 </li>
                  <li>
-                    <div style="padding-top:20px;">
+                  <div class="address-text-spacing">
                         
                     </div>
                 </li>
                 <li>
-                     <span id="spanPincode" style="color:#006C6F;position:absolute;top:240px;display:none;">Pincode</span>
-                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
-                        <input onkeypress="aniPincode();"  onkeyup = "upaniPincode(this.id);" id="inputPincode" data-bind="value: addNewAddressModel.fields.pincode" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" placeholder="Pincode" type="text">
+                     <span id="spanPincode" class="animated-placholder" style="top:440px;">Pincode</span>
+                 <div class="authentication-textbox-div">
+                        <input onkeypress="aniPincode();"  onkeyup = "upaniPincode(this.id);" id="inputPincode" data-bind="value: addNewAddressModel.fields.pincode"  placeholder="Pincode" type="text">
                     </div>
                 </li>
                  <li>
-                    <div style="padding-top:20px;">
+                   <div class="address-text-spacing">
                         
                     </div>
                 </li>
-                <li>
-                 
-                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
-                        <select style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" data-role="dropdownlist">
-                             <option value="0" selected="selected">Title.</option>
-                            <option value="Mr.">Mr.</option>
-                            <option value="Ms.">Ms.</option>
-                            <option value="Dr.">Dr.</option>
-                             <option value="Miss.">Miss.</option>
-                        </select>
-                    </div>
-                </li>
+               
                  <li>
-                    <div style="padding-top:20px;">
+                    <div class="address-text-spacing">
                         
                     </div>
                 </li>
-                <li>
-                    <span id="spanName" style="color:#006C6F;position:absolute;top:380px;display:none;">Name</span>
-                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
-                        <input onkeypress="aniName();"  onkeyup = "upaniName(this.id);" id="inputName" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" data-bind="value: addNewAddressModel.fields.name" type="text" placeholder="Name">
-                    </div>
-                </li>
-                 <li>
-                    <div style="padding-top:20px;">
-                        
-                    </div>
-                </li>
-                <li>
-                     <span id="spanAddEmail" style="color:#006C6F;position:absolute;top:450px;display:none;">Email</span>
-                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
-                               <input id="inputAddEmail" onkeypress="aniAddEmail();"  onkeyup = "upaniAddEmail(this.id);"  style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" data-bind="value: addNewAddressModel.fields.email" placeholder="example@example.com" type="email">
-                    </div>
-                </li>
-                <li>
-                    <div style="padding-top:20px;">
-                        
-                    </div>
-                </li>
-                <li>
-                     <span id="spanAddMobile" style="color:#006C6F;position:absolute;top:520px;display:none;">Mobile</span>
-                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
-                               <input id="inputAddMobile" onkeypress="aniAddMobile();"  onkeyup = "upaniAddMobile(this.id);"  style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;"  placeholder="Mobile Number" >
-                    </div>
-                </li>
+            
             </ul>
 
             <div class="button-group">
-                <a class="primary" style="background-color:#006C6F;color:white;"  href="components/Summary/view.html" data-role="button" >Save Address</a>
+                <a  class="Green-button"  href="components/Summary/view.html" data-role="button" >Save Address</a>
             </div>
         </form>
         <!-- START_CUSTOM_CODE_addNewAddressModel -->

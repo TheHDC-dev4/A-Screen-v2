@@ -1,6 +1,34 @@
-<div data-role="view" style="height:2000px;" data-title="EgiftExternal" data-layout="EgiftExternal"
+<div data-role="view" style="height:2000px;" data-title="Gift Card" data-layout="main-nonav"
      data-model="app.EgiftExternal"  data-show="app.EgiftExternal.onShow" data-after-show="app.EgiftExternal.afterShow">
-  <iframe  style="width:100%;" height="2000"    src="https://www.woohoo.in/himalaya-e-gift-voucher">
-</iframe>
+      <ul class="payment-option"  >
+                
+          <li>
+                    <span id="spanGiftCardNumber" style="color:#006C6F;position:absolute;top:30px;display:none;">Gift Card Number</span>
+                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                       
+                         <input id="inputGiftCardNumber" onkeypress="aniGiftCardNumber();"  onkeyup = "upGiftCardNumber(this.id);" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" placeholder="Gift Card Number" type="email" data-bind="value: authenticationViewModel.email" >
+                    </div>
+                      
+                 
+                </li>
+        <li>
+                    <span id="spanGiftCardPin" style="color:#006C6F;position:absolute;top:140px;display:none;">Gift Card Pin</span>
+                   <div style="width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;">
+                       
+                         <input id="inputGiftCardPin" onkeypress="aniGiftCardPin();"  onkeyup = "upGiftCardPin(this.id);" style="padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;" placeholder="Gift Card Pin" type="email" data-bind="value: authenticationViewModel.email" >
+                    </div>
+                      
+                 
+                </li>
+                  
+    <li>
+                                <a  style="background-color:#006C6F;color:white;text-align:center;" data-role="button" class="largebutton"  >View Balance</a>
+                         </li>
+            <li>
+                                <a   style="background-color:#006C6F;color:white;text-align:center;" data-role="button" class="largebutton"  >Reset</a>
+                         </li>
+          <li>
+          </li>
+    </ul>
       
 </div>

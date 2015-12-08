@@ -1,39 +1,34 @@
 
-
-
 <div data-role="view" data-title="My Cart" data-layout="Mycart" data-model="app.cartDetails" data-show="app.cartDetails.onShow" data-transition="overlay:up" data-after-show="app.cartDetails.afterShow">
     <!-- START_CUSTOM_CODE_dataListView -->
-
     <!-- END_CUSTOM_CODE_dataListView -->
     <ul data-role="listview" data-style="inset" data-template="cartDetailsModelTemplate" data-bind="{ source: cartDetailsModel.dataSource, events: {click: cartDetailsModel.itemClick}}" data-pull-to-refresh="false" data-endless-scroll="false" >
     </ul>
     <!-- START_CUSTOM_CODE_dataListViewModel -->
     <!-- END_CUSTOM_CODE_dataListViewModel -->
     <script type="text/x-kendo-template" id="cartDetailsModelTemplate">
-    <div  style="width:100%;">
-                 <div class="image-with-text left" style=" display: table;width:100%;" >
-                 <div style="display: table-row;width:100%;">
-                                            <!--  <a  href="\#components/cartDetails/details.html?uid=${uid}">  -->
-                                            <span>
-                                                     <div style="display: table-cell;width:30%;vertical-align:top;float:left;">
+            <div  class="class100">
+                 <div class="image-with-text left"  >
+                 <div class="View-Row">
+                                             <a  href="\#components/childernHealth/details.html?uid=${uid}"> 
+                                                      <div class="View-Cell left">
                                                       <img src="#: data['ImageUrl'] #" width="100%" >
                                                       </div>
-                                                       <div style="display: table-cell;vertical-align:top;width:30%;" >
-                                                       <h5 style="width:100%;">#: data['ProductName'] #</h5>
-                                                                                                              <span style="font-size:10px;float:left;color:black;">&\#8377</span> <h6>#: data['Price'] #</h6>
-                                                         <h6 style="color:\#a8a8a8">#: data['size'] #</h6>
+                                                      <div class="View-Cell-title left" >
+                                                       <h5 class="class100">#: data['ProductName'] #</h5>
+                                                      <span class="product-price-display">&\#8377</span> <h6>#: data['Price'] #</h6>
+                                                         <h6 class="Size-color">#: data['size'] #</h6>
                                                         </div>
-                                                        </span>
-                                                <!--  </a>   -->
-                                        				 <div style="display: table-cell;width:30%;vertical-align:top;">
-                                          						<div style="float:right;">
-                                          							<div style="float:right;">
+                                                 </a>   
+                                        				 <div class="View-Cell">
+                                          						<div class="Right">
+                                          							<div class="Right">
                                            								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#:
                                                                         data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="removeFromCart"  data-title="test"  data-test="#: data['Test'] #" >
                                           									<img src="images/User-Interface-Minus-icon.png">
                                           								</a>
-                                          								<div  data-init="init"  class="left" style="padding-right:7px;padding-left:7px;padding-top:4px;" >
-                                           										2<i></i>
+                                          								<div  data-init="init"   class = "padding-befor-productcount left" >
+                                           										0<i></i>
                                            								</div>
                                                                         
                                                                                <a  data-role="button" class="left round"  data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="addToCart" data-title="test" 
@@ -42,10 +37,10 @@
                                                                                 </a>
                                            								</div>
                                            							</div>
-                                                                     <div style="clear: both; float: left; display: block; position: relative;">
+                                                                     <div class="clear-after-product-count">
                                                                     </div>
-                                                                   <div style="float:right;margin-top:25px;min-height:30px;">
-                                                                        <a data-role = "button" style="width:90px; font-size:10px;" id=  "btn#: data['Catalogid'] #"   class="km-small" onclick="RemoveFromCart(this.id);">Remove</a>
+                                                                   <div style="float:right;margin-top:25px;min-height:30px;padding-right:10px;" align="center">
+                                                                        <a data-role = "button"  id=  "btn#: data['Catalogid'] #"   data-icon="delete-e" onclick="RemoveFromCart(this.id);" style="border:none;color:\#000;"></a>
                                                                         <span style="font-size:12px;display:none;color:\#FF6600;white-space:nowrap;">Remove</span>
                                                                         </div>
                                            					</div>

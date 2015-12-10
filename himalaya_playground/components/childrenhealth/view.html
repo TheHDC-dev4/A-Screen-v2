@@ -1,16 +1,16 @@
-    <div data-role="view" data-title="general" data-layout="Wellness" data-model="app.general" data-show="app.general.onShow" data-after-show="app.general.afterShow">
-        <!-- START_CUSTOM_CODE_general -->
-        <!-- END_CUSTOM_CODE_general -->
-        <ul data-role="listview" data-style="inset" data-template="generalModelTemplate" data-bind="{ source: generalModel.dataSource, events: {click: generalModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" >
+    <div data-role="view" data-title="Children Health" data-layout="Pharma" data-model="app.childernHealth" data-show="app.childernHealth.onShow" data-after-show="app.childernHealth.afterShow">
+        <!-- START_CUSTOM_CODE_childernHealth -->
+        <!-- END_CUSTOM_CODE_childernHealth -->
+        <ul data-role="listview" data-style="inset" data-template="childernHealthModelTemplate" data-bind="{ source: childernHealthModel.dataSource, events: {click: childernHealthModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" >
         </ul>
-        <!-- START_CUSTOM_CODE_generalModel -->
-        <!-- END_CUSTOM_CODE_generalModel -->
-        <script type="text/x-kendo-template" id="generalModelTemplate">
-               <div  class="class100">
+        <!-- START_CUSTOM_CODE_childernHealthModel -->
+        <!-- END_CUSTOM_CODE_childernHealthModel -->
+        <script type="text/x-kendo-template" id="childernHealthModelTemplate">
+             <div  class="class100">
                      <div class="image-with-text left"  >
                      <div class="View-Row">
-                                                 <a  href="\#components/general/details.html?uid=${uid}"> 
-                                                         <div class="View-Cell left">
+                                                 <a  href="\#components/childrenhealth/details.html?uid=${uid}"> 
+                                                          <div class="View-Cell left">
                                                           <img src="#: data['ImageUrl'] #" width="100%" >
                                                           </div>
                                                           <div class="View-Cell-title left" >

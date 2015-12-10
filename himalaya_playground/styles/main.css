@@ -6,11 +6,12 @@
 
 .payment-option {
    margin-left:-20px;
+    padding-right:20px;
 }
 
 .payment-option li{
     padding-top:20px;
-        padding-bottom:20px;
+        padding-bottom:40px;
   
      list-style-type:none;
 }
@@ -39,6 +40,50 @@ transform: scale(2, 2);
 }
 
 
+.km-locator-e:after,
+  .km-locator-e:before
+    {
+        content: "\e0b4";
+         color:#ff6600;
+    }
+
+
+.km-notification-e:after,
+  .km-notification-e:before
+    {
+        content: "\e0c2";
+         color:#ff6600;
+    }
+
+.km-support-e:after,
+  .km-support-e:before
+    {
+          content: "\e319";
+         color:#ff6600;
+        background:#ff6600;
+    }
+
+
+
+
+.km-shipping-e:after,
+  .km-shipping-e:before
+    {
+         content: "\e07a";
+         color:#ff6600;
+
+    }
+
+
+.km-policy-e:after,
+  .km-policy-e:before
+    {
+         content: "\e0b2";
+          color:#ff6600;
+
+    }
+
+
  .km-delete-e:after,
     .km-delete-e:before
     {
@@ -56,6 +101,11 @@ transform: scale(2, 2);
 color:#006C6F;position:absolute;top:30px;display:none;"
 }
 
+
+
+.payment-width{
+   width:80%;
+}
 #kendoUiMobileApp .Green-button
 {background-color:#006C6F;color:white;}
 #kendoUiMobileApp .Orange-button
@@ -638,6 +688,7 @@ color:black;
 #kendoUiMobileApp .navagation {
   background-color:#FFF;  
     position: relative; 
+    vertical-align:top;
    
 }
 
@@ -655,7 +706,7 @@ color:black;
 .km-nova .km-drawer .km-content .km-listview li {
     background-color:#FFF;
 border:none;
-color:black;
+color:#FF6600;
     
    
     
@@ -735,11 +786,11 @@ color:black;
 
 #kendoUiMobileApp .View-Cell
 {
-    display: table-cell;vertical-align:top;width:30%;
+    display: table-cell;vertical-align:top;width:40%;
 }
 #kendoUiMobileApp .View-Cell-title
 {
-    display: table-cell;vertical-align:top;width:50%;
+    display: table-cell;vertical-align:top;width:60%;
 }
 
 #kendoUiMobileApp .View-Row

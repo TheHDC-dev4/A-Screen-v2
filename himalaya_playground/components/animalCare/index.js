@@ -10,7 +10,8 @@ app.animalCare = kendo.observable({
         
           var app = {};
 app.db = null;
-   
+    var view = this.view();
+view.element.find(".km-scroll-container").css("-webkit-transform", "");
 
     
 /* start create data base*/

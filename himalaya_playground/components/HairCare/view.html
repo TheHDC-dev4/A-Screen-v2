@@ -1,65 +1,65 @@
 
 
 
-<div data-role="view" data-title="Hair Care" data-layout="main" data-model="app.cartDetails" data-show="app.cartDetails.onShow" data-after-show="app.cartDetails.afterShow">
-     <!-- START_CUSTOM_CODE_dataListView -->
-     <div   
-        id="touchSurface"
-        data-role="touch"
-        data-enable-swipe="1"
-        data-touchstart="myTouch.touchstart"
-        data-swipe="myTouch.swipe"
-        data-tap="myTouch.tap"
-        data-doubletap="myTouch.doubletap"
-        data-hold="myTouch.hold" >
-<!--data-filterable="{field: 'ProductName', operator: 'contains'}" -->
-    <!-- END_CUSTOM_CODE_dataListView -->
-    <ul  data-role="listview" data-style="inset" data-template="cartDetailsModelTemplate" data-bind="{ source: cartDetailsModel.dataSource, events: {click: cartDetailsModel.itemClick}}" data-pull-to-refresh="false" data-endless-scroll="false" >
-    </ul>
-    <!-- START_CUSTOM_CODE_dataListViewModel -->
-    <!-- END_CUSTOM_CODE_dataListViewModel -->
-    <script type="text/x-kendo-template" id="cartDetailsModelTemplate">
-    <div  class="class100">
-                 <div class="image-with-text left"  >
-                 <div class="View-Row">
-                                             <a  href="\#components/animalCare/details.html?uid=${uid}"> 
-                                                     <div class="View-Cell left">
-                                                      <img src="#: data['ImageUrl'] #" width="100%" >
-                                                      </div>
-                                                      <div class="View-Cell-title left" >
-                                                       <h5 class="class100">#: data['ProductName'] #</h5>
-                                                      <span class="product-price-display">&\#8377</span> <h6>#: data['Price'] #</h6>
-                                                         <h6 class="Size-color">#: data['size'] #</h6>
-                                                        </div>
-                                                 </a>   
-                                        				 <div class="View-Cell">
-                                          						<div class="Right">
-                                          							<div class="Right">
-                                           								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#:
-                                                                        data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="removeFromCart"  data-title="test"  data-test="#: data['Test'] #" >
-                                          									<img src="images/User-Interface-Minus-icon.png">
-                                          								</a>
-                                          								<div  data-init="init"   class = "padding-befor-productcount left" >
-                                           										0<i></i>
-                                           								</div>
-                                                                        
-                                                                               <a  data-role="button" class="left round"  data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="addToCart" data-title="test" 
-                                                                               data-test="#: data['Test'] #" >
-                                                                               <img  src="images/User-Interface-Plus-icon.png">
-                                                                                </a>
-                                           								</div>
-                                           							</div>
-                                                                     <div class="clear-after-product-count">
-                                                                    </div>
-                                                                   <div class = "padding-befor-wishlist">
-                                                                        <a data-role = "button" data-icon="Wishlist-e" id=  "btn#: data['Catalogid'] #"  class= "wishlist-button" class="km-small" onclick="AddtowishList(this.id);"></a>
-                                                                       
+    <div data-role="view" data-title="Hair Care" data-layout="main" data-model="app.cartDetails" data-show="app.cartDetails.onShow" data-after-show="app.cartDetails.afterShow">
+         <!-- START_CUSTOM_CODE_dataListView -->
+         <div   
+            id="touchSurface"
+            data-role="touch"
+            data-enable-swipe="1"
+            data-touchstart="myTouch.touchstart"
+            data-swipe="myTouch.swipe"
+            data-tap="myTouch.tap"
+            data-doubletap="myTouch.doubletap"
+            data-hold="myTouch.hold" >
+    <!--data-filterable="{field: 'ProductName', operator: 'contains'}" -->
+        <!-- END_CUSTOM_CODE_dataListView -->
+        <ul  data-role="listview" data-style="inset" data-template="cartDetailsModelTemplate" data-bind="{ source: cartDetailsModel.dataSource, events: {click: cartDetailsModel.itemClick}}" data-pull-to-refresh="false" data-endless-scroll="false" >
+        </ul>
+        <!-- START_CUSTOM_CODE_dataListViewModel -->
+        <!-- END_CUSTOM_CODE_dataListViewModel -->
+        <script type="text/x-kendo-template" id="cartDetailsModelTemplate">
+        <div  class="class100">
+                     <div class="image-with-text left"  >
+                     <div class="View-Row">
+                                                 <a  href="\#components/animalCare/details.html?uid=${uid}"> 
+                                                         <div class="View-Cell left">
+                                                          <img src="#: data['ImageUrl'] #" width="100%" >
+                                                          </div>
+                                                          <div class="View-Cell-title left" >
+                                                           <h5 class="class100">#: data['ProductName'] #</h5>
+                                                          <span class="product-price-display">&\#8377</span> <h6>#: data['Price'] #</h6>
+                                                             <h6 class="Size-color">#: data['size'] #</h6>
+                                                            </div>
+                                                     </a>   
+                                                             <div class="View-Cell">
+                                                                    <div class="Right">
+                                                                        <div class="Right">
+                                                                            <a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#:
+                                                                            data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="removeFromCart"  data-title="test"  data-test="#: data['Test'] #" >
+                                                                                <img src="images/User-Interface-Minus-icon.png">
+                                                                            </a>
+                                                                            <div  data-init="init"   class = "padding-befor-productcount left" >
+                                                                                    0<i></i>
+                                                                            </div>
+
+                                                                                   <a  data-role="button" class="left round"  data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" data-click="addToCart" data-title="test" 
+                                                                                   data-test="#: data['Test'] #" >
+                                                                                   <img  src="images/User-Interface-Plus-icon.png">
+                                                                                    </a>
+                                                                            </div>
                                                                         </div>
-                                           					</div>
-                                            </div>
-                      </div>
-       </div>
+                                                                         <div class="clear-after-product-count">
+                                                                        </div>
+                                                                       <div class = "padding-befor-wishlist">
+                                                                            <a data-role = "button" data-icon="Wishlist-e" id=  "btn#: data['Catalogid'] #"  class= "wishlist-button" class="km-small" onclick="AddtowishList(this.id);"></a>
+
+                                                                            </div>
+                                                                </div>
+                                                </div>
+                          </div>
+           </div>
+            </div>
+        </script>
         </div>
-    </script>
     </div>
-</div>

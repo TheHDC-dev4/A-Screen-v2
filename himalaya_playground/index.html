@@ -4,11 +4,11 @@
 <head>
     <title></title>
     <meta charset="utf-8">
-    
+
     <link href="bower_components/kendo-ui-appbuilder-core/styles/kendo.mobile.all.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
 
-  <link href="styles/font/fontello/css/fontello-codes.css" rel="stylesheet">
+    <link href="styles/font/fontello/css/fontello-codes.css" rel="stylesheet">
 
     <!-- cordova script (this will be a 404 during development if served with `grunt serve`) -->
     <script src="cordova.js"></script>
@@ -21,14 +21,13 @@
     <script src="dataProviders/defaultProvider.js"></script>
     <script src="dataProviders/himalayaPlaygroundBackend.js"></script>
     <script src="kendo/js/jquery-1.7.1.min.js"></script>
-  
+
 
     <style>
         @font-face {
             font-family: "plus";
             src: url("images/fontello.woff") format("woff"), url("images/fontello.ttf") format("truetype");
         }
-
     </style>
 </head>
 
@@ -48,7 +47,7 @@
     <script src="components/mensHealth/index.js"></script>
     <script src="components/oralHealth/index.js"></script>
     <script src="components/dermaCare/index.js"></script>
-    <script src="components/childernHealth/index.js"></script>
+    <script src="components/childrenhealth/index.js"></script>
     <script src="components/animalCare/index.js"></script>
     <script src="components/mensCare/index.js"></script>
     <script src="components/oralCare/index.js"></script>
@@ -56,70 +55,65 @@
     <script src="components/cartDetails/index.js"></script>
     <script src="components/dataListView/index.js"></script>
     <script src="components/FinalCart/index.js"></script>
-     <script src="components/Summary/index.js"></script>
-      <script src="components/OrderHistory/index.js"></script>
+    <script src="components/Summary/index.js"></script>
+    <script src="components/OrderHistory/index.js"></script>
     <script src="components/Redeempoints/index.js"></script>
-      <script src="components/Currentoffers/index.js"></script>
+    <script src="components/Currentoffers/index.js"></script>
     <script src="components/egiftcard/index.js"></script>
-        <script src="components/Search/index.js"></script>
-            <script src="components/egiftExternal/index.js"></script>
-    
+    <script src="components/Search/index.js"></script>
+    <script src="components/egiftExternal/index.js"></script>
+
     <script src="components/home/index.js"></script>
-   <div data-role="layout" data-id="PersonalCare">
+    <div data-role="layout" data-id="PersonalCare">
         <header data-role="header">
             <div data-role="navbar">
                 <div class="header-outer">
-             <span class="Catagory-header-title"  data-align="left"   >Personal Care</span>
-                <span class="Catagory-Sub-header-title"  data-align="left"   data-role="view-title"></span>
-              <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-            
-                <a data-role="button"   href="components/Search/view.html" class="header-search-link"  data-icon="search"   data-align="right" >
-                     
-                    </a>
-                 <a data-role="button"  class="Right-drawer" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
+                    <span class="Catagory-header-title" data-align="left">Personal Care</span>
+                    <span class="Catagory-Sub-header-title" data-align="left" data-role="view-title"></span>
+                    <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+                    <a data-role="button" href="components/Search/view.html" class="header-search-link" data-icon="search" data-align="right"></a>
+                    <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer" data-icon="right-e" data-align="right"></a>
                 </div>
-            
-            </div>
-     
-          <div class = "class100" data-elastic="false" data-role="scroller" id="scroller"  >
-         
-           
-
-                <div data-role="tabstrip" id="oralCare" class = "class200"   >
-                   
-                <a id="askin" class="startLink"  href="components/dataListView/view.html">Skin Care
-            </a><a href="components/hariCares/view.html">Hair Care
-                    
-            </a>
-                    
-                    <a  href="components/oralCare/view.html">Oral Care
-            </a><a href="components/mensCare/view.html">Men's care</a>
 
             </div>
-               </div>
+
+            <div class="class100" data-elastic="false" data-role="scroller" id="scroller">
+
+
+
+                <div data-role="tabstrip" id="oralCare" class="class200">
+
+                    <a id="askin" class="startLink" href="components/dataListView/view.html">Skin Care
+                    </a><a href="components/hariCares/view.html">Hair Care
+                    
+                    </a>
+
+                    <a href="components/oralCare/view.html">Oral Care
+                    </a><a href="components/mensCare/view.html">Men's care</a>
+
+                </div>
+            </div>
         </header>
 
         <!-- application views will be rendered here -->
-          <footer data-role="footer">
+        <footer data-role="footer">
 
 
-            <div class="left footer-first-part" >
+            <div class="left footer-first-part">
 
 
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart" class="cart"  data-role="button" data-badge="0">
-
-                </a>
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart" class="cart" data-role="button" data-badge="0"></a>
             </div>
-            <div class="left footer-second-part"  >
+            <div class="left footer-second-part">
 
-                <div >
-                   <span >
-               &#8377 680.00
-            </span>
+                <div>
+                    <span>&#8377 680.00
+                    </span>
                 </div>
             </div>
-            <div   class="footer-third-part">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button" >Check out</a>
+            <div class="footer-third-part">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
             </div>
         </footer>
     </div>
@@ -127,15 +121,13 @@
     <div data-role="layout" data-id="AnimalCare">
         <header data-role="header">
             <div data-role="navbar">
-                 <div class="header-outer">
-           
-                 <span class="Catagory-title"  data-align="left"   data-role="view-title">Animal Care</span>
-              <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-            
-                <a data-role="button"   href="components/Search/view.html"  class="header-search-link"  data-icon="search"    data-align="right" >
-                     
-                    </a>
-                  <a data-role="button" class="Right-drawer"  data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
+                <div class="header-outer">
+
+                    <span class="Catagory-title" data-align="left" data-role="view-title">Animal Care</span>
+                    <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+                    <a data-role="button" href="components/Search/view.html" class="header-search-link" data-icon="search" data-align="right"></a>
+                    <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer" data-icon="right-e" data-align="right"></a>
                 </div>
             </div>
 
@@ -145,23 +137,20 @@
         <footer data-role="footer">
 
 
-            <div class="left footer-first-part" >
+            <div class="left footer-first-part">
 
 
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  class="cart" data-role="button" data-badge="0">
-
-                </a>
+                <a href="components/cartDetails/view.html" id="A1" data-icon="cart" class="cart" data-role="button" data-badge="0"></a>
             </div>
-            <div class="left footer-second-part"  >
+            <div class="left footer-second-part">
 
-                <div >
-                   <span >
-               &#8377 680.00
-            </span>
+                <div>
+                    <span>&#8377 680.00
+                    </span>
                 </div>
             </div>
-            <div   class="footer-third-part">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button" >Check out</a>
+            <div class="footer-third-part">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
             </div>
         </footer>
     </div>
@@ -169,208 +158,190 @@
 
     <div data-role="layout" data-id="Pharma">
         <header data-role="header">
-               <div data-role="navbar">
+            <div data-role="navbar">
                 <div class="header-outer">
-             <span class="Catagory-header-title"  data-align="left"   >Personal Care</span>
-                <span class="Catagory-Sub-header-title"  data-align="left"   data-role="view-title"></span>
-              <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-            
-                <a data-role="button"   href="components/Search/view.html" class="header-search-link"  data-icon="search"   data-align="right" >
-                     
-                    </a>
-                 <a data-role="button"  class="Right-drawer" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
+                    <span class="Catagory-header-title" data-align="left">Pharmaceuticals</span>
+                    <span class="Catagory-Sub-header-title" data-align="left" data-role="view-title"></span>
+                    <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+                    <a data-role="button" href="components/Search/view.html" class="header-search-link" data-icon="search" data-align="right"></a>
+                    <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer" data-icon="right-e" data-align="right"></a>
                 </div>
-            
+
             </div>
-            <div class = "class100" data-elastic="false" data-role="scroller"  >
-         
-           
-
-                <div data-role="tabstrip" class = "class200"   >
-                   
-                <a class="startLink" href="components/childernHealth/view.html">Pharmaceuticals
-            </a><a href="components/dermaCare/view.html">Derma Care
-            </a><a href="components/mensHealth/view.html">Men's Health
-            </a><a href="components/oralHealth/view.html">Oral Health</a>
-                <a href="components/womensHealth/view.html">Women's Health</a>
-            </div>
-                 </div>
-        </header>
-
-        <!-- application views will be rendered here -->
-              <footer data-role="footer">
+            <div class="class100" data-elastic="false" data-role="scroller">
 
 
-            <div class="left footer-first-part" >
 
+                <div data-role="tabstrip" class="class200">
 
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  class="cart" data-role="button" data-badge="0">
-
-                </a>
-            </div>
-            <div class="left footer-second-part"  >
-
-                <div >
-                   <span >
-               &#8377 680.00
-            </span>
+                    <a class="startLink" href="components/childrenhealth/view.html"> children's Health
+                    </a><a href="components/dermaCare/view.html">Derma Care
+                    </a><a href="components/mensHealth/view.html">Men's Health
+                    </a><a href="components/oralHealth/view.html">Oral Health</a>
+                    <a href="components/womensHealth/view.html">Women's Health</a>
                 </div>
             </div>
-            <div   class="footer-third-part">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button" >Check out</a>
-            </div>
-        </footer>
-    </div>
-
-    <div data-role="layout" data-id="Baby">
-        <header data-role="header">
-             <div data-role="navbar">
-                <div class="header-outer">
-             <span class="Catagory-header-title"  data-align="left"   >Baby Care</span>
-                <span class="Catagory-Sub-header-title"  data-align="left"   data-role="view-title"></span>
-              <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-            
-                <a data-role="button"   href="components/Search/view.html" class="header-search-link"  data-icon="search"   data-align="right" >
-                     
-                    </a>
-                 <a data-role="button"  class="Right-drawer" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
-                </div>
-            
-            </div>
-           <div class="class100" data-elastic="false" data-role="scroller"  >
-         
-           
-
-                <div data-role="tabstrip" class = "class200"   >
-                   
-                <a class="startLink" href="components/postbath/view.html">Post Bath
-            </a><a href="components/prebath/view.html">Pre Bath
-                </a><a href="components/bath/view.html">Bath</a>
-
-            </div>
-            </div>
-        </header>
-
-        <!-- application views will be rendered here -->
-          <footer data-role="footer">
-
-
-            <div class="left footer-first-part" >
-
-
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  class="cart" data-role="button" data-badge="0">
-
-                </a>
-            </div>
-            <div class="left footer-second-part"  >
-
-                <div >
-                   <span >
-               &#8377 680.00
-            </span>
-                </div>
-            </div>
-            <div   class="footer-third-part">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button" >Check out</a>
-            </div>
-        </footer>
-    </div>
-
-    <div data-role="layout" data-id="Wellness">
-        <header data-role="header">
-              <div data-role="navbar">
-                <div class="header-outer">
-             <span class="Catagory-header-title"  data-align="left"   >wellness</span>
-                <span class="Catagory-Sub-header-title"  data-align="left"   data-role="view-title"></span>
-              <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-            
-                <a data-role="button"   href="components/Search/view.html" class="header-search-link"  data-icon="search"   data-align="right" >
-                     
-                    </a>
-                 <a data-role="button"  class="Right-drawer" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
-                </div>
-            
-            </div>
-          
-         
-           
-
-                <div data-role="tabstrip"   >
-                    
-                <a class="startLink" href="components/pureHerbs/view.html">Pure Herbs
-            </a><a href="components/general/view.html">General
-            </a>
-
-            </div>
-         
         </header>
 
         <!-- application views will be rendered here -->
         <footer data-role="footer">
 
 
-            <div class="left footer-first-part" >
+            <div class="left footer-first-part">
 
 
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  class="cart" data-role="button" data-badge="0">
-
-                </a>
+                <a href="components/cartDetails/view.html" id="A2" data-icon="cart" class="cart" data-role="button" data-badge="0"></a>
             </div>
-            <div class="left footer-second-part"  >
+            <div class="left footer-second-part">
 
-                <div >
-                   <span >
-               &#8377 680.00
-            </span>
+                <div>
+                    <span>&#8377 680.00
+                    </span>
                 </div>
             </div>
-            <div   class="footer-third-part">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button" >Check out</a>
+            <div class="footer-third-part">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
             </div>
         </footer>
     </div>
-    <div data-role="layout" data-id="Mycart" >
+
+    <div data-role="layout" data-id="Baby">
         <header data-role="header">
-            <div data-role="navbar" >
-               
-                  <div class="header-outer">
-           
-                               <span class="Catagory-title"   data-align="left"   >My Cart</span>
-               
-              <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-             <a data-role="backbutton" class="Right-drawer"    data-icon="down-e"   data-align="right" ></a> 
-                
+            <div data-role="navbar">
+                <div class="header-outer">
+                    <span class="Catagory-header-title" data-align="left">Baby Care</span>
+                    <span class="Catagory-Sub-header-title" data-align="left" data-role="view-title"></span>
+                    <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+                    <a data-role="button" href="components/Search/view.html" class="header-search-link" data-icon="search" data-align="right"></a>
+                    <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer" data-icon="right-e" data-align="right"></a>
                 </div>
-             
+
+            </div>
+            <div class="class100" data-elastic="false" data-role="scroller">
+
+
+
+                <div data-role="tabstrip" class="class200">
+
+                    <a class="startLink" href="components/postbath/view.html">Post Bath
+                    </a><a href="components/prebath/view.html">Pre Bath
+                    </a><a href="components/bath/view.html">Bath</a>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+
+
+            <div class="left footer-first-part">
+
+
+                <a href="components/cartDetails/view.html" id="A3" data-icon="cart" class="cart" data-role="button" data-badge="0"></a>
+            </div>
+            <div class="left footer-second-part">
+
                 <div>
-                    <span id="spanCartMsg" class="GreenMsg" >Order Eligible for Free Shipping</span>
-                </div>                      
+                    <span>&#8377 680.00
+                    </span>
+                </div>
+            </div>
+            <div class="footer-third-part">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
+            </div>
+        </footer>
+    </div>
+
+    <div data-role="layout" data-id="Wellness">
+        <header data-role="header">
+            <div data-role="navbar">
+                <div class="header-outer">
+                    <span class="Catagory-header-title" data-align="left">wellness</span>
+                    <span class="Catagory-Sub-header-title" data-align="left" data-role="view-title"></span>
+                    <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+                    <a data-role="button" href="components/Search/view.html" class="header-search-link" data-icon="search" data-align="right"></a>
+                    <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer" data-icon="right-e" data-align="right"></a>
+                </div>
+
+            </div>
+
+
+
+
+            <div data-role="tabstrip">
+
+                <a class="startLink" href="components/pureHerbs/view.html">Pure Herbs
+                </a><a href="components/general/view.html">General
+                </a>
 
             </div>
 
         </header>
 
         <!-- application views will be rendered here -->
-      <footer data-role="footer">
+        <footer data-role="footer">
 
 
-            <div class="left footer-first-part" >
+            <div class="left footer-first-part">
 
 
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  class="cart" data-role="button" data-badge="0">
-
-                </a>
+                <a href="components/cartDetails/view.html" id="A4" data-icon="cart" class="cart" data-role="button" data-badge="0"></a>
             </div>
-            <div class="left footer-second-part"  >
+            <div class="left footer-second-part">
 
-                <div >
-                   <span >
-               &#8377 680.00
-            </span>
+                <div>
+                    <span>&#8377 680.00
+                    </span>
                 </div>
             </div>
-            <div   class="footer-third-part">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button" >Check out</a>
+            <div class="footer-third-part">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
+            </div>
+        </footer>
+    </div>
+    <div data-role="layout" data-id="Mycart">
+        <header data-role="header">
+            <div data-role="navbar">
+
+                <div class="header-outer">
+
+                    <span class="Catagory-title" data-align="left">My Cart</span>
+
+                    <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+                    <a data-role="backbutton" class="Right-drawer" data-icon="down-e" data-align="right"></a>
+
+                </div>
+
+                <div>
+                    <span id="spanCartMsg" class="GreenMsg">Order Eligible for Free Shipping</span>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+
+
+            <div class="left footer-first-part">
+
+
+                <a href="components/cartDetails/view.html" id="A5" data-icon="cart" class="cart" data-role="button" data-badge="0"></a>
+            </div>
+            <div class="left footer-second-part">
+
+                <div>
+                    <span>&#8377 680.00
+                    </span>
+                </div>
+            </div>
+            <div class="footer-third-part">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
             </div>
         </footer>
     </div>
@@ -378,13 +349,13 @@
     <div data-role="layout" data-id="Verification">
         <header data-role="header">
             <div data-role="navbar">
-              
-                 <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details" ></a>
-                 <span class="Catagory-title"  data-align="left"   data-role="view-title"></span>
-                          
-                <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
-                
-                              
+
+                <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
+                <span class="Catagory-title" data-align="left" data-role="view-title"></span>
+
+                <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer" data-icon="right-e" data-align="right"></a>
+
+
             </div>
 
         </header>
@@ -396,18 +367,18 @@
     <div data-role="layout" data-id="CheckOut">
         <header data-role="header">
             <div data-role="navbar">
-                  <span class="header-outer-checkout-flow"  data-align="left"   >Payment Options</span>
-                <a data-role="backbutton"  class="detail-back" data-align="left" data-icon="details"></a>
-                <div class="Green-Circle" data-align="right"></div> <div data-align="right"></div> <div data-align="right"></div>
-                <div class="circle-next-div"  data-align="right">
-                    
+                <span class="header-outer-checkout-flow" data-align="left">Payment Options</span>
+                <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
+                <div class="Green-Circle" data-align="right"></div>
+                <div data-align="right"></div>
+                <div data-align="right"></div>
+                <div class="circle-next-div" data-align="right">
                 </div>
-                <div class="Green-Circle" data-align="right"></div> 
-             <div class="circle-next-div"  data-align="right">
-                    
+                <div class="Green-Circle" data-align="right"></div>
+                <div class="circle-next-div" data-align="right">
                 </div>
-                      <div class="Green-Circle" data-align="right"></div> 
-                                      <a href="components/finalOrder/view.html" data-role="button" data-icon="cart"  class="Cart-top" data-role="button" data-badge="0" data-align="right" ></a>            
+                <div class="Green-Circle" data-align="right"></div>
+                <a href="components/finalOrder/view.html" data-role="button" data-icon="cart" class="Cart-top" data-role="button" data-badge="0" data-align="right"></a>
             </div>
 
         </header>
@@ -415,15 +386,15 @@
         <!-- application views will be rendered here -->
 
     </div>
-   
+
     <div data-role="layout" data-id="Search">
         <header data-role="header">
             <div data-role="navbar">
-                  <span class="header-outer-checkout-flow"   data-align="left"   >Search Product</span>
-                <a data-role="backbutton"  class="detail-back" data-align="left" data-icon="details"></a>
-                
-                 
-                                     
+                <span class="header-outer-checkout-flow" data-align="left">Search Product</span>
+                <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
+
+
+
             </div>
 
         </header>
@@ -431,15 +402,15 @@
         <!-- application views will be rendered here -->
 
     </div>
-        
+
     <div data-role="layout" data-id="EgiftExternal">
         <header data-role="header">
             <div data-role="navbar">
-                  <span class="header-outer-checkout-flow"  data-align="left"   >E Gift Card</span>
-                <a data-role="backbutton"  class="detail-back" data-align="left" data-icon="details"></a>
-                
-                 
-                                     
+                <span class="header-outer-checkout-flow" data-align="left">E Gift Card</span>
+                <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
+
+
+
             </div>
 
         </header>
@@ -450,11 +421,11 @@
     <div data-role="layout" data-id="giftcard">
         <header data-role="header">
             <div data-role="navbar">
-                  <span class="header-outer-checkout-flow"  data-align="left"   >E Gift Card</span>
-                <a data-role="backbutton"  class="detail-back" data-align="left" data-icon="details"></a>
-                
-                 
-                                      <a href="components/finalOrder/view.html" data-role="button" data-icon="cart"  class="Cart-top" data-role="button" data-badge="0" data-align="right" ></a>            
+                <span class="header-outer-checkout-flow" data-align="left">E Gift Card</span>
+                <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
+
+
+                <a href="components/finalOrder/view.html" data-role="button" data-icon="cart" class="Cart-top" data-role="button" data-badge="0" data-align="right"></a>
             </div>
 
         </header>
@@ -465,10 +436,10 @@
     <div data-role="layout" data-id="Thanku">
         <header data-role="header">
             <div data-role="navbar">
-                  <span class="header-outer-checkout-flow"  data-align="left"   >Order Confirmed</span>
-               
-                  <a data-role="button"  class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-                     <a data-role="button"  class="Right-drawer" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
+                <span class="header-outer-checkout-flow" data-align="left">Order Confirmed</span>
+
+                <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+                <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer" data-icon="right-e" data-align="right"></a>
             </div>
 
         </header>
@@ -476,40 +447,39 @@
         <!-- application views will be rendered here -->
 
     </div>
-    
-     <div data-role="layout" data-id="finalOrder">
+
+    <div data-role="layout" data-id="finalOrder">
         <header data-role="header">
             <div data-role="navbar">
-                  <span class="header-outer-checkout-flow"  data-align="left"   >Your Final Cart</span>
-                <a data-role="backbutton"  class="detail-back" data-align="right" data-icon="details"></a>
-           
-                    
-                </div>
-                      
-        
+                <span class="header-outer-checkout-flow" data-align="left">Your Final Cart</span>
+                <a data-role="backbutton" class="detail-back" data-align="right" data-icon="details"></a>
+
+            </div>
+
+
 
         </header>
 
         <!-- application views will be rendered here -->
 
     </div>
-    
-    
+
+
     <div data-role="layout" data-id="Address">
         <header data-role="header">
             <div data-role="navbar">
-                  <span class="header-outer-checkout-flow" data-align="left"   >Shipping Address</span>
+                <span class="header-outer-checkout-flow" data-align="left">Shipping Address</span>
                 <a data-role="button" href="components/home/view.html" class="detail-back" data-align="left" data-icon="details"></a>
-                <div class="Green-Circle" data-align="right"></div> <div data-align="right"></div> <div data-align="right"></div>
-                <div class="circle-next-div"  data-align="right">
-                    
+                <div class="Green-Circle" data-align="right"></div>
+                <div data-align="right"></div>
+                <div data-align="right"></div>
+                <div class="circle-next-div" data-align="right">
                 </div>
-                <div class="Gray-Circle" data-align="right"></div> 
-                 <div class="circle-next-div"  data-align="right">
-                    
+                <div class="Gray-Circle" data-align="right"></div>
+                <div class="circle-next-div" data-align="right">
                 </div>
-                      <div class="Gray-Circle" data-align="right"></div> 
-                                      <a href="components/finalOrder/view.html" data-role="button" data-icon="cart"  class="Cart-top" data-role="button" data-badge="0" data-align="right" ></a>            
+                <div class="Gray-Circle" data-align="right"></div>
+                <a href="components/finalOrder/view.html" data-role="button" data-icon="cart" class="Cart-top" data-role="button" data-badge="0" data-align="right"></a>
             </div>
 
         </header>
@@ -517,23 +487,22 @@
         <!-- application views will be rendered here -->
 
     </div>
-    
-    
-       <div data-role="layout" data-id="summary">
+
+    <div data-role="layout" data-id="summary">
         <header data-role="header">
             <div data-role="navbar">
-                  <span class="header-outer-checkout-flow"  data-align="left"   >Summary</span>
-                <a data-role="backbutton"  class="detail-back" data-align="left" data-icon="details"></a>
-                <div class="Green-Circle" data-align="right"></div> <div data-align="right"></div> <div data-align="right"></div>
-                <div  class="circle-next-div" data-align="right">
-                    
+                <span class="header-outer-checkout-flow" data-align="left">Summary</span>
+                <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
+                <div class="Green-Circle" data-align="right"></div>
+                <div data-align="right"></div>
+                <div data-align="right"></div>
+                <div class="circle-next-div" data-align="right">
                 </div>
-                <div class="Green-Circle" data-align="right"></div> 
-                 <div class="circle-next-div" data-align="right">
-                    
+                <div class="Green-Circle" data-align="right"></div>
+                <div class="circle-next-div" data-align="right">
                 </div>
-                      <div class="Gray-Circle" data-align="right"></div> 
-                                      <a href="components/finalOrder/view.html" data-role="button" data-icon="cart"  class="Cart-top" data-role="button" data-badge="0" data-align="right" ></a>            
+                <div class="Gray-Circle" data-align="right"></div>
+                <a href="components/finalOrder/view.html" data-role="button" data-icon="cart" class="Cart-top" data-role="button" data-badge="0" data-align="right"></a>
             </div>
 
         </header>
@@ -541,161 +510,147 @@
         <!-- application views will be rendered here -->
 
     </div>
-    
+
     <div data-role="layout" data-id="main-nonav">
         <header data-role="header">
-            <div  data-role="navbar">
-                 <div class="header-outer">
-           
-                <div class="header-outer-checkout-flow"   data-align="left"   data-role="view-title"></div>
-              <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-            
-                <a data-role="button"  href="components/Search/view.html" class="header-search-link"  data-icon="search"     data-align="right" >
-                     
-                    </a>
-                     
-                  <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
-                </div>
-                </div>
-        </header>
-
-        <!-- application views will be rendered here -->
-            <footer data-role="footer">
-
-
-            <div class="left footer-first-part" >
-
-
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  class="cart" data-role="button" data-badge="0">
-
-                </a>
-            </div>
-            <div class="left footer-second-part"  >
-
-                <div >
-                   <span >
-               &#8377 680.00
-            </span>
-                </div>
-            </div>
-            <div   class="footer-third-part">
-                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button" >Check out</a>
-            </div>
-        </footer>
-    </div>
-
-    <div  id="appDrawer" data-role="drawer" >
-        <header data-role="header">
-         
-                
-          
-            <div  align="center"  style="padding:30px;background-color:#FFF;border-bottom:1px solid #f1f1f1;" >
-      <div    align="center"  >
-           <img src="images/20-X-20-logo.png" style="border:1px solid #FF6600;border-radius:40px;padding:8px;" />
-     </div>    
-  
-          
-                </div
-                                                                                                                            </div>
-       
-             
-
-        </header>
-            <div class="navagation" align="top" >
-
-        <ul id="right-navigation" >
-            <li><a href="components/home/view.html" data-icon="home" data-role="button" class="km-link-button"  >Home</a></li>
-            <li><a href="components/dataListView/view.html" data-role="button" class="km-link-button" >Personal Care</a>
-            </li>
-            <li><a href="components/pureHerbs/view.html" data-role="button" class="km-link-button" >Wellness</a>
-            </li>
-            <li><a href="components/childernHealth/view.html" data-role="button" class="km-link-button" >Phramaceuticals</a>
-            </li>
-            <li><a href="components/postbath/view.html" data-role="button" class="km-link-button" >Baby Care</a>
-            </li>
-            <li><a href="components/animalCare/view.html" data-role="button" class="km-link-button" >Animal Care</a>
-            </li>
-            <li><a href="components/Currentoffers/view.html" data-role="button" class="km-link-button">Offers</a>
-            </li>
-           
-         
-        </ul>
-                <div class="hline"></div>
-            <ul id="left-bottomul">
-                
-                <li><a href="components/dataListView/view.html" data-role="button" class="km-link-button" >Refund Policy</a>
-            </li>
-            <li><a href="components/dataListView/view.html"  data-role="button" class="km-link-button">Shipping Policy</a>
-            </li>
-            <li><a href="components/dataListView/view.html" data-role="button" class="km-link-button" >Support</a>
-            </li>
-            <li><a href="components/dataListView/view.html" data-role="button" class="km-link-button">Notifications</a>
-            </li>
-        
-            </li>
-         
-            </ul>
-              </div>
-    </div>
-    
-    
-    
-    
-  <div data-role="layout" data-id="Wishlist">
-        <header data-role="header">
             <div data-role="navbar">
-                 <div class="header-outer">
-           
-                 <span class="Catagory-title"  data-align="left"   data-role="view-title"></span>
-              <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-            
-                <a  href="components/Search/view.html"  class="header-search-link"  data-icon="search"    data-align="right" >
-                     
-                    </a>
-                  <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer"  data-icon="right-e" data-align="right" ></a> 
+                <div class="header-outer">
+
+                    <div class="header-outer-checkout-flow" data-align="left" data-role="view-title"></div>
+                    <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+                    <a data-role="button" href="components/Search/view.html" class="header-search-link" data-icon="search" data-align="right"></a>
+
+                    <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer" data-icon="right-e" data-align="right"></a>
                 </div>
             </div>
-
         </header>
 
         <!-- application views will be rendered here -->
-      <footer data-role="footer">
+        <footer data-role="footer">
 
 
-            <div class="left" style="width:10%;">
+            <div class="left footer-first-part">
 
 
-                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart"  class="cart" data-role="button" data-badge="0">
-
-                </a>
+                <a href="components/cartDetails/view.html" id="A6" data-icon="cart" class="cart" data-role="button" data-badge="0"></a>
             </div>
-            <div class="left footer-second-part" >
+            <div class="left footer-second-part">
 
                 <div>
-                   <span >
-               &#8377 680.00
-            </span>
+                    <span>&#8377 680.00
+                    </span>
                 </div>
             </div>
-            <div  class="footer-third-part">
+            <div class="footer-third-part">
                 <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
             </div>
         </footer>
     </div>
-    
-    
-    <div data-role="drawer"  id="rightdrawer" style="width: 7em" data-title="Share" data-position="right"  data-stretch="true">
-    <div data-role="tabstrip" class="km-vertical-tabstrip">
-         <a href="components/authenticationView/view.html" data-icon="login-e">Sign In
-      
-        </a>
-        <a href="components/OrderHistory/view.html" data-icon="history">Order History
-      
-        </a><a href="components/Wishlist/view.html" data-icon="favorites">Wishlist
-           <a href="components/Redeempoints/view.html" data-icon="redeem-e" >Redeem Points
-        </a><a  href="components/egiftExternal/view.html"   data-icon="gift-e" >E-Gift Card </a>
+
+    <div id="appDrawer" data-role="drawer" >
+        <header data-role="header">
+
+
+
+            <div align="center" style="padding: 30px; background-color: #FFF; border-bottom: 1px solid #f1f1f1;">
+                <div align="center">
+                    <img src="images/20-X-20-logo.png" style="border: 1px solid #FF6600; border-radius: 40px; padding: 8px;" />
+                </div>
+
+
+            </div>
+
+
+
+
+        </header>
+        <div class="navagation" valign="top">
+            <ul id="navigation-container" data-role="listview" data-use-native-scrolling="true">
+                <li><a href="components/home/view.html" data-icon="home">Home</a></li>
+                <li><a href="components/dataListView/view.html">Personal Care</a>
+                </li>
+                <li><a href="components/pureHerbs/view.html">Wellness</a>
+                </li>
+                <li><a href="components/childernHealth/view.html">Phramaceuticals</a>
+                </li>
+                <li><a href="components/postbath/view.html">Baby Care</a>
+                </li>
+                <li><a href="components/animalCare/view.html">Animal Care</a>
+                </li>
+                <li><a href="components/dataListView/view.html">Offers</a>
+                </li>
+                <li><a href="components/dataListView/view.html" data-icon="policy-e">Refund Policy</a>
+                </li>
+                <li><a href="components/dataListView/view.html" data-icon="shipping-e">Shipping Policy</a>
+                </li>
+                <li><a href="components/dataListView/view.html" data-icon="support-e">Support</a>
+                </li>
+                <li><a href="components/OrderHistoryItems/view.html" data-icon="notification-e">Notifications</a>
+                </li>
+
+
+                <li><a href="components/authenticationView/view.html" data-icon="locator-e">Store Locator</a>
+
+                </li>
+
+            </ul>
+        </div>
     </div>
-</div>
+
+
+
+
+    <div data-role="layout" data-id="Wishlist">
+        <header data-role="header">
+            <div data-role="navbar">
+                <div class="header-outer">
+
+                    <span class="Catagory-title" data-align="left" data-role="view-title"></span>
+                    <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+                    <a href="components/Search/view.html" class="header-search-link" data-icon="search" data-align="right"></a>
+                    <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer" data-icon="right-e" data-align="right"></a>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- application views will be rendered here -->
+        <footer data-role="footer">
+
+
+            <div class="left" style="width: 10%;">
+
+
+                <a href="components/cartDetails/view.html" id="A7" data-icon="cart" class="cart" data-role="button" data-badge="0"></a>
+            </div>
+            <div class="left footer-second-part">
+
+                <div>
+                    <span>&#8377 680.00
+                    </span>
+                </div>
+            </div>
+            <div class="footer-third-part">
+                <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
+            </div>
+        </footer>
+    </div>
+
+
+    <div data-role="drawer" id="rightdrawer" style="width: 7em" data-title="Share" data-position="right" data-stretch="true">
+        <div data-role="tabstrip" class="km-vertical-tabstrip">
+            <a href="components/authenticationView/view.html" data-icon="login-e">Sign In
+      
+            </a>
+            <a href="components/OrderHistory/view.html" data-icon="history">Order History
+      
+            </a><a href="components/Wishlist/view.html" data-icon="favorites">Wishlist
+           <a href="components/Redeempoints/view.html" data-icon="redeem-e">Redeem Points
+           </a><a href="components/egiftExternal/view.html" data-icon="gift-e">E-Gift Card </a>
+        </div>
+    </div>
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
 
 
@@ -704,7 +659,7 @@
 
 
 
-<script>
+
 
 
 </html>

@@ -1,81 +1,81 @@
-<div data-role="view" data-title="Authentication" data-layout="Verification" data-model="app.authenticationView" data-show="app.authenticationView.onShow" data-after-show="app.authenticationView.afterShow">
-    <div class="signin-view">
-        <form>
-            <ul style="list-style-type: none;">
-                <li>
-                    <span id="spanEmail" class="animated-placholder" style="top:30px;">Email/Mobile</span>
-                   <div class="authentication-textbox-div">
-                       
-                         <input id="inputEmail" onkeypress="aniEmail();"  onkeyup = "upaniEmail(this.id);"  placeholder="Email/Mobile" type="email" data-bind="value: authenticationViewModel.email" >
-                    </div>
-                      
-                 
-                </li>
-                <li>
-                    <div class="authentication-text-spacing">
-                        
-                    </div>
-                </li>
-                <li>
-                                        <span id="spanPassword" class="animated-placholder" style="top:110px;">Password</span>
-                 <div class="authentication-textbox-div">
-                        <input id="inputPassword" onkeypress="aniPassword();"  onkeyup = "upaniPassword(this.id);"  placeholder="Password"  type="password" data-bind="value: authenticationViewModel.password" required>
-                  </div>
-                </li>
-            </ul>
+    <div data-role="view" data-title="Authentication" data-layout="Verification" data-model="app.authenticationView" data-show="app.authenticationView.onShow" data-after-show="app.authenticationView.afterShow">
+        <div class="signin-view">
+            <form>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <span id="spanEmail" class="animated-placholder" style="top:30px;">Email/Mobile</span>
+                       <div class="authentication-textbox-div">
 
-            <div class="button-group button-group-vertical">
-                <a data-role="button" class="Green-button"  href="components/addNewAddress/view.html"   >Sign In</a>
+                             <input id="inputEmail" onkeypress="aniEmail();"  onkeyup = "upaniEmail(this.id);"  placeholder="Email/Mobile" type="email" data-bind="value: authenticationViewModel.email" >
+                        </div>
 
-                <a data-role="button" class="Orange-button" data-bind="events: { click: authenticationViewModel.toggleView }">Register</a>
 
-            </div>
-        </form>
-    </div>
-    <div class="signup-view" style="display:none;">
-        <form>
-            <ul style="list-style-type: none;"  data-style="inset">
-                
+                    </li>
+                    <li>
+                        <div class="authentication-text-spacing">
+
+                        </div>
+                    </li>
+                    <li>
+                                            <span id="spanPassword" class="animated-placholder" style="top:110px;">Password</span>
+                     <div class="authentication-textbox-div">
+                            <input id="inputPassword" onkeypress="aniPassword();"  onkeyup = "upaniPassword(this.id);"  placeholder="Password"  type="password" data-bind="value: authenticationViewModel.password" required>
+                      </div>
+                    </li>
+                </ul>
+
+                <div class="button-group button-group-vertical">
+                    <a data-role="button" class="Green-button"  href="components/addNewAddress/view.html"   >Sign In</a>
+
+                    <a data-role="button" class="Orange-button" data-bind="events: { click: authenticationViewModel.toggleView }">Register</a>
+
+                </div>
+            </form>
+        </div>
+        <div class="signup-view" style="display:none;">
+            <form>
+                <ul style="list-style-type: none;"  data-style="inset">
+
+                    <li>
+                         <span id="spaninputRegEmail" class="animated-placholder" style="top:30px;">Email/Mobile</span>
+                                       <div class="authentication-textbox-div">
+                            <input onkeypress="aniRegEmail();"  onkeyup = "upaniRegEmail(this.id);" id="inputRegEmail" placeholder="Email/Password"  type="email" data-bind="value: authenticationViewModel.email" required>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="authentication-text-spacing">
+
+                        </div>
+                    </li>
+                    <li>
+                         <span id="spaninputRegPassword" class="animated-placholder" style="top:110px;">Password</span>
+                                          <div class="authentication-textbox-div">
+                            <input onkeypress="aniRegPassword();"  onkeyup = "upaniRegPassworde(this.id);" id="inputRegPassword" placeholder="Password"  type="password" data-bind="value: authenticationViewModel.password">
+                        </div>
+                    </li>
+                     <li>
+                     <div class="authentication-text-spacing">
+
+                        </div>
+                    </li>
                 <li>
-                     <span id="spaninputRegEmail" class="animated-placholder" style="top:30px;">Email/Mobile</span>
-                                   <div class="authentication-textbox-div">
-                        <input onkeypress="aniRegEmail();"  onkeyup = "upaniRegEmail(this.id);" id="inputRegEmail" placeholder="Email/Password"  type="email" data-bind="value: authenticationViewModel.email" required>
-                    </div>
-                </li>
-                 <li>
-                    <div class="authentication-text-spacing">
-                        
-                    </div>
-                </li>
-                <li>
-                     <span id="spaninputRegPassword" class="animated-placholder" style="top:110px;">Password</span>
-                                      <div class="authentication-textbox-div">
-                        <input onkeypress="aniRegPassword();"  onkeyup = "upaniRegPassworde(this.id);" id="inputRegPassword" placeholder="Password"  type="password" data-bind="value: authenticationViewModel.password">
-                    </div>
-                </li>
-                 <li>
-                 <div class="authentication-text-spacing">
-                        
-                    </div>
-                </li>
-            <li>
-                 <span id="spaninputRegConf" class="animated-placholder" style="top:180px;">Confirm Password</span>
-                                      <div class="authentication-textbox-div">
-                        <input onkeypress="aniRegConf();"  onkeyup = "upaniRegConf(this.id);" id="inputRegConf" placeholder= "Confirm Password"   >
-                    </div>
-                </li>
-            </ul>
-            <div class="button-group button-group-vertical">
-                <a  class="Green-button" class="primary" data-role="button" href="components/addNewAddress/view.html" >Register</a>
-                <a  class="Orange-button" data-role="button" data-bind="events: { click: authenticationViewModel.toggleView }">Sign In</a>
-            </div>
-        </form>
-        <!-- START_CUSTOM_CODE_authenticationViewModel -->
-        <!-- END_CUSTOM_CODE_authenticationViewModel -->
+                     <span id="spaninputRegConf" class="animated-placholder" style="top:180px;">Confirm Password</span>
+                                          <div class="authentication-textbox-div">
+                            <input onkeypress="aniRegConf();"  onkeyup = "upaniRegConf(this.id);" id="inputRegConf" placeholder= "Confirm Password"   >
+                        </div>
+                    </li>
+                </ul>
+                <div class="button-group button-group-vertical">
+                    <a  class="Green-button" class="primary" data-role="button" href="components/addNewAddress/view.html" >Register</a>
+                    <a  class="Orange-button" data-role="button" data-bind="events: { click: authenticationViewModel.toggleView }">Sign In</a>
+                </div>
+            </form>
+            <!-- START_CUSTOM_CODE_authenticationViewModel -->
+            <!-- END_CUSTOM_CODE_authenticationViewModel -->
+        </div>
+        <div class="offline" align="center" style="display:none;">
+            You are currently offline. Before using this app in offline mode you must initialize it while you are online
+        </div>
+        <!-- START_CUSTOM_CODE_authenticationView -->
+        <!-- END_CUSTOM_CODE_authenticationView -->
     </div>
-    <div class="offline" align="center" style="display:none;">
-        You are currently offline. Before using this app in offline mode you must initialize it while you are online
-    </div>
-    <!-- START_CUSTOM_CODE_authenticationView -->
-    <!-- END_CUSTOM_CODE_authenticationView -->
-</div>

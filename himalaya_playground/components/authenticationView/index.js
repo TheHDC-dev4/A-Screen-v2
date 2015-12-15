@@ -109,14 +109,14 @@ app.authenticationView = kendo.observable({
 function aniPassword()
 {
      $('#spanPassword').show();
-    $('#spanPassword').animate({top: '90px'}, "slow");
+    $('#spanPassword').animate({top: '80px'}, "slow");
 }
 
 function aniEmail()
 {
    
      $('#spanEmail').show();
-    $('#spanEmail').animate({top: '5px'}, "slow");
+    $('#spanEmail').animate({top: '0px'}, "slow");
 }
 
 function  upaniEmail(e)

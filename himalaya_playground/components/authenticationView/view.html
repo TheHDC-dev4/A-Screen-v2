@@ -1,7 +1,7 @@
     <div data-role="view" data-title="Authentication" data-layout="Verification" data-model="app.authenticationView" data-show="app.authenticationView.onShow" data-after-show="app.authenticationView.afterShow">
         <div class="signin-view">
             <form>
-                <ul style="list-style-type: none;">
+                <ul class="form-ul" >
                     <li>
                         <span id="spanEmail" class="animated-placholder" style="top:30px;">Email/Mobile</span>
                        <div class="authentication-textbox-div">
@@ -25,16 +25,16 @@
                 </ul>
 
                 <div class="button-group button-group-vertical">
-                    <a data-role="button" class="Green-button"  href="components/addNewAddress/view.html"   >Sign In</a>
+                    <a data-role="button" class="Green-button km-large"  href="components/addNewAddress/view.html"   >Sign In</a>
 
-                    <a data-role="button" class="Orange-button" data-bind="events: { click: authenticationViewModel.toggleView }">Register</a>
+                    <a data-role="button" class="Gray-button km-large" data-bind="events: { click: authenticationViewModel.toggleView }">Register</a>
 
                 </div>
             </form>
         </div>
         <div class="signup-view" style="display:none;">
             <form>
-                <ul style="list-style-type: none;"  data-style="inset">
+                <ul class="form-ul"  data-style="inset">
 
                     <li>
                          <span id="spaninputRegEmail" class="animated-placholder" style="top:30px;">Email/Mobile</span>
@@ -66,8 +66,8 @@
                     </li>
                 </ul>
                 <div class="button-group button-group-vertical">
-                    <a  class="Green-button" class="primary" data-role="button" href="components/addNewAddress/view.html" >Register</a>
-                    <a  class="Orange-button" data-role="button" data-bind="events: { click: authenticationViewModel.toggleView }">Sign In</a>
+                    <a  class="Green-button km-large"  data-role="button" href="components/addNewAddress/view.html" >Register</a>
+                    <a  class="Gray-button km-large" data-role="button" data-bind="events: { click: authenticationViewModel.toggleView }">Sign In</a>
                 </div>
             </form>
             <!-- START_CUSTOM_CODE_authenticationViewModel -->

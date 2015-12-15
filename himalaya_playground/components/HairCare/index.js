@@ -1,31 +1,39 @@
 'use strict';
 
-window.myTouch = {
+
+
+window.myTouchHaircare = {
         touchstart: function(e)  {  },
         swipe: function(e) { var router = new kendo.Router(); 
                             if(e.direction == 'left')
                                 {
-                         
-                                      router.navigate("components/dataListView/view.html");
+                                     
+                            router.navigate("components/oralCare/view.html");
+                                       
+                       $("#scroller").animate({
+            scrollLeft: -50
+        }, 800);
                                 }
-                            else
-                                {
-                                       router.navigate("components/oralCare/view.html");
+                            else  if(e.direction == 'right')
+                                 {
+                            router.navigate("components/dataListView/view.html");
                                 }
                                 },
-        tap: function(e) { alert("tap"); },
-        doubletap: function(e) { alert("double tap"); },
-        hold: function(e) {alert("hold"); }
+        tap: function(e) {  },
+        doubletap: function(e) {  },
+        hold: function(e) { }
     }
+
+
 function AddtowishList(e)
 {
     $('#'+e).css('color','#FF6600');
 }
 
-app.cartDetails = kendo.observable({
-    onShow: function() {
+app.hariCares = kendo.observable({
+     onShow: function() {
 
-         $("#CartBack").attr("href","#divList");
+        
           var app = {};
 app.db = null;
    
@@ -65,15 +73,11 @@ function getAllTheData() {
         getAllTheData();
     },
     afterShow: function() {
-       $('.startLink').removeClass('startLink'); 
-    },
- 
+      $('.startLink').removeClass('startLink');  
+    }
 });
 
-
-
-// START_CUSTOM_CODE_dataListView
-
+// START_CUSTOM_CODE_hariCares
 var cartFlag = false;
 function addToCart(e)
 {
@@ -354,7 +358,7 @@ e.button.next().text(count1);
     
    
 }
-// END_CUSTOM_CODE_dataListView
+// END_CUSTOM_CODE_hariCares
 (function(parent) {
     var dataProvider = app.data.himalayaPlaygroundBackend,
         processImage = function(img) {
@@ -398,69 +402,44 @@ e.button.next().text(count1);
 
             change: function(e) {
                 var data = this.data();
-            
                 for (var i = 0; i < data.length; i++) {
                     var dataItem = data[i];
-                    //
-                    //
-                  
-                   
-                    dataItem["Test"] =  ReturnCount;
-                    dataItem['ImageUrlUrl'] =
-                        processImage(dataItem['ImageUrl']);
 
                     flattenLocationProperties(dataItem);
                 }
             },
             schema: {
                 model: {
-                    
                     fields: {
                         'ProductName': {
                             field: 'ProductName',
                             defaultValue: ''
                         },
-                        'Price': {
-                            field: 'Price',
-                            defaultValue: ''
-                        },
-                        'ImageUrl': {
-                            field: 'ImageUrl',
-                            defaultValue: ''
-                        },
-                         
-                         
                     }
-                    
-                    
-                    
                 }
-                
-                
             },
         },
-     
         dataSource = new kendo.data.DataSource(dataSourceOptions),
-        cartDetailsModel = kendo.observable({
+        hariCaresModel = kendo.observable({
             dataSource: dataSource,
            /* itemClick: function(e) {
-                app.mobileApp.navigate('#components/cartDetails/details.html?uid=' + e.dataItem.uid);
+                app.mobileApp.navigate('#components/hariCares/details.html?uid=' + e.dataItem.uid);
             },*/
             detailsShow: function(e) {
                 var item = e.view.params.uid,
-                    dataSource = cartDetailsModel.get('dataSource'),
+                    dataSource = hariCaresModel.get('dataSource'),
                     itemModel = dataSource.getByUid(item);
-                itemModel.PictureUrl = processImage(itemModel.Picture);
-                if (!itemModel.Text) {
-                    itemModel.Text = String.fromCharCode(160);
+                itemModel.ImageUrlUrl = processImage(itemModel.ImageUrl);
+                if (!itemModel.ProductName) {
+                    itemModel.ProductName = String.fromCharCode(160);
                 }
-                cartDetailsModel.set('currentItem', itemModel);
+                hariCaresModel.set('currentItem', itemModel);
             },
             currentItem: null
         });
 
-    parent.set('cartDetailsModel', cartDetailsModel);
-})(app.cartDetails);
+    parent.set('hariCaresModel', hariCaresModel);
+})(app.hariCares);
 // START_CUSTOM_CODE_bathModel
 function AddtowishListDetails(e)
 {
@@ -469,7 +448,7 @@ function AddtowishListDetails(e)
     $('#'+e).hide();
 }
 
-    function addTo(e)
+  function addTo(e)
     {
     
        var count1 =  parseInt($(e).prev().text());
@@ -487,5 +466,4 @@ function removecart(e)
 $(e).next().text(count1);
             }
 }
-   
-// END_CUSTOM_CODE_dataListViewModel
+// END_CUSTOM_CODE_hariCaresModel

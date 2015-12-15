@@ -23,12 +23,7 @@
     <script src="kendo/js/jquery-1.7.1.min.js"></script>
 
 
-    <style>
-        @font-face {
-            font-family: "plus";
-            src: url("images/fontello.woff") format("woff"), url("images/fontello.ttf") format("truetype");
-        }
-    </style>
+
 </head>
 
 <body id="kendoUiMobileApp">
@@ -51,7 +46,7 @@
     <script src="components/animalCare/index.js"></script>
     <script src="components/mensCare/index.js"></script>
     <script src="components/oralCare/index.js"></script>
-    <script src="components/hariCares/index.js"></script>
+    <script src="components/HairCare/index.js"></script>
     <script src="components/cartDetails/index.js"></script>
     <script src="components/dataListView/index.js"></script>
     <script src="components/FinalCart/index.js"></script>
@@ -82,10 +77,10 @@
 
 
 
-                <div data-role="tabstrip" id="oralCare" class="class200">
+                <div data-role="tabstrip" id="oralCare" class="class150">
 
                     <a id="askin" class="startLink" href="components/dataListView/view.html">Skin Care
-                    </a><a href="components/hariCares/view.html">Hair Care
+                    </a><a href="components/HairCare/view.html">Hair Care
                     
                     </a>
 
@@ -173,9 +168,9 @@
 
 
 
-                <div data-role="tabstrip" class="class200">
+                <div data-role="tabstrip" class="class240">
 
-                    <a class="startLink" href="components/childrenhealth/view.html"> children's Health
+                    <a class="startLink" href="components/childrenhealth/view.html"> Children's Health
                     </a><a href="components/dermaCare/view.html">Derma Care
                     </a><a href="components/mensHealth/view.html">Men's Health
                     </a><a href="components/oralHealth/view.html">Oral Health</a>
@@ -223,7 +218,7 @@
 
 
 
-                <div data-role="tabstrip" class="class200">
+                <div data-role="tabstrip" class="class150">
 
                     <a class="startLink" href="components/postbath/view.html">Post Bath
                     </a><a href="components/prebath/view.html">Pre Bath
@@ -274,8 +269,8 @@
 
             <div data-role="tabstrip">
 
-                <a class="startLink" href="components/pureHerbs/view.html">Pure Herbs
-                </a><a href="components/general/view.html">General
+                <a class="class50" class="startLink" href="components/pureHerbs/view.html">Pure Herbs
+                </a><a  class="class50" href="components/general/view.html">General
                 </a>
 
             </div>
@@ -367,7 +362,7 @@
     <div data-role="layout" data-id="CheckOut">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="header-outer-checkout-flow" data-align="left">Payment Options</span>
+                <span class="Main-Title" data-align="left">Payment Options</span>
                 <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
                 <div class="Green-Circle" data-align="right"></div>
                 <div data-align="right"></div>
@@ -390,7 +385,7 @@
     <div data-role="layout" data-id="Search">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="header-outer-checkout-flow" data-align="left">Search Product</span>
+                <span class="Main-Title" data-align="left">Search Product</span>
                 <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
 
 
@@ -406,7 +401,7 @@
     <div data-role="layout" data-id="EgiftExternal">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="header-outer-checkout-flow" data-align="left">E Gift Card</span>
+                <span class="Main-Title" data-align="left">E Gift Card</span>
                 <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
 
 
@@ -421,7 +416,7 @@
     <div data-role="layout" data-id="giftcard">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="header-outer-checkout-flow" data-align="left">E Gift Card</span>
+                <span class="Main-Title" data-align="left">E Gift Card</span>
                 <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
 
 
@@ -436,7 +431,7 @@
     <div data-role="layout" data-id="Thanku">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="header-outer-checkout-flow" data-align="left">Order Confirmed</span>
+                <span class="Main-Title" data-align="left">Order Confirmed</span>
 
                 <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
                 <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer" data-icon="right-e" data-align="right"></a>
@@ -451,7 +446,7 @@
     <div data-role="layout" data-id="finalOrder">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="header-outer-checkout-flow" data-align="left">Your Final Cart</span>
+                <span class="Main-Title" data-align="left">Your Final Cart</span>
                 <a data-role="backbutton" class="detail-back" data-align="right" data-icon="details"></a>
 
             </div>
@@ -468,7 +463,7 @@
     <div data-role="layout" data-id="Address">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="header-outer-checkout-flow" data-align="left">Shipping Address</span>
+                <span class="Main-Title" data-align="left">Shipping Address</span>
                 <a data-role="button" href="components/home/view.html" class="detail-back" data-align="left" data-icon="details"></a>
                 <div class="Green-Circle" data-align="right"></div>
                 <div data-align="right"></div>
@@ -491,7 +486,7 @@
     <div data-role="layout" data-id="summary">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="header-outer-checkout-flow" data-align="left">Summary</span>
+                <span class="Main-Title" data-align="left">Summary</span>
                 <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
                 <div class="Green-Circle" data-align="right"></div>
                 <div data-align="right"></div>
@@ -516,7 +511,7 @@
             <div data-role="navbar">
                 <div class="header-outer">
 
-                    <div class="header-outer-checkout-flow" data-align="left" data-role="view-title"></div>
+                    <div class="Main-Title" data-align="left" data-role="view-title"></div>
                     <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
 
                     <a data-role="button" href="components/Search/view.html" class="header-search-link" data-icon="search" data-align="right"></a>
@@ -530,17 +525,19 @@
         <footer data-role="footer">
 
 
+         
             <div class="left footer-first-part">
-
-
+<a href="components/cartDetails/view.html" class="km-link-button">
                 <a href="components/cartDetails/view.html" id="A6" data-icon="cart" class="cart" data-role="button" data-badge="0"></a>
             </div>
+       </a>
             <div class="left footer-second-part">
 
                 <div>
                     <span>&#8377 680.00
                     </span>
                 </div>
+                </a>
             </div>
             <div class="footer-third-part">
                 <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
@@ -555,7 +552,7 @@
 
             <div align="center" style="padding: 30px; background-color: #FFF; border-bottom: 1px solid #f1f1f1;">
                 <div align="center">
-                    <img src="images/20-X-20-logo.png" style="border: 1px solid #FF6600; border-radius: 40px; padding: 8px;" />
+                    <img src="images/logos/hlogo.jpg" />
                 </div>
 
 
@@ -567,12 +564,12 @@
         </header>
         <div class="navagation" valign="top">
             <ul id="navigation-container" data-role="listview" data-use-native-scrolling="true">
-                <li><a href="components/home/view.html" data-icon="home">Home</a></li>
+                <li><a href="components/home/view.html" >Home</a></li>
                 <li><a href="components/dataListView/view.html">Personal Care</a>
                 </li>
                 <li><a href="components/pureHerbs/view.html">Wellness</a>
                 </li>
-                <li><a href="components/childernHealth/view.html">Phramaceuticals</a>
+                <li><a href="components/childernHealth/view.html">pharmaceutical</a>
                 </li>
                 <li><a href="components/postbath/view.html">Baby Care</a>
                 </li>
@@ -580,17 +577,17 @@
                 </li>
                 <li><a href="components/dataListView/view.html">Offers</a>
                 </li>
-                <li><a href="components/dataListView/view.html" data-icon="policy-e">Refund Policy</a>
+                <li><a href="components/dataListView/view.html" >Refund Policy</a>
                 </li>
-                <li><a href="components/dataListView/view.html" data-icon="shipping-e">Shipping Policy</a>
+                <li><a href="components/dataListView/view.html" >Shipping Policy</a>
                 </li>
-                <li><a href="components/dataListView/view.html" data-icon="support-e">Support</a>
+                <li><a href="components/dataListView/view.html" >Support</a>
                 </li>
-                <li><a href="components/OrderHistoryItems/view.html" data-icon="notification-e">Notifications</a>
+                <li><a href="components/OrderHistoryItems/view.html">Notifications</a>
                 </li>
 
 
-                <li><a href="components/authenticationView/view.html" data-icon="locator-e">Store Locator</a>
+                <li><a href="components/authenticationView/view.html" >Store Locator</a>
 
                 </li>
 

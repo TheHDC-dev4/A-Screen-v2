@@ -1,7 +1,10 @@
 
 .km-nova .km-header .km-navbar  .km-view-title{
-    background-color: rgb(255, 255, 255);
-
+/* text-transform: capitalize; */
+  
+   color:#fff;
+    background-color:#f7f7f7;
+    color:#666!important;
 }
 
 .payment-option {
@@ -33,9 +36,10 @@ transform: scale(2, 2);
    margin-left:-10px;
 }
 
-.km-nova .km-tabstrip .km-button
+.km-nova .km-tabstrip .km-button 
 {
      background-color:#006C6F;
+    width:100%;
    
 }
 
@@ -106,12 +110,15 @@ color:#006C6F;position:absolute;top:30px;display:none;"
 .payment-width{
    width:80%;
 }
+#kendoUiMobileApp .Gray-button
+{background-color:#f7f7f7;color:#666;}
+
 #kendoUiMobileApp .Green-button
-{background-color:#006C6F;color:white;}
+{background-color:#00A287;color:white;}
 #kendoUiMobileApp .Orange-button
 {background-color:#FF6600;color:white;}
 #kendoUiMobileApp  .authentication-textbox-div
-{width:100%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;}
+{width:104%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;}
 
 #kendoUiMobileApp  .authentication-text-spacing
 {padding-top:30px;}
@@ -119,7 +126,7 @@ color:#006C6F;position:absolute;top:30px;display:none;"
 {padding-top:20px;}
 
 #kendoUiMobileApp  .authentication-textbox-div input
-{padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;}
+{border:none;width:100%;height:45px;font-size:20px;}
 
 #kendoUiMobileApp  .button-summary-white
 {background-color:white}
@@ -175,16 +182,9 @@ float:right;margin-top:-30px;padding-right:15px;
 #kendoUiMobileApp .Detail-outer-incDec
 {float:right;margin-top:-30px;padding-right:15px;}
 
-#kendoUiMobileApp  .Caragory-heading-detail
-{
-font-size:100%;display: inline-block;white-space:nowrap;
-}
 
-#kendoUiMobileApp .class100
-{width:100%;}
 
-#kendoUiMobileApp .class200
-{width:200%;}
+
 
 #kendoUiMobileApp .header-outer{
 display:inline-block;width:100%;
@@ -200,6 +200,7 @@ display:inline-block;width:100%;
 #kendoUiMobileApp .header-outer-checkout-flow
 {
     margin-left:50px;margin-top:10px; position:absolute;display: inline-block;white-space:nowrap;font-size:20px;
+    color:#00A287;
 }
 
 
@@ -213,25 +214,8 @@ display:inline-block;width:100%;
 }
 #kendoUiMobileApp .GreenMsg
 {color:green}
-#kendoUiMobileApp .Catagory-header-title{
-    margin-left:50px;margin-top:5px; position:absolute;font-size:100%;
-    display: inline-block;white-space:nowrap;font-size:15px;
-}
 
-#kendoUiMobileApp .Catagory-Sub-header-title{
-margin-left:50px;margin-top:27px;
-position:absolute;font-size:100%;
-display: inline-block;white-space:nowrap;font-size:12px;color:#696969;
-}
-#kendoUiMobileApp .Catagory-title{
-margin-left:50px;margin-top:15px; position:absolute;font-size:100%;display: inline-block;white-space:nowrap;
-}
-#kendoUiMobileApp .header-search-link{
-color:#696969;
-   font-weight:bold;
-    
- 
-}
+
 
 
 .km-nova .km-link-button {
@@ -249,7 +233,7 @@ color:#696969;
 }
 
 #kendoUiMobileApp .padding-befor-productcount{
-    padding-right:7px;padding-left:7px;padding-top:4px;
+    padding-right:7px;padding-left:7px;padding-top:12px;width:30px;
 }
 
 
@@ -263,7 +247,7 @@ color:#696969;
 
 #kendoUiMobileApp .product-price-display
 {
-    font-size:10px;float:left;color:black;
+    font-size:13px;float:left;color:black;
 }
 
 #kendoUiMobileApp  .details-desc-spacing
@@ -273,69 +257,76 @@ color:#696969;
 {font-style:italic}
 #kendoUiMobileApp .Size-color
 {
-    color:#a8a8a8
+    color:#a8a8a8;
+    font-size:13px;
 }
-
+#kendoUiMobileApp .price-color
+{
+    color:#000;
+    font-size:13px;
+}
 #kendoUiMobileApp  .wishlist-button
 {font-size:35px;border:none;padding:0px;color:#ecf0f1;}
 
 #kendoUiMobileApp .padding-befor-wishlist
-{float:right;min-height:30px;padding-right:25px;padding-top:10px;}
+{float:right;min-height:30px;padding-right:40px;padding-top:10px;}
 
 #kendoUiMobileApp .detail-size
 {width:100%;color:#a8a8a8;font-weight:bold}
 #kendoUiMobileApp .detail-size-lable
 {width:100%;color:#a8a8a8;font-style:italic}
-#kendoUiMobileApp .Left-drawer{
-color:#696969;
-}
-#kendoUiMobileApp .Right-drawer{
-color:#696969;
-}
+
 
 #kendoUiMobileApp .footer-first-part{
    width:10%; 
+    color:#666;background-color:#f7f7f7;
 }
 
 #kendoUiMobileApp .Cart-top
 {color:green;margin-right:10px;margin-top:5px;}
 #kendoUiMobileApp .cart
 {
-    color:#FFF;background-color:#006C6F;font-size:20px;padding:5px 0px 0px 5px;border:none;
+    color:#FFF;background-color:#006C6F;font-size:20px;padding:5px 0px 0px 5px;border:none;color:#666;background-color:#f7f7f7;
 }
 
 #kendoUiMobileApp .footer-second-part{
-    width:20%;height:auto;
+    width:24%;height:auto;
+  
+    
 }
 
 #kendoUiMobileApp .footer-second-part div{
-color:#fff;margin: 0 auto;width:32%;margin-top:10px;
+margin: 0 auto;width:32%;margin-top:10px;
+
 }
 
 
 #kendoUiMobileApp .footer-second-part div span{
-    display:inline block;white-space: nowrap;font-weight:bold;
+    display:inline block;white-space: nowrap;font-weight:bold;font-size:20px;
 }
 
 #kendoUiMobileApp .footer-third-part{
-   width:60%;height: auto;float:right
+   width:60%;height: auto;float:right;
+
 }
 
 #kendoUiMobileApp .checkout-button{
-    background-color:#FF6600;color:#fff;float:right;width:83%;margin-top:0px;border: none;border-radius: 0;
+    background-color:#00A287;color:#fff;float:right;width:83%;margin-top:0px;border: none;border-radius: 0;
+    height:50px;font-size:20px;
 }
 
 #rightdrawer .km-vertical-tabstrip{
-    background:#FFF
+    background:#FFF;
 }
 #rightdrawer .km-vertical-tabstrip .km-button{
-    background:#7f8c8d;
+    background:#BDC9BB;
     color:#fff;
 }
 
 #rightdrawer .km-vertical-tabstrip .km-button .km-state-active{
-    background:#000;
+    background:#FFF;
 }
+
 .km-nova .km-footer  {
     background: #006C6F;
     padding:0px;
@@ -343,45 +334,7 @@ color:#fff;margin: 0 auto;width:32%;margin-top:10px;
 
 
 
-.km-nova .km-header .km-tabstrip .km-button{
-   width:100%;
-    white-space:nowrap;
-    border-radius:0px;
-    background-color:#006C6F;
-    background-image: none;
-    background-image: none;
-    background-image: none;
-    font-size:20px;
-    border:none;
-    border-radius:none;
-}
 
-.km-nova .km-header .km-tabstrip {
-    
-  
-    background-color:#006C6F;
-    background-image: none;
-    background-image: none;
-    background-image: none;
-}
-.km-nova .km-header .km-tabstrip .km-button.km-state-active  {
- 
-   
-   
-    background-color:#006C6F;
-    background-image: none;
-    background-image: none;
-    background-image: none;
-    border-bottom:5px solid #FF6600;
-}
-
-
-
-.km-nova .km-header .km-navbar
-{
-      color:#FF6600;
-   
-}
 
 .km-nova .km-view .km-listview{
     
@@ -468,7 +421,7 @@ input:-moz-placeholder { color:#7f8c8d;font-size:20px; }
    width:50%;
 }
 #kendoUiMobileApp .startLink{
-border-bottom:5px solid #FF6600;
+border-bottom:5px solid #F7F7F7;
 }
 
 #kendoUiMobileApp .history-font{
@@ -584,14 +537,23 @@ border-bottom:5px solid #FF6600;
     border-spacing: 1em;
 }
 
+#kendoUiMobileApp .form-ul
+{list-style-type: none;margin-left:.3em;}
+
+#kendoUiMobileApp .Address-Text-box
+{padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;}
+
+#kendoUiMobileApp .signin-view{width:100%;}
+
 #kendoUiMobileApp .button-group {
     table-layout: fixed;
 }
 
 #kendoUiMobileApp .button-group .km-button {
     display: table-cell;
-    padding: .6em .8em;
+    padding: 1.5em 1.5em;
     margin: 1em 0;
+    
 }
 
 #kendoUiMobileApp .button-group.button-group-vertical .km-button {
@@ -634,7 +596,7 @@ border-bottom:5px solid #FF6600;
 
 
 .km-nova .km-drawer{
-    width:80%;
+    width:90%;
     border:none;
       background-color:#FFF;
 }
@@ -686,9 +648,10 @@ color:black;
 }
 
 #kendoUiMobileApp .navagation {
-  background-color:#FFF;  
+  background-color:#f7f7f7;  
     position: relative; 
     vertical-align:top;
+    color:#666;
    
 }
 
@@ -703,28 +666,49 @@ color:black;
     
 }
 
-.km-nova .km-drawer .km-content .km-listview li {
-    background-color:#FFF;
-border:none;
-color:#FF6600;
+.km-nova .km-drawer .km-content  #navigation-container li {
     
+border:none;
+
+  font-family: "Times New Roman",'Lucida Sans Unicode','Lucida Grande',"sans-serif" ; 
+   color:#666;
+    background-color:#f7f7f7; 
+     text-transform: uppercase;
+    
+}
+.km-nova .km-drawer .km-content  #navigation-container li a {
+ font-family: "Open Sans",'Lucida Sans Unicode','Lucida Grande',"sans-serif" ;
+    color:#666;
+}
+
+
+
+
+.km-nova .km-drawer .km-content .km-listview li .km-button {
+    background-color:#FF6600;
+ background-color:#00A287;
+    color:#fff;
    
     
 }
 
+
 .km-nova .km-drawer .km-content .km-listview-link:after {
-     background-color:#FFF;
+     background-color:#00A287;
     display: none;
+    color:#fff;
 }
 
 
 
 .km-nova .km-drawer .km-content .km-listview {
-     background-color:#FFF;
+     background-color:#FF6600;
     border:none;
 }
 .km-nova .km-drawer .km-listview li.km-state-active {
-     background-color:#FFF;
+     background-color:#FF6600;
+    background-color:#00A287;
+    color:#fff;
   border:none;
 }
 .km-nova .km-drawer,
@@ -795,7 +779,7 @@ color:#FF6600;
 
 #kendoUiMobileApp .View-Row
 {
-    display: table-row;width:100%;
+    display: table-row;
 }
 
 
@@ -814,7 +798,7 @@ border:none;
 
 }
 #kendoUiMobileApp  .home-image-a{
- border:1px solid #FF6600;
+ border:1px solid #f7f7f7;
 width:50%;
    
  float:left;
@@ -849,22 +833,9 @@ width:50%;
      
 }
 
-#kendoUiMobileApp  .detail-back{
- -ms-transform: rotate(1809deg); /* IE 9 */
-    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-    transform: rotate(180deg);
 
-    color:#696969;
-     
-}
 
-#kendoUiMobileApp  .tagline{
-    color: #aeaeae;
-    display: block;
-    font-style: italic;
-    font-size:12px;
-    
-}
+
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */
 
@@ -881,13 +852,14 @@ width:50%;
 }
 
 #kendoUiMobileApp #navigation-container  {
-    background: #7f8c8d;
+    background: #FFF;
     color: #000;
 }
 
 #kendoUiMobileApp #navigation-container .active {
-    background: #7f8c8d;
+    background: #FFF;
     color: #000;
+ 
 }
 #kendoUiMobileApp .km-listview-link  {
     color: #000
@@ -901,14 +873,7 @@ color:#000;
     color: #000;
 }
 
-#kendoUiMobileApp .containerdivNewLine { clear: both; float: left; display: block; position: relative; } 
-#kendoUiMobileApp h5 {color:#FF6600;width:220px;}
-#kendoUiMobileApp h2{color:#FF6600;}
-#kendoUiMobileApp h3{color:#FF6600;}
-#kendoUiMobileApp .left{float:left;vertical-align: top;}
-#kendoUiMobileApp .round{border-radius:60px;border:1px solid grey;width:30px;height:30px;padding:5px}
-#kendoUiMobileApp .round:active{border:1px solid red;}
-#kendoUiMobileApp .home_tile{width:100%;height:100%;}
+
     .km-arrow-e:after,
     .km-arrow-e:before
     {
@@ -926,3 +891,239 @@ color:#000;
 	margin-bottom:8px;
 	font-family:tahoma, arial, sans-serif;
 }
+
+.km-nova .km-footer, .km-nova .km-header .km-title{
+    background-color:#f7f7f7!important;
+    color:#666666!important;
+}
+
+
+/* customized class start */
+
+
+#kendoUiMobileApp .Green-bg
+{
+     background-color:#00A287!important;
+    color:#fff!important;
+}
+
+
+#kendoUiMobileApp .orange-bg
+{
+     background-color:#FF6600!important;
+    color:#fff!important;
+}
+
+
+#kendoUiMobileApp .Gray-bg
+{
+      color:#666!important;
+ background-color:#F7F7F7!important;
+}
+
+
+
+#kendoUiMobileApp .Main-Title
+{
+    margin-left:50px;margin-top:10px; position:absolute;display: inline-block;white-space:nowrap;font-size:20px;
+    color:#00A287;  text-transform: uppercase;
+}
+
+
+
+
+
+/* catagory scroll */
+.km-nova .km-header .km-tabstrip .km-button{
+  width:100%;
+   
+    white-space:nowrap;
+    border-radius:0px;
+     background-color:#00A287!important;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+   
+    border:none;
+    border-radius:none;
+    color: #F7F7F7!important;
+    height:70px;
+  
+      text-transform: uppercase;
+   
+   
+}
+
+/* catagory scroll */
+.km-nova .km-header .km-tabstrip .km-text
+{
+   color:#F7F7F7!important;
+   
+    font-size: 16px;
+    padding-right:20px;
+}
+
+
+.km-nova .km-header .km-tabstrip .km-button.km-state-active  {
+ 
+     
+ 
+ 
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    border-bottom:5px solid #F7F7F7;
+}
+
+
+
+.km-nova .km-header .km-navbar
+{
+     
+      width:100%;
+   
+}
+
+#kendoUiMobileApp .class50
+{width:50%;}
+#kendoUiMobileApp .class100
+{width:100%;}
+
+#kendoUiMobileApp .class200
+{width:200%;}
+#kendoUiMobileApp .class150
+{width:150%;}
+#kendoUiMobileApp .class240
+{width:240%;}
+
+#kendoUiMobileApp  .Caragory-heading-detail
+{
+font-size:100%;display: inline-block;white-space:nowrap;color:#00A287!important;
+}
+#kendoUiMobileApp  .tagline{
+    color: #aeaeae;
+    display: block;
+    font-style: italic;
+    font-size:12px;
+    
+}
+
+#kendoUiMobileApp .containerdivNewLine { clear: both; float: left; display: block; position: relative; } 
+#kendoUiMobileApp h5 {color:#FF6600;width:220px;}
+#kendoUiMobileApp h2{color:#FF6600;}
+#kendoUiMobileApp h3{color:#FF6600;}
+#kendoUiMobileApp .left{float:left;vertical-align: middle;}
+#kendoUiMobileApp .round{border-radius:50%;border:1px solid #666;width:2.26em;height:2.26em;vertical-align:middle;
+  background-image: url('../images/User-Interface-Minus-icon.png');
+    background-repeat: no-repeat;
+   
+    background-position: center center; 
+}
+#kendoUiMobileApp .round-minus{border-radius:50%;border:1px solid #666;width:2.26em;height:2.26em;vertical-align:middle;
+  background-image: url('../images/User-Interface-Minus-icon.png');
+    background-repeat: no-repeat;
+   
+    background-position: center center; 
+}
+#kendoUiMobileApp .round-plus{border-radius:50%;border:1px solid #666;width:2.26em;height:2.26em;vertical-align:middle;
+  background-image: url('../images/User-Interface-Plus-icon.png');
+    background-repeat: no-repeat;
+   
+    background-position: center center; 
+      }
+#kendoUiMobileApp .round:active{border:1px solid red;}
+#kendoUiMobileApp .home_tile{width:100%;height:100%;}
+
+.km-nova .km-navbar .km-button {
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    padding: 0 0.5em!important;
+    height: 100%;
+    line-height: 2.27em!important;
+}
+
+#kendoUiMobileApp .Left-drawer{
+color:#696969;
+    font-size:20px;
+}
+#kendoUiMobileApp .Right-drawer{
+color:#696969;
+        font-size:20px;
+}
+
+#kendoUiMobileApp  .detail-back{
+ -ms-transform: rotate(1809deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+font-size:20px;
+    color:#696969;
+     border-radius: 0;
+    border: 0;
+    margin: 0;
+    padding: 0 0.5em!important;
+    height: 100%;
+    line-height: 2.27em!important;
+     
+}
+
+
+#kendoUiMobileApp  .header-outer .km-back {
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    padding: 0 0.5em!important;
+    height: 100%;
+    line-height: 2.27em!important;
+}
+
+
+#kendoUiMobileApp .Catagory-title{
+margin-left:50px;margin-top:15px; position:absolute;
+
+    display: inline-block;white-space:nowrap;font-size:15px;color:#00A287!important;
+      text-transform: uppercase;
+}
+#kendoUiMobileApp .header-search-link{
+color:#696969;
+   font-weight:bold;
+    font-size:20px;
+    
+ 
+}
+
+#kendoUiMobileApp .Catagory-header-title{
+    margin-left:50px;margin-top:5px; position:absolute;font-size:100%;
+    display: inline-block;white-space:nowrap;font-size:15px;color:#00A287!important;
+      text-transform: uppercase;
+}
+
+#kendoUiMobileApp .Catagory-Sub-header-title{
+margin-left:50px;margin-top:27px;
+position:absolute;font-size:100%;
+display: inline-block;white-space:nowrap;font-size:12px; color:#666!important;
+      text-transform: uppercase;
+}
+
+
+
+#kendoUiMobileApp .Catagory-header-detail-title{
+    margin-left:0px;margin-top:5px; position:absolute;font-size:100%;
+    display: inline-block;white-space:nowrap;font-size:15px;color:#00A287!important;
+      text-transform: uppercase;
+}
+
+#kendoUiMobileApp .Catagory-Sub-header-detail-title{
+margin-left:0px;margin-top:27px;
+position:absolute;font-size:100%;
+display: inline-block;white-space:nowrap;font-size:12px; color:#666!important;
+      text-transform: uppercase;
+}
+
+
+.km-nova  .km-details:after {
+    content: "\e217";
+    top: 3px;
+}
+
+/* customized class End */

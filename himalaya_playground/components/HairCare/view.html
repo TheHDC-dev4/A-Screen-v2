@@ -1,35 +1,24 @@
+    <div data-role="view" data-title="Hair Care" data-layout="PersonalCare" data-model="app.hariCares" data-show="app.hariCares.onShow" data-after-show="app.hariCares.afterShow">
+       <!-- START_CUSTOM_CODE_dataListView -->
 
-
-
-    <div data-role="view" data-title="Hair Care" data-layout="main" data-model="app.cartDetails" data-show="app.cartDetails.onShow" data-after-show="app.cartDetails.afterShow">
-         <!-- START_CUSTOM_CODE_dataListView -->
-         <div   
-            id="touchSurface"
-            data-role="touch"
-            data-enable-swipe="1"
-            data-touchstart="myTouch.touchstart"
-            data-swipe="myTouch.swipe"
-            data-tap="myTouch.tap"
-            data-doubletap="myTouch.doubletap"
-            data-hold="myTouch.hold" >
-    <!--data-filterable="{field: 'ProductName', operator: 'contains'}" -->
         <!-- END_CUSTOM_CODE_dataListView -->
-        <ul  data-role="listview" data-style="inset" data-template="cartDetailsModelTemplate" data-bind="{ source: cartDetailsModel.dataSource, events: {click: cartDetailsModel.itemClick}}" data-pull-to-refresh="false" data-endless-scroll="false" >
+
+        <ul data-role="listview" data-style="inset" data-template="hariCaresModelTemplate" data-bind="{ source: hariCaresModel.dataSource, events: {click: hariCaresModel.itemClick}}" data-pull-to-refresh="true" data-endless-scroll="false" >
         </ul>
-        <!-- START_CUSTOM_CODE_dataListViewModel -->
-        <!-- END_CUSTOM_CODE_dataListViewModel -->
-        <script type="text/x-kendo-template" id="cartDetailsModelTemplate">
-        <div  class="class100">
+        <!-- START_CUSTOM_CODE_hariCaresModel -->
+        <!-- END_CUSTOM_CODE_hariCaresModel -->
+        <script type="text/x-kendo-template" id="hariCaresModelTemplate">
+            <div  class="class100">
                      <div class="image-with-text left"  >
                      <div class="View-Row">
-                                                 <a  href="\#components/animalCare/details.html?uid=${uid}"> 
+                                                 <a  href="\#components/HairCare/details.html?uid=${uid}"> 
                                                          <div class="View-Cell left">
                                                           <img src="#: data['ImageUrl'] #" width="100%" >
                                                           </div>
                                                           <div class="View-Cell-title left" >
                                                            <h5 class="class100">#: data['ProductName'] #</h5>
-                                                          <span class="product-price-display">&\#8377</span> <h6>#: data['Price'] #</h6>
-                                                             <h6 class="Size-color">#: data['size'] #</h6>
+                                                           <h6 class="Size-color">#: data['size'] #</h6>
+                                                          <span class="product-price-display">&\#8377  &nbsp;</span>  <h6>#: data['Price'] #</h6>
                                                             </div>
                                                      </a>   
                                                              <div class="View-Cell">
@@ -60,6 +49,9 @@
                           </div>
            </div>
             </div>
+
         </script>
-        </div>
+
+
+
     </div>

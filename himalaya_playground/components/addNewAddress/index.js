@@ -1,16 +1,18 @@
 'use strict';
 
 app.addNewAddress = kendo.observable({
-    onShow: function() {},
+    onShow: function() {
+         document.getElementById("addressLable-Div").style.display = "none";
+    },
     afterShow: function() {},
     onChange: function(e) {
         
            var router = new kendo.Router();
          e.checked ? 
         
-            document.getElementById("addressLable-Div").style.display = "none"
+            document.getElementById("addressLable-Div").style.display = "inline"
          
-         : document.getElementById("addressLable-Div").style.display = "inline";
+         : document.getElementById("addressLable-Div").style.display = "none";
         
         }
       

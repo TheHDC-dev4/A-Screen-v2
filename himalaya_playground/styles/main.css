@@ -111,10 +111,10 @@ color:#006C6F;position:absolute;top:30px;display:none;"
    width:80%;
 }
 #kendoUiMobileApp .Gray-button
-{background-color:#f7f7f7;color:#666;font-size:20px;  padding: .65em!important;}
+{background-color:#f7f7f7;color:#666;font-size:20px;  padding: .65em!important;border:1px solid #666;}
 
 #kendoUiMobileApp .Green-button
-{background-color:#00A287;color:white;font-size:20px;  padding: .65em!important;}
+{background-color:#00A287;color:white;font-size:20px;  padding: .65em!important;border:1px solid #f7f7f7;}
 #kendoUiMobileApp .Orange-button
 {background-color:#FF6600;color:white;}
 #kendoUiMobileApp  .authentication-textbox-div

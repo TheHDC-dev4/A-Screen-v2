@@ -42,21 +42,22 @@
                        
                  
                                            								<a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#:
-                                                                        data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round" onclick="removecart(this);"  data-title="test"  data-test="#: data['Test'] #" >
-                                          									<img src="images/User-Interface-Minus-icon.png">
-                                          								</a>
-                                          								<div  data-init="init"  class = "padding-befor-productcount left" >
-                                           										0<i></i>
+                                                                            data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round-minus" data-click="removeFromCart"  data-title="test"  data-test="#: data['Test'] #" >
+                                                                              
+                                                                            </a>
+                                                                            <div  data-init="init"   class = "padding-befor-productcount left" align="center">
+                                                                                    0<i></i>
+                                                                            </div>
+
+                                                                                   <a  data-role="button" class="left round-plus"  data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" data-click="addToCart" data-title="test" 
+                                                                                   data-test="#: data['Test'] #" >
+                                                                                  
+                                                                                    </a>
                                            								</div>
-                                                                        
-                                                                               <a  data-role="button" class="left round"   class="left round" onclick="addTo(this);"  >
-                                                                               <img  src="images/User-Interface-Plus-icon.png">
-                                                                                </a>
-                                           								</div>
-                  <div class = "padding-befor-wishlist">
-                                                                        <a data-role = "button" data-icon="Wishlist-e" id=  "btnAddtoWishlist"  class= "wishlist-button" class="km-small"  onclick="AddtowishListDetails(this.id);"></a>
-                                                                       
-                                                                        </div>
+          <div class = "padding-befor-wishlist">
+                                                                            <a data-role = "button" data-icon="Wishlist-e" id=  "btn#: data['Catalogid'] #"  class= "wishlist-button" class="km-small" onclick="AddtowishList(this.id);"></a>
+
+                                                                            </div>
        
                      </div>
                <div style="padding-top:20px;">

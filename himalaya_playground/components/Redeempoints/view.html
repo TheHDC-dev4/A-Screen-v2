@@ -1,19 +1,43 @@
 <div data-role="view" data-title="Redeem points" data-layout="main-nonav" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
     <div class="about-view" data-bind="invisible:error">
-        <div class="icon-group">
+<!--         <div class="icon-group">
 
 
             <div class="app-details" align="center">
                 <span class="redeem-title">Available Points</span></br>
                 <span class="redeem-point-display">1200</span>
             </div>
-        </div>
-    
+        
+        </div> -->
     <div align="center">
-        <a href="components/Wishlist/view.html" class="km-small" data-role="button">How to Redeem Point?</a>
-    </div>
+   
+        <br/>
+        <div align="center" class="row padding">
+            <div class="cell padding  greenbg font20" align="center">
+                <h3> Earned</h3>
+            </div>
+             <div class="cell padding  greenbg font20" align="center">
+                 <h3> Redeemed</h3>
+            </div>
+             <div class="cell padding  greenbg font20" align="center">
+                 <h3> Remaining</h3>
+            </div>
+        </div>
+             <div align="center" class="row padding">
+            <div class="cell padding greybg" align="center">
+                <h3>4000</h3>
+            </div>
+             <div class="cell padding greybg" align="center">
+                 <h3>2800</h3>
+            </div>
+             <div class="cell padding greybg" align="center">
+                 <h3>1200</h3>
+            </div>
+        </div>
+    <br/>
+    
     <div id="collapsible" data-role="collapsible" data-animation="false">
-        <h2>Point Redeemed History</h2>
+        <h2 class="GreenMsg">Point Redeemed History</h2>
         <ul data-role="listview"  data-endless-scroll="false" >
          <li>
                  <div  class="container" align="center"  >
@@ -96,7 +120,7 @@
         </ul>
     </div>
     <div id="collapsible" data-role="collapsible" data-animation="false">
-        <h2>Point Earned History</h2>
+        <h2 class="GreenMsg" >Point Earned History</h2>
         
                  <div  class="container" align="center"  >
             <ul data-role="listview"  data-endless-scroll="false" >
@@ -181,7 +205,17 @@
         </ul>
              </div>
     </div>
-      
+      <div id="collapsible" data-role="collapsible" data-animation="false">
+        <h2 class="GreenMsg" >How To Redeem Points?</h2>
+        
+                 <div  class="container" align="center"  >
+            <ul data-role="listview"  data-endless-scroll="false" >
+        <li>
+            Static Content
+                </li>
+        </ul>
+             </div>
+    </div>
 
       
         <!-- START_CUSTOM_CODE_aboutViewModel -->

@@ -22,7 +22,15 @@
     <script src="dataProviders/himalayaPlaygroundBackend.js"></script>
     <script src="kendo/js/jquery-1.7.1.min.js"></script>
 
-
+<style>
+     .km-pages{
+            text-align:center!important;
+            padding-top:10px;
+            height:5px!important;
+            
+        }
+        .km-current-page{background-color:#00A587!important;}
+    </style>
 
 </head>
 
@@ -57,6 +65,10 @@
     <script src="components/egiftcard/index.js"></script>
     <script src="components/Search/index.js"></script>
     <script src="components/egiftExternal/index.js"></script>
+       <script src=" components/home1/index.js"></script>
+       <script src=" components/home2/index.js"></script>
+       <script src=" components/home3/index.js"></script>
+   
 
     <script src="components/home/index.js"></script>
     <div data-role="layout" data-id="PersonalCare">
@@ -118,7 +130,7 @@
             <div data-role="navbar">
                 <div class="header-outer">
 
-                    <span class="Catagory-title" data-align="left" data-role="view-title">Animal Care</span>
+                    <span class="Main-Title" data-align="left" data-role="view-title">Animal Care</span>
                     <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
 
                     <a data-role="button" href="components/Search/view.html" class="header-search-link" data-icon="search" data-align="right"></a>
@@ -304,7 +316,7 @@
 
                 <div class="header-outer">
 
-                    <span class="Catagory-title" data-align="left">My Cart</span>
+                    <span class="Main-Title" data-align="left">My Cart</span>
 
                     <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
                     <a data-role="backbutton" class="Right-drawer" data-icon="down-e" data-align="right"></a>
@@ -312,7 +324,7 @@
                 </div>
 
                 <div>
-                    <span id="spanCartMsg" class="GreenMsg">Order Eligible for Free Shipping</span>
+                    <span id="spanCartMsg" class="Gray-bg">Order Eligible for Free Shipping</span>
                 </div>
 
             </div>
@@ -346,7 +358,7 @@
             <div data-role="navbar">
 
                 <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
-                <span class="Catagory-title" data-align="left" data-role="view-title"></span>
+                <span class="Default-title" data-align="left" data-role="view-title"></span>
 
                 <a data-role="button" class="Right-drawer" data-rel="drawer" href="#rightdrawer" data-icon="right-e" data-align="right"></a>
 
@@ -362,7 +374,7 @@
     <div data-role="layout" data-id="CheckOut">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="Main-Title" data-align="left">Payment Options</span>
+                <span class="Catagory-title" data-align="left">Payment Options</span>
                 <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
                 <div class="Green-Circle" data-align="right"></div>
                 <div data-align="right"></div>
@@ -401,7 +413,7 @@
     <div data-role="layout" data-id="EgiftExternal">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="Main-Title" data-align="left">E Gift Card</span>
+                <span class="Catagory-title" data-align="left">E Gift Card</span>
                 <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
 
 
@@ -463,7 +475,7 @@
     <div data-role="layout" data-id="Address">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="Main-Title" data-align="left">Shipping Address</span>
+                <span class="Catagory-title" data-align="left">Shipping Address</span>
                 <a data-role="button" href="components/home/view.html" class="detail-back" data-align="left" data-icon="details"></a>
                 <div class="Green-Circle" data-align="right"></div>
                 <div data-align="right"></div>
@@ -486,7 +498,7 @@
     <div data-role="layout" data-id="summary">
         <header data-role="header">
             <div data-role="navbar">
-                <span class="Main-Title" data-align="left">Summary</span>
+                <span class="Catagory-title" data-align="left">Summary</span>
                 <a data-role="backbutton" class="detail-back" data-align="left" data-icon="details"></a>
                 <div class="Green-Circle" data-align="right"></div>
                 <div data-align="right"></div>
@@ -565,29 +577,32 @@
         <div class="navagation" valign="top">
             <ul id="navigation-container" data-role="listview" data-use-native-scrolling="true">
                 <li><a href="components/home/view.html" >Home</a></li>
+                   <li><a href="components/home1/view.html" >Home2</a></li>
+                   <li><a href="components/home2/view.html" >Home3</a></li>
+                   <li><a href="components/home3/view.html" >Home4</a></li>
                 <li><a href="components/dataListView/view.html">Personal Care</a>
                 </li>
                 <li><a href="components/pureHerbs/view.html">Wellness</a>
                 </li>
-                <li><a href="components/childernHealth/view.html">pharmaceutical</a>
+                <li><a href="components/childrenhealth/view.html">pharmaceuticals</a>
                 </li>
                 <li><a href="components/postbath/view.html">Baby Care</a>
                 </li>
                 <li><a href="components/animalCare/view.html">Animal Care</a>
                 </li>
-                <li><a href="components/dataListView/view.html">Offers</a>
+                <li><a href="components/Currentoffers/view.html">Offers</a>
                 </li>
-                <li><a href="components/dataListView/view.html" >Refund Policy</a>
+                <li><a href="" >Refund Policy</a>
                 </li>
-                <li><a href="components/dataListView/view.html" >Shipping Policy</a>
+                <li><a href="" >Shipping Policy</a>
                 </li>
-                <li><a href="components/dataListView/view.html" >Support</a>
+                <li><a href="" >Support</a>
                 </li>
-                <li><a href="components/OrderHistoryItems/view.html">Notifications</a>
+                <li><a href="">Notifications</a>
                 </li>
 
 
-                <li><a href="components/authenticationView/view.html" >Store Locator</a>
+                <li><a href="" >Store Locator</a>
 
                 </li>
 
@@ -603,7 +618,7 @@
             <div data-role="navbar">
                 <div class="header-outer">
 
-                    <span class="Catagory-title" data-align="left" data-role="view-title"></span>
+                    <span class="Main-Title" data-align="left" data-role="view-title"></span>
                     <a data-role="button" class="Left-drawer" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
 
                     <a href="components/Search/view.html" class="header-search-link" data-icon="search" data-align="right"></a>

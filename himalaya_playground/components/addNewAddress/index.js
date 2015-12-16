@@ -2,7 +2,18 @@
 
 app.addNewAddress = kendo.observable({
     onShow: function() {},
-    afterShow: function() {}
+    afterShow: function() {},
+    onChange: function(e) {
+        
+           var router = new kendo.Router();
+         e.checked ? 
+        
+            document.getElementById("addressLable-Div").style.display = "none"
+         
+         : document.getElementById("addressLable-Div").style.display = "inline";
+        
+        }
+      
 });
 
 // START_CUSTOM_CODE_addNewAddress
@@ -134,3 +145,6 @@ if($("#" + e).val() == '') {
     }
 }
 // END_CUSTOM_CODE_addNewAddressModel
+
+
+

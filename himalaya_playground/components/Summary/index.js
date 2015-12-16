@@ -4,13 +4,14 @@ app.summary = kendo.observable({
     onShow: function() {},
     afterShow: function() {},
      onChange: function(e) {
-        
+        var a = document.getElementById('summary-Submit'); //or grab it by tagname etc
+
            var router = new kendo.Router();
          e.checked ? 
         
-             router.navigate("components/thankyou/view.html")
+            a.href = "components/thankyou/view.html"
          
-         : "unchecked";
+         : a.href = "components/paymentOptiion/view.html";
         
         }
 });

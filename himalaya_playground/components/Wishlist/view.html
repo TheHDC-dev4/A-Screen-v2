@@ -6,30 +6,45 @@
     <!-- START_CUSTOM_CODE_dermaCareModel -->
     <!-- END_CUSTOM_CODE_dermaCareModel -->
     <script type="text/x-kendo-template" id="dermaCareModelTemplate">
-        <div  style="width:100%;">
-                 <div class="image-with-text left" style=" display: table;width:100%;" >
-                 <div style="display: table-row;width:100%;">
-                                             <a  href="\#components/Wishlist/details.html?uid=${uid}"> 
-                                                     <div style="display: table-cell;width:30%;vertical-align:top;float:left;">
-                                                      <img src="#: data['ImageUrl'] #" width="100%" >
-                                                      </div>
-                                                       <div style="display: table-cell;vertical-align:top;width:30%;" >
-                                                       <h5 style="width:100%;">#: data['ProductName'] #</h5>
-                                                                                                               <span style="font-size:10px;float:left;color:black;">&\#8377</span> <h6>#: data['Price'] #</h6>
-                                                         <h6 style="color:\#a8a8a8">#: data['size'] #</h6>
-                                                        </div>
-                                                 </a>   
-                                        				 <div style="display: table-cell;width:30%;vertical-align:top;">
-                                          						
-                                                                     <div style="clear: both; float: left; display: block; position: relative;">
-                                                                    </div>
-                                                                   <div style="float:right;margin-top:25px;min-height:30px;">
-                                                                        <a data-role = "button" style="width:90px; font-size:10px;" id=  "btn#: data['Catalogid'] #"   class="km-small" onclick="RemoveFromCart(this.id);">Remove</a>
-                                                                        <span style="font-size:12px;display:none;color:\#FF6600;white-space:nowrap;">Remove</span>
+        <div  class="class100">
+                     <div class="image-with-text left"  >
+                     <div class="View-Row">
+                                              
+                                                          <div class="View-Cell left">
+                                                          <img src="#: data['ImageUrl'] #" width="100%" >
+                                                          </div>
+                                                          <div class="View-Cell-title left" >
+                                                           <h5 class="class100">#: data['ProductName'] #</h5>
+                                                          <h6 class="Size-color">#: data['size'] #</h6>
+                                                          <span class="product-price-display">&\#8377  &nbsp;</span>  <h6>#: data['Price'] #</h6>
+                                                            </div>
+                                                     
+                                                             <div class="View-Cell">
+                                                                    <div class="Right">
+                                                                        <div class="Right">
+                                                                           <a data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#:
+                                                                            data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" class="left round-minus" data-click="removeFromCart"  data-title="test"  data-test="#: data['Test'] #" >
+                                                                              
+                                                                            </a>
+                                                                            <div  data-init="init"   class = "padding-befor-productcount left" align="center">
+                                                                                    0<i></i>
+                                                                            </div>
+
+                                                                                   <a  data-role="button" class="left round-plus"  data-product="#: data['ProductName'] #" data-size="#: data['size'] #"  data-imageurl="#: data['ImageUrl'] #" data-id="#: data['Catalogid'] #"  data-role="button" data-click="addToCart" data-title="test" 
+                                                                                   data-test="#: data['Test'] #" >
+                                                                                  
+                                                                                    </a>
+                                                                            </div>
                                                                         </div>
-                                           					</div>
-                                            </div>
-                      </div>
-       </div>
+                                                                         <div class="clear-after-product-count">
+                                                                        </div>
+                                                                       <div class="remove-outer-div" align="center">
+                                                                            <a data-role = "button"  id=  "btn#: data['Catalogid'] #"   data-icon="delete-e" onclick="RemoveFromCart(this.id);" class="Remove-button"></a>
+                                                        
+                                                                            </div>
+                                                                </div>
+                                                </div>
+                          </div>
+           </div>
     </script>
 </div>

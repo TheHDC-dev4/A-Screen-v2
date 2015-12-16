@@ -1,16 +1,146 @@
 
 
-     <div data-role="view" data-title="Order History Items" data-layout="Verification"  data-model="app.finalOrder" data-show="app.finalOrder.onShow" data-after-show="app.finalOrder.afterShow">
+     <div data-role="view" data-title="Order History Details" data-layout="Verification"  data-model="app.finalOrder" data-show="app.finalOrder.onShow" data-after-show="app.finalOrder.afterShow">
         <!-- START_CUSTOM_CODE_animalCare -->
         <!-- END_CUSTOM_CODE_animalCare -->
 
+         <ul  data-role="listview" data-style="inset">
+             
+             <li align="center">
+                 <h4 class="uppercase orange left">
+                     Order Details
+                     
+                 </h4>
+             <div  class="container" align="center" >
+               <div    class="row" align="center">
+
+            <div class="leftcell" align="center">
+             <span class="order-history-header">Order no</span>
+                <span class="history-font">23450</span>
+                
+             </div>
+             <div class="middlecell" align="center">
+            <span class="order-history-header">Order Date</span>
+                <span class="history-font">Nov 02 2015</span>
+             </div>
+             <div class="rightcell" align="center">
+             <span class="order-history-header">Order Amount</span>
+                <span class="history-font">&#8377 2300.00</span>
+             </div>
+                 <div>
+               
+           </div>
+                      </div>
+                 
+             </div>
+             </li>
+             <li align="center">
+                 <h4 class="uppercase orange left">
+                     Order Items
+                 </h4>
+             </li>
+         </ul>
+         
         <ul data-role="listview" data-style="inset" data-template="finalOrderModelTemplate" data-bind="{ source: finalOrderModel.dataSource}" data-pull-to-refresh="false" data-endless-scroll="false">
             
            
         </ul>
-   <div align="center" style="padding-bottom:20px;">
-        <a data-role="backbutton" class="km-large" data-align="right"  >Reorder</a>
+         <ul data-role="listview" data-style="inset">
+             <li>
+                  <h4 class="uppercase orange">
+                         Shipping Information
+                     </h4><br/>
+                 <div class="left" style="width:30%">
+                    <span>Name &nbsp;</span>
+                 </div>
+              <div class="left" style="width:10%">
+                <span >:&nbsp;</span>
+                 </div>
+                  <div class="left" style="width:60%">
+                     <span >Hemanth kumar s</span> 
+                 </div>
+                 
+                
+                  <div class="left" style="width:30%">
+                    <span >Address &nbsp;</span>
+                 </div>
+              <div class="left" style="width:10%">
+                <span >:&nbsp;</span>
+                 </div>
+                  <div class="left" style="width:60%">
+                     <span >#2 rr layout chikkasandra chikkbanavara post bangalore 560057</span> 
+                 </div>
+              
+                  <div class="left" style="width:30%">
+                    <span>Phone &nbsp;</span>
+                 </div>
+              <div class="left" style="width:10%">
+                <span >:&nbsp;</span>
+                 </div>
+                  <div class="left" style="width:60%">
+                     <span >+91-9738730067</span> 
+                 </div>
+                 <div class="left" style="width:30%">
+                    <span>E-mail &nbsp;</span>
+                 </div>
+              <div class="left" style="width:10%">
+                <span >:&nbsp;</span>
+                 </div>
+                  <div class="left" style="width:60%">
+                     <span >hemu9902@gmail.com</span> 
+                 </div>
+             </li>
+             
+             <li>
+                 <h4 class="uppercase orange">
+                         Billing Information
+                     </h4><br/>
+                <div class="left" style="width:30%">
+                    <span>Name &nbsp;</span>
+                 </div>
+              <div class="left" style="width:10%">
+                <span >:&nbsp;</span>
+                 </div>
+                  <div class="left" style="width:60%">
+                     <span >Hemanth kumar s</span> 
+                 </div>
+                 
+                
+                  <div class="left" style="width:30%">
+                    <span >Address &nbsp;</span>
+                 </div>
+              <div class="left" style="width:10%">
+                <span >:&nbsp;</span>
+                 </div>
+                  <div class="left" style="width:60%">
+                     <span >#2 rr layout chikkasandra chikkbanavara post bangalore 560057</span> 
+                 </div>
+              
+                  <div class="left" style="width:30%">
+                    <span>Phone &nbsp;</span>
+                 </div>
+              <div class="left" style="width:10%">
+                <span >:&nbsp;</span>
+                 </div>
+                  <div class="left" style="width:60%">
+                     <span >+91-9738730067</span> 
+                 </div>
+                  <div class="left" style="width:30%">
+                    <span>E-mail &nbsp;</span>
+                 </div>
+              <div class="left" style="width:10%">
+                <span >:&nbsp;</span>
+                 </div>
+                  <div class="left" style="width:60%">
+                     <span >hemu9902@gmail.com</span> 
+                 </div>
+             <li>
+                      <div align="center" style="padding-bottom:20px;">
+        <a data-role="backbutton" class="Green-button km-large big-button" data-align="right"  >Reorder</a>
          </div>
+             </li>
+         </ul>
+
             
         <!-- START_CUSTOM_CODE_finalOrderModel -->
         <!-- END_CUSTOM_CODE_finalOrderModel -->
@@ -24,7 +154,8 @@
                                                           </div>
                                                            <div style="display: table-cell;vertical-align:top;width:30%;" >
                                                            <h5 style="width:100%;">#: data['ProductName'] #</h5>
-                                                          <span style="font-size:10px;float:left;color:black;">&\#8377</span> <h6>#: data['Price'] #</h6>
+                                     
+                                                          <span class="product-price-display">&\#8377  &nbsp;</span>  <h6>#: data['Price'] #</h6>
                                                             <div style="float:left;"> <h6 style="color:\#a8a8a8">#: data['size'] #</h6></div> <div style="float:left;padding-left:10%"> <h6 > X</h6></div>
                                                             <div  style="float:left;padding-left:5px;"><h6 style="color:red;"> 3</h6></div>
                                                             </div>
@@ -42,6 +173,7 @@
            </div>
 
         </script>
+       
     </div>
      
 

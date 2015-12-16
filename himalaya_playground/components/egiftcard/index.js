@@ -2,27 +2,27 @@
 
 function aniGiftCardNumber()
 {
-     $('#spanGiftCardNumber').show();
-    $('#spanGiftCardNumber').animate({top: '5px'}, "slow");
+     $('#spanCardNumber').show();
+    $('#spanCardNumber').animate({top: '5px'}, "slow");
 }
 
 function  upGiftCardNumber(e)
 {
 if($("#" + e).val() == '') {
-        $('#spanGiftCardNumber').css({"top": "30px", "display": "none"});
+        $('#spanCardNumber').css({"top": "30px", "display": "none"});
     }
 }
 
 function aniGiftCardPin()
 {
-     $('#spanGiftCardPin').show();
-    $('#spanGiftCardPin').animate({top: '100px'}, "slow");
+     $('#spanCardPin').show();
+    $('#spanCardPin').animate({top: '100px'}, "slow");
 }
 
 function  upGiftCardPin(e)
 {
 if($("#" + e).val() == '') {
-        $('#spanGiftCardPin').css({"top": "140px", "display": "none"});
+        $('#spanCardPin').css({"top": "140px", "display": "none"});
     }
 }
 

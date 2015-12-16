@@ -23,8 +23,27 @@
                         
                     </div>
                 </li>
+                 <li>
+                   <div class="authentication-textbox-div">
+                   <select   data-role="dropdownlist">
+                         	<option value="0" selected="selected">Select Title</option>
+		<option value="1">Mr.</option>
+		<option value="2">Mrs.</option>
+                       <option value="3">Miss.</option>
+                       <option value="4">Ms.</option>
+                       <option value="5">Dr.</option>
+	
+
+                        </select>
+                    </div>
+                </li>
+                 <li>
+                    <div class="address-text-spacing">
+                        
+                    </div>
+                </li>
                     <li>
-                    <span id="spanName" class="animated-placholder"  style="top:30px;" >Name</span>
+<!--                     <span id="spanName" class="animated-placholder"  style="top:30px;" >Name</span> -->
                  <div class="authentication-textbox-div">
                         <input onkeypress="aniName();"  onkeyup = "upaniName(this.id);" id="inputName" class="Address-Text-box" data-bind="value: addNewAddressModel.fields.name" type="text" placeholder="Name">
                     </div>
@@ -35,7 +54,7 @@
                     </div>
                 </li>
                 <li>
-                     <span id="spanAddEmail" class="animated-placholder" style="top:100px;">Email</span>
+<!--                      <span id="spanAddEmail" class="animated-placholder" style="top:100px;">Email</span> -->
                    <div class="authentication-textbox-div">
                                <input id="inputAddEmail" onkeypress="aniAddEmail();"  onkeyup = "upaniAddEmail(this.id);"  class="Address-Text-box" data-bind="value: addNewAddressModel.fields.email" placeholder="example@example.com" type="email">
                     </div>
@@ -46,7 +65,7 @@
                     </div>
                 </li>
                 <li>
-                     <span id="spanAddMobile" class="animated-placholder" style="top:180px;">Mobile</span>
+<!--                      <span id="spanAddMobile" class="animated-placholder" style="top:180px;">Mobile</span> -->
                    <div class="authentication-textbox-div">
                                <input id="inputAddMobile" onkeypress="aniAddMobile();"  onkeyup = "upaniAddMobile(this.id);"  class="Address-Text-box"  placeholder="Mobile Number" >
                     </div>
@@ -57,9 +76,9 @@
                     </div>
                 </li>
                 <li>
-                  <span id="spanAddress" class="animated-placholder" style="top:260px;">Address</span>
+<!--                   <span id="spanAddress" class="animated-placholder" style="top:260px;">Address</span> -->
                    <div class="authentication-textbox-div">
-                        <input onkeypress="aniAddress();"  onkeyup = "upaniAddress(this.id);" id="inputAddress" placeholder="Address"   data-bind="value: addNewAddressModel.fields.address" type="text">
+                        <input onkeypress="aniAddress();"  onkeyup = "upaniAddress(this.id);" id="inputAddress" placeholder="Address" class="Address-Text-box"  data-bind="value: addNewAddressModel.fields.address" type="text">
                     </div>
                 </li>
                  <li>
@@ -68,9 +87,9 @@
                     </div>
                 </li>
                 <li>
-                    <span id="spanCity" class="animated-placholder"  style="top:310px;">City</span>
+<!--                     <span id="spanCity" class="animated-placholder"  style="top:310px;">City</span> -->
                     <div class="authentication-textbox-div">
-                        <input placeholder="City" onkeypress="aniCity();"  onkeyup = "upaniCity(this.id);" id="inputCity" data-bind="value: addNewAddressModel.fields.city" type="text">
+                        <input placeholder="City" onkeypress="aniCity();" class="Address-Text-box" onkeyup = "upaniCity(this.id);" id="inputCity" data-bind="value: addNewAddressModel.fields.city" type="text">
                     </div>
                 </li>
                  <li>
@@ -80,7 +99,7 @@
                 </li>
                 <li>
                    <div class="authentication-textbox-div">
-                   <select   data-role="dropdownlist">
+                   <select class="Address-Text-box"  data-role="dropdownlist">
                          	<option value="0" selected="selected">State / UT</option>
 		<option value="AN">Andaman &amp; Nicobar Islands</option>
 		<option value="AP">Andhra Pradesh</option>
@@ -127,27 +146,39 @@
                     </div>
                 </li>
                 <li>
-                     <span id="spanPincode" class="animated-placholder" style="top:440px;">Pincode</span>
+<!--                      <span id="spanPincode" class="animated-placholder" style="top:440px;">Pincode</span> -->
                  <div class="authentication-textbox-div">
-                        <input onkeypress="aniPincode();"  onkeyup = "upaniPincode(this.id);" id="inputPincode" data-bind="value: addNewAddressModel.fields.pincode"  placeholder="Pincode" type="text">
+                        <input class="Address-Text-box" onkeypress="aniPincode();"  onkeyup = "upaniPincode(this.id);" id="inputPincode" data-bind="value: addNewAddressModel.fields.pincode"  placeholder="Pincode" type="text">
                     </div>
                 </li>
-                 <li>
+                
+<!--                  <li>
                    <div class="address-text-spacing">
                         
                     </div>
                 </li>
                
                  <li>
-                    <div class="address-text-spacing">
                         
                     </div>
-                </li>
+                </li> -->
+                    <div class="address-text-spacing">
             
             </ul>
-
+ <ul data-role="listview" data-style="inset"  class="form-ul">
+      <li>
+                              
+                           Save Address  <input data-role="switch" id="email-switch"   data-bind="events: { change: onChange }">
+                              
+                         </li>
+     <li>
+             <div class="authentication-textbox-div" id="addressLable-Div">
+      <input class="Address-Text-box"  id="addressLable"  placeholder="Address Lable" type="text">
+         </div>
+     </li>
+            </ul>
             <div class="button-group">
-                <a  class="km-large"  href="components/Summary/view.html" data-role="button" >Save Address</a>
+                <a  class="Green-button km-large"  href="components/Summary/view.html" data-role="button" >Continue</a>
             </div>
         </form>
         <!-- START_CUSTOM_CODE_addNewAddressModel -->

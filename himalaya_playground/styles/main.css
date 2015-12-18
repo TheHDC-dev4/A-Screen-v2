@@ -5,11 +5,13 @@
    color:#fff;
     background-color:#f7f7f7;
     color:#666!important;
+   
 }
 
 .payment-option {
    margin-left:-20px;
     padding-right:20px;
+   
 }
 
 .payment-option li{
@@ -17,11 +19,14 @@
         padding-bottom:40px;
   
      list-style-type:none;
+   
 }
 
 
-.payment-option li >div{
+.payment-option li div{
     padding-right:20px;
+    font-size:15px;
+   
 }
 .payment-option li input[type=radio]{
 transform: scale(2, 2); 
@@ -29,18 +34,19 @@ transform: scale(2, 2);
 -ms-transform: scale(2, 2); 
 -webkit-transform: scale(2, 2); 
 -o-transform: scale(2, 2); 
-    
+   
 }
 .largebutton{
     width:100%;
    margin-left:-10px;
+   
 }
 
 .km-nova .km-tabstrip .km-button 
 {
      background-color:#006C6F;
     width:100%;
-   
+  
 }
 
 
@@ -49,6 +55,7 @@ transform: scale(2, 2);
     {
         content: "\e0b4";
          color:#ff6600;
+       
     }
 
 
@@ -57,6 +64,7 @@ transform: scale(2, 2);
     {
         content: "\e0c2";
          color:#ff6600;
+       
     }
 
 .km-support-e:after,
@@ -65,6 +73,7 @@ transform: scale(2, 2);
           content: "\e319";
          color:#ff6600;
         background:#ff6600;
+       
     }
 
 
@@ -75,6 +84,7 @@ transform: scale(2, 2);
     {
          content: "\e07a";
          color:#ff6600;
+       
 
     }
 
@@ -84,6 +94,7 @@ transform: scale(2, 2);
     {
          content: "\e0b2";
           color:#ff6600;
+       
 
     }
 
@@ -93,6 +104,7 @@ transform: scale(2, 2);
     {
         content: "\e221";
         color:#666;
+       
       
         padding:10px;
     }
@@ -103,65 +115,71 @@ transform: scale(2, 2);
 
 #kendoUiMobileApp  .checkout-title{
 color:#006C6F;position:absolute;top:30px;display:none;"
+   
 }
 
 
 
 .payment-width{
    width:80%;
+   
 }
 #kendoUiMobileApp .Gray-button
-{background-color:#f7f7f7;color:#666;font-size:20px;  padding: .65em!important;border:1px solid #666;}
+{background-color:#f7f7f7;color:#666;font-size:20px;  padding: .65em!important;border:1px solid #666;font-family:"HimalayaFont"!important;}
 
 #kendoUiMobileApp .Orange-button
-{background-color:#FF6600;color:white;font-size:20px;  padding: .65em!important;border:1px solid #f7f7f7;}
+{background-color:#FF6600;color:white;font-size:20px;  padding: .65em!important;border:1px solid #f7f7f7;
+    font-family:"HimalayaFont"!important;
+    border:none!important;
+}
 
 #kendoUiMobileApp  .authentication-textbox-div
-{width:104%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;}
+{width:104%; border-bottom:1px solid #006C6F;height:50px;margin-left:-30px;font-family:"HimalayaFont"!important;}
 
 #kendoUiMobileApp  .authentication-text-spacing
-{padding-top:30px;}
+{padding-top:30px;font-family:"HimalayaFont"!important;}
 #kendoUiMobileApp  .address-text-spacing
-{padding-top:20px;}
+{padding-top:20px;font-family:"HimalayaFont"!important;}
 
 #kendoUiMobileApp  .authentication-textbox-div input
-{border:none;width:100%;height:45px;font-size:20px;}
+{border:none;width:100%;height:45px;font-size:20px;font-family:"HimalayaFont"!important;}
 
 #kendoUiMobileApp  .button-summary-white
-{background-color:white}
+{background-color:white;font-family:"HimalayaFont"!important;}
 #kendoUiMobileApp  .summary-text
 {
-border:none;width:100%;height:45px;font-size:20px;padding-left:5px;padding-bottom:10px;
+border:none;width:100%;height:45px;font-size:20px;padding-left:5px;padding-bottom:10px;font-family:"HimalayaFont"!important;
     border-bottom:1px solid #006C6F;
 }
 
 
 #kendoUiMobileApp  .authentication-textbox-div select
-{padding-top:10px;border:none;width:100%;height:45px;font-size:20px;}
-#kendoUiMobileApp  .authentication-textbox-div #inputRegConf
-{padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;text-security: disc;
+{padding-top:10px;border:none;width:100%;height:45px;font-size:20px;font-family:"HimalayaFont"!important;color:#8A9596;}
+#kendoUiMobileApp  .authentication-textbox-div  .password
+{padding-top:10px;border:none;width:100%;height:45px;font-size:20px;text-security: disc;font-family:"HimalayaFont"!important;
     -moz-text-security: disc;-webkit-text-security: disc;}
 .outer-incdec{
 float:right;margin-top:-30px;padding-right:15px;
 }
- .outerdiv-details > div{margin: auto;width: 100%;padding-bottom:10px;padding-left:10px;
+ .outerdiv-details > div{margin: auto;width: 100%;padding-bottom:10px;padding-left:10px;font-family:"HimalayaFont"!important;
 }
 
 #kendoUiMobileApp   .Price-Lable-details
-{float:left;padding-top:10px;padding-right:10px;font-style:italic}
+{float:left;padding-top:10px;padding-right:10px;font-style:italic;font-family:"HimalayaFont"!important;}
 
 
 #kendoUiMobileApp .Price-rupuee-details
-{float:left;font-weight:bold;padding-top:10px;padding-right:5px;}
+{float:left;font-weight:bold;padding-top:10px;padding-right:5px;font-family:"HimalayaFont"!important;}
 
 #kendoUiMobileApp .Price-details
-{float:left;font-weight:bold;padding-top:10px;}
+{float:left;font-weight:bold;padding-top:10px;font-family:"HimalayaFont"!important;}
 
 #kendoUiMobileApp .km-view .divOuter-details div{
     margin: auto;
     width: 100%;
     padding-bottom:10px;
     padding-left:10px;
+   
 }
 
 
@@ -179,14 +197,14 @@ float:right;margin-top:-30px;padding-right:15px;
 
 
 #kendoUiMobileApp .Detail-outer-incDec
-{float:right;margin-top:-30px;padding-right:15px;}
+{float:right;margin-top:-30px;padding-right:15px;font-family:"HimalayaFont"!important;}
 
 
 
 
 
 #kendoUiMobileApp .header-outer{
-display:inline-block;width:100%;
+display:inline-block;width:100%;font-family:"HimalayaFont"!important;
 }
 
 
@@ -195,53 +213,59 @@ display:inline-block;width:100%;
 {border-radius: 50%;width: 15px;height: 15px;border:1px solid green; background-color:green;}
 
 #kendoUiMobileApp .padding-20{padding-top:20px}
-
+#kendoUiMobileApp .padding-left-15{padding-left:15px}
+#kendoUiMobileApp .padding-left-20{padding-left:20px}
+#kendoUiMobileApp .padding-100{padding-top:100px}
 #kendoUiMobileApp .header-outer-checkout-flow
 {
     margin-left:50px;margin-top:10px; position:absolute;display: inline-block;white-space:nowrap;font-size:20px;
-    color:#FF6600;
+    color:#FF6600;font-family:"HimalayaFont"!important;
 }
 
 
 #kendoUiMobileApp .Gray-Circle 
 {
-    border-radius: 50%;width: 15px;height: 15px;border:1px solid #ecf0f1; background-color:#ecf0f1;
+    border-radius: 50%;width: 15px;height: 15px;border:1px solid #ecf0f1; background-color:#ecf0f1;font-family:"HimalayaFont"!important;
 }
 #kendoUiMobileApp .circle-next-div
 {
-    padding-left:5px;
+    padding-left:5px;font-family:"HimalayaFont"!important;
 }
 #kendoUiMobileApp .GreenMsg
-{color:#00A287;}
+{color:#00A287;font-family:"HimalayaFont"!important;}
 #kendoUiMobileApp .OrangeMsg
-{color:#FF6600;}
+{color:#FF6600;font-family:"HimalayaFont"!important;}
 
 
 #kendoUiMobileApp .km-collapsible-content{
    text-align:left!important;
     width:100%!important;
+   
 }
 #kendoUiMobileApp .km-collapsible-header{
    text-align:left!important;
     width:100%!important;
+   
 }
 
 .km-nova .km-link-button {
     color: #00acc1;
     border-color: transparent;
    width:100%;text-align:left;
+   
 }
 
-#kendoUiMobileApp .Font20{font-size:20px;}
+#kendoUiMobileApp .Font20{font-size:20px;font-family:"HimalayaFont"!important;}
 
 
 #kendoUiMobileApp .Right
 {
-    float:right;
+    float:right
+       
 }
 
 #kendoUiMobileApp .padding-befor-productcount{
-    padding-right:7px;padding-left:7px;padding-top:12px;width:30px;
+    padding-right:7px;padding-left:7px;padding-top:12px;width:30px;font-family:"HimalayaFont"!important;
 }
 
 
@@ -250,54 +274,58 @@ display:inline-block;width:100%;
     clear: both; float: left; display: block; position: relative;
 }
 
-#kendoUiMobileApp .discription
-{text-align:justif;}
+
 
 #kendoUiMobileApp .product-price-display
 {
-    font-size:13px;float:left;color:black;
+    font-size:13px;float:left;color:black;font-family:"HimalayaFont"!important;
 }
 
 #kendoUiMobileApp  .details-desc-spacing
-{padding-top:25px;padding-left:15px;padding-right:15px;}
+{padding-top:25px;padding-left:15px;padding-right:15px;font-family:"HimalayaFont"!important;}
 
 #kendoUiMobileApp  .italic
-{font-style:italic}
+{font-style:italic;font-family:"HimalayaFont"!important;}
 #kendoUiMobileApp .Size-color
 {
     color:#a8a8a8;
     font-size:13px;
+   
 }
 #kendoUiMobileApp .price-color
 {
     color:#000;
     font-size:13px;
+   
 }
 #kendoUiMobileApp  .wishlist-button
-{font-size:35px;border:none;padding:0px;color:#ecf0f1;}
+{font-size:35px;border:none;padding:0px;color:#ecf0f1;font-family:"HimalayaFont"!important;}
 
 #kendoUiMobileApp .padding-befor-wishlist
-{float:right;min-height:30px;padding-right:40px;padding-top:10px;}
+{float:right;min-height:30px;padding-right:40px;padding-top:10px;font-family:"HimalayaFont"!important;}
 
 #kendoUiMobileApp .detail-size
-{width:100%;color:#a8a8a8;font-weight:bold}
+{width:100%;color:#a8a8a8;font-weight:bold;font-family:"HimalayaFont"!important;}
 #kendoUiMobileApp .detail-size-lable
-{width:100%;color:#a8a8a8;font-style:italic}
+{width:100%;color:#a8a8a8;font-style:italic;font-family:"HimalayaFont"!important;}
 
 
 #kendoUiMobileApp .footer-first-part{
    width:10%; 
     color:#666;background-color:#f7f7f7;
+   
 }
 
 #kendoUiMobileApp .Cart-top
-{color:green;margin-right:10px;margin-top:5px;}
+{color:green;margin-right:10px;margin-top:12px;font-size:20px;}
 #kendoUiMobileApp .cart
 {
-    color:#FFF;background-color:#006C6F;font-size:20px;padding:5px 0px 0px 5px;border:none;color:#666;background-color:#f7f7f7;
+   
+    color:#FFF;background-color:#006C6F;font-weight:bold; font-size:30px;padding:5px 0px 0px 5px;border:none;color:#666;background-color:#f7f7f7;
 }
 
 #kendoUiMobileApp .footer-second-part{
+   
     width:24%;height:auto;
   
     
@@ -305,40 +333,45 @@ display:inline-block;width:100%;
 
 #kendoUiMobileApp .footer-second-part div{
 margin: 0 auto;width:32%;margin-top:10px;
-
+font-family:"HimalayaFont"!important;
 }
 
 
 #kendoUiMobileApp .footer-second-part div span{
-    display:inline block;white-space: nowrap;font-weight:bold;font-size:20px;
+    display:inline block;white-space: nowrap;font-weight:bold;font-size:20px;font-family:"HimalayaFont"!important;
 }
 
 #kendoUiMobileApp .footer-third-part{
    width:60%;height: auto;float:right;
-
+font-family:"HimalayaFont"!important;
 }
 
 #kendoUiMobileApp .checkout-button{
     background-color:#FF6600;color:#fff;float:right;width:83%;margin-top:0px;border: none;border-radius: 0;
     height:50px;font-size:20px;
+   
 }
 
 #rightdrawer .km-vertical-tabstrip{
     background:#FFF;
+   
 }
 #rightdrawer .km-vertical-tabstrip .km-button{
     background:#F7F7F7;
     color:#666;
+   
 }
 
 #rightdrawer .km-vertical-tabstrip .km-button.km-state-active{
  background:#F7F7F7!important;
     color:#FF6600!important;
+   
 }
 
 .km-nova .km-footer  {
     background: #006C6F;
     padding:0px;
+   
 }
 
 
@@ -346,12 +379,12 @@ margin: 0 auto;width:32%;margin-top:10px;
 
 
 .km-nova .km-view .km-listview{
-    
+   
 }
 
 .km-nova .km-view .km-header .km-navbar{
     color:#FF6600;
-   
+  
 }
 
 
@@ -371,45 +404,57 @@ margin: 0 auto;width:32%;margin-top:10px;
 
 .km-flat .km-view .km-content {
     background-color: rgb(255, 255, 255);
+   
 }
 .km-flat .km-view .km-navbar {
     background-color: rgb(255, 255, 255);
+   
 }
 .km-flat .km-view .km-navbar .km-button {
   background-color: rgb(255, 255, 255);
+   
 }
 .km-flat .km-view .km-navbar .km-button.km-state-active {
    background-color: rgb(255, 255, 255);
+   
 }
 .km-flat .km-view .km-navbar .km-button .km-text {
     color: rgb(255, 255, 255);
+   
 }
 .km-flat .km-view .km-content .km-list .km-state-active .km-listview-link {
      background-color: rgb(255, 255, 255);
+   
 }
 .km-flat .km-view .km-content .km-list > li {
     background-color: rgb(255, 255, 255);
      border:1px solid #FFF;
     border-bottom:1px solid #ccc;
+   
 }
 .km-flat .km-view .km-content {
     padding:0;
+   
 }
 .km-flat .km-view .km-tabstrip .km-button.km-state-active {
     background-color: rgb(255, 102, 0);
+   
 }
 .km-flat .km-view .km-content .km-button.km-state-active {
     background-color: rgb(255, 102, 0);
+   
 }
 
 .km-flat .km-view .km-content .km-button {
     background-color: rgb(255, 255, 255);
      padding: 0;
+   
 
     margin: 0;
 }
 .km-flat .km-view  {
     background-color: #FF9819;
+   
 }
  .km-right-e:after,
     .km-right-e:before
@@ -417,10 +462,10 @@ margin: 0 auto;width:32%;margin-top:10px;
         content: "\e316";
     }
 
-::-webkit-input-placeholder { color:#7f8c8d;font-size:20px; }
-::-moz-placeholder { color:#7f8c8d;font-size:20px; } /* firefox 19+ */
-:-ms-input-placeholder { color:#7f8c8d;font-size:20px; } /* ie */
-input:-moz-placeholder { color:#7f8c8d;font-size:20px; }
+::-webkit-input-placeholder { color:#7f8c8d;font-size:20px;font-family:"HimalayaFont"!important; }
+::-moz-placeholder { color:#7f8c8d;font-size:20px;} /* firefox 19+ */
+:-ms-input-placeholder { color:#7f8c8d;font-size:20px;font-family:"HimalayaFont"!important; } /* ie */
+input:-moz-placeholder { color:#7f8c8d;font-size:20px;font-family:"HimalayaFont"!important; }
 
 
 #kendoUiMobileApp .inactive{
@@ -428,13 +473,17 @@ input:-moz-placeholder { color:#7f8c8d;font-size:20px; }
    cursor: default;
     font-size:12px;
    width:50%;
+   
 }
 #kendoUiMobileApp .startLink{
-border-bottom:5px solid #F7F7F7;
+border-bottom:5px solid #FF6600;
+   
 }
 
 #kendoUiMobileApp .history-font{
     font-size:15px;
+    color:#000;
+   
 }
 #kendoUiMobileApp .rupee:after,
 #kendoUiMobileApp .rupee:before
@@ -450,19 +499,21 @@ border-bottom:5px solid #F7F7F7;
     font-size:20px;
     display:block;
     font-weight:bold;
+   
 }
-}
+
 #kendoUiMobileApp .one-third-order-hisrory{
     padding-left:10px;
     width:33%;
     margin:auto;
     display:block;
     white-space:nowrap;
+   
 }
 #kendoUiMobileApp .order-History-outerDiv
 {
     width:100%;
-   
+  
 }
 
 #kendoUiMobileApp .ruler{
@@ -548,9 +599,10 @@ border-bottom:5px solid #F7F7F7;
 
 #kendoUiMobileApp .form-ul
 {list-style-type: none;margin-left:.3em;}
-
+#kendoUiMobileApp .form-ul li
+{color:#8A9596;padding-left:10px;font-size:20px;}
 #kendoUiMobileApp .Address-Text-box
-{padding-top:10px;padding-left:10px;border:none;width:100%;height:45px;font-size:20px;}
+{padding-top:10px;border:none;width:100%;height:45px;font-size:20px;}
 
 #kendoUiMobileApp .signin-view{width:100%;}
 
@@ -605,7 +657,7 @@ border-bottom:5px solid #F7F7F7;
 
 
 .km-nova .km-drawer{
-    width:75%;
+    width:80%;
     border:none;
       background-color:#FFF;
 }
@@ -671,7 +723,7 @@ color:black;
 
 #navigation-container{
     list-style-type:none;
-   
+   z-index:10000000;
     
 }
 
@@ -947,7 +999,7 @@ color:#000;
    
     white-space:nowrap;
     border-radius:0px;
-     background-color:#FF6600!important;
+     background-color:#d8d8d8!important;
     background-image: none;
     background-image: none;
     background-image: none;
@@ -965,7 +1017,7 @@ color:#000;
 /* catagory scroll */
 .km-nova .km-header .km-tabstrip .km-text
 {
-   color:#F7F7F7!important;
+   color:#666!important;
    
     font-size: 16px;
     padding-right:20px;
@@ -980,7 +1032,7 @@ color:#000;
     background-image: none;
     background-image: none;
     background-image: none;
-    border-bottom:5px solid #F7F7F7;
+    border-bottom:5px solid #FF6600;
 }
 
 
@@ -1115,6 +1167,7 @@ color:#696969;
     margin-left:50px;margin-top:5px; position:absolute;
     display: inline-block;white-space:nowrap;font-size:15px;color:#FF6600!important;
       text-transform: uppercase;
+    font-family:"HimalayaFont";
 }
 
 #kendoUiMobileApp .Catagory-Sub-header-title{
@@ -1162,11 +1215,11 @@ display: inline-block;white-space:nowrap;font-size:12px; color:#666!important;
 }
 
 #kendoUiMobileApp .order-history-header
-{display: block;color:#bdc3c7;padding-right:5px;text-transform: uppercase;font-size:13px;}
+{display: block;padding-right:5px;text-transform: uppercase;font-size:13px;}
 #kendoUiMobileApp .uppercase
 {text-transform: uppercase;}
 #kendoUiMobileApp .orange{color:#FF6600;}
-#kendoUiMobileApp .cell{ display: table-cell;}
+#kendoUiMobileApp .cell{ display: table-cell;border:1px solid #FFF;}
 #kendoUiMobileApp width40{width:40%}
 #kendoUiMobileApp width10{width:10%}
 #kendoUiMobileApp width60{width:60%}
@@ -1331,5 +1384,112 @@ width:50%;
 }
 
 
+.km-nova .km-switch-wrapper {
+    border-color:#FF6600;
+    background-color: #FF6600;
+}
+.km-nova .km-switch-background{
+    background-color:transparent!important;
+}
+
+.km-nova .km-switch-handle{
+    border:none;
+}
+@-webkit-keyframes km-spin {
+    from {
+        -webkit-transform: rotate(50deg)
+    }
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+/* .km-nova .km-loading-left:before {
+  background-color:transparent!important;
+          background-image: url(" http://www.w3schools.com/jquery/demo_wait.gif");
+     background-repeat: norepeat;
+    width:100%;
+}
+.km-nova .km-loading-left:after {
+   
+    background-color:transparent!important;
+          background-image: url(" http://www.w3schools.com/jquery/demo_wait.gif") ,;
+      background-repeat: norepeat;
+     width:100%;
+}
+.km-nova span.km-loading-right {
+  background: none;
+     
+ 
+} */
+
+/* #kendoUiMobileApp  .km-loading-right{
+     background: none;
+      background-image: url(" http://www.w3schools.com/jquery/demo_wait.gif");
+}
+
+#kendoUiMobileApp  .km-loading-left{
+     background: none;
+      background-image: url(" http://www.w3schools.com/jquery/demo_wait.gif");
+}
+#kendoUiMobileApp .km-loading{
+    background:#FF6600;
+} */
 
 
+#kendoUiMobileApp .km-loader{
+  
+    background:#ecf0f1;
+    opacity: 0.5;
+    display:block;
+}
+
+
+
+
+@font-face {
+        font-family: "HimalayaFont";
+        src: url("Font/OpenSans-Semibold-webfont.woff") format("woff"),
+             url("Font/OpenSans-Semibold-webfont.ttf") format("truetype");
+    }
+
+#kendoUiMobileApp .km-nova{font-family:"HimalayaFont"!important;}
+body{font-family:"HimalayaFont"!important;}
+h1,h2,h3,h4,h5,h6,span,div,input,li,a{font-family:"HimalayaFont"!important;}
+p{line-height:2;
+font-size:15px!important;
+}
+
+#kendoUiMobileApp .discription
+{text-align:justif;}
+
+#kendoUiMobileApp .discription ul li
+{line-height:2;
+font-size:15px!important;}
+
+#kendoUiMobileApp .greenbg
+{
+    background:#00A287!important;
+}
+#kendoUiMobileApp .greybg
+{
+    background:#f7f7f7!important;
+}
+#kendoUiMobileApp .greenbg h3
+{
+    color:#ffffff!important;
+}
+#kendoUiMobileApp .greybg h3
+{
+    color:#666666!important;
+}
+#kendoUiMobileApp .km-header{
+     -moz-box-shadow: 0px 5px 3px #f7f7f7;
+-webkit-box-shadow: 0px 5px 3px #f7f7f7;
+box-shadow-bottom: 5px #f7f7f7;
+}
+#kendoUiMobileApp .km-footer{
+     -moz-box-shadow: 0px 3px 13px #666;
+-webkit-box-shadow: 0px 3px 13px #666;
+box-shadow: 5px #666;
+}

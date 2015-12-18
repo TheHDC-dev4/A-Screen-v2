@@ -1,13 +1,13 @@
-    <div data-role="view" style="height:2000px;" data-title="Gift Card" data-layout="main-nonav"
+    <div data-role="view" style="height:2000px;" data-title="E Gift Card" data-layout="main-nonav"
          data-model="app.EgiftExternal"  data-show="app.EgiftExternal.onShow" data-after-show="app.EgiftExternal.afterShow">
           <div class="signin-view">
             <form>
                 <ul class="form-ul" >
                     <li>
-                        <span id="spanCardNumber" class="animated-placholder" style="top:30px;">Gift Card Number</span>
+<!--                         <span id="spanCardNumber" class="animated-placholder" style="top:30px;">E Gift Card Number</span> -->
                        <div class="authentication-textbox-div">
 
-                             <input id="inputCardNumber" onkeypress="aniEmail();"  onkeyup = "upaniEmail(this.id);"  placeholder="Gift Card Number" type="email" data-bind="value: authenticationViewModel.email" >
+                             <input id="inputCardNumber" onkeypress="aniEmail();"  onkeyup = "upaniEmail(this.id);"  placeholder="E Gift Card Number" type="number" maxlength="20" data-bind="value: authenticationViewModel.email" >
                         </div>
 
 
@@ -18,9 +18,9 @@
                         </div>
                     </li>
                     <li>
-                                            <span id="spanCardPin" class="animated-placholder" style="top:110px;">Gift Card Pin</span>
+<!--                                             <span id="spanCardPin" class="animated-placholder" style="top:110px;">E Gift Card Pin</span> -->
                      <div class="authentication-textbox-div">
-                            <input id="inputCardPin" onkeypress="aniPassword();"  onkeyup = "upaniPassword(this.id);"  placeholder="Gift Card Pin"  type="password" data-bind="value: authenticationViewModel.password" required>
+                            <input id="inputCardPin" onkeypress="aniPassword();" maxlength="10" onkeyup = "upaniPassword(this.id);"  placeholder="E Gift Card Pin"  type="number" class="password" data-bind="value: authenticationViewModel.password" required>
                       </div>
                     </li>
                 </ul>

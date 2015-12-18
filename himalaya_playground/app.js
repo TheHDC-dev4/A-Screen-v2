@@ -70,4 +70,14 @@ loading: '',
 }());
 
 // START_CUSTOM_CODE_kendoUiMobileApp
+
+function RedirectToCart()
+{
+   var router = new kendo.Router(); 
+                          
+  router.navigate("components/cartDetails/view.html");
+}
+
+
+
 // END_CUSTOM_CODE_kendoUiMobileApp

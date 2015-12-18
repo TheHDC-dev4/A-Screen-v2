@@ -31,6 +31,10 @@ function AddtowishList(e)
 app.dataListView = kendo.observable({
     onShow: function() {
        
+        
+        
+        
+        
           var app = {};
 app.db = null;
    
@@ -560,6 +564,18 @@ function removecart(e)
  count1--;
 $(e).next().text(count1);
             }
+}
+
+
+
+
+
+
+function onShows() {
+      var view = this.view();
+
+ view.loader.show();
+  
 }
    
 // END_CUSTOM_CODE_dataListViewModel

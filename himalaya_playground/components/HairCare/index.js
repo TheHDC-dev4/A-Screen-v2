@@ -85,9 +85,7 @@ function addToCart(e)
 /* var data = e.button.data();
 
     alert( data.test);*/
-
-    
-    
+ 
  var app = {};
 app.db = null;
   

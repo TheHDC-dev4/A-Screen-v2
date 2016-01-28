@@ -4,10 +4,12 @@
             <form>
                 <ul class="form-ul" >
                     <li>
-                        <span id="spanCardNumber" class="animated-placholder" style="top:30px;">E Gift Card Number</span>
+                        
                        <div class="authentication-textbox-div">
 
-                             <input id="inputCardNumber" onkeypress="aniEmail();"  onkeyup = "upaniEmail(this.id);"  placeholder="E Gift Card Number" type="email" data-bind="value: authenticationViewModel.email" >
+                             <input id="inputCardNumber"   onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)"  maxlength = "20"   placeholder="E Gift Card Number" type="number" 
+                                    
+                               max="99999999999999999999" >
                         </div>
 
 
@@ -18,9 +20,12 @@
                         </div>
                     </li>
                     <li>
-                                            <span id="spanCardPin" class="animated-placholder" style="top:110px;">E Gift Card Pin</span>
+                                         
                      <div class="authentication-textbox-div">
-                            <input id="inputCardPin" onkeypress="aniPassword();"  onkeyup = "upaniPassword(this.id);"  placeholder="E Gift Card Pin"  type="password" data-bind="value: authenticationViewModel.password" required>
+                            <input id="inputCardPin"  maxlength = "7"  onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)"   placeholder="E Gift Card Pin"  type="number" 
+                                   class="password" 
+                                   
+                                    max="9999999999" >
                       </div>
                     </li>
                 </ul>
@@ -37,12 +42,12 @@
 
      
               <li >
-                  <div  style="width:70%;float:left;">
+                  <div  style="width:60%;float:left;">
                     
                            Order Amount
                          
                   </div>
-                  <div   style="width:30%;float:right;">
+                  <div   style="width:40%;float:right;">
                    
 
                          &#8377 &nbsp; 2300.00
@@ -50,7 +55,7 @@
                   </div>
               </li>
                <li>
-                  <div  style="width:70%;float:left;">
+                  <div  style="width:60%;float:left;">
                     
                          Balance Amount in Card
                          

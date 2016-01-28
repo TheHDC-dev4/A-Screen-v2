@@ -21,7 +21,7 @@
     <script src="dataProviders/defaultProvider.js"></script>
     <script src="dataProviders/himalayaPlaygroundBackend.js"></script>
     <script src="kendo/js/jquery-1.7.1.min.js"></script>
-
+<script src="Plugins/Child Browser/childbrowser.js"></script>
 <style>
      .km-pages{
             text-align:center!important;
@@ -65,10 +65,12 @@
     <script src="components/egiftcard/index.js"></script>
     <script src="components/Search/index.js"></script>
     <script src="components/egiftExternal/index.js"></script>
-       <script src=" components/home1/index.js"></script>
-       <script src=" components/home2/index.js"></script>
-       <script src=" components/home3/index.js"></script>
-   
+    <script src=" components/home1/index.js"></script>
+    <script src=" components/home2/index.js"></script>
+    <script src=" components/home3/index.js"></script>
+     <script src=" components/refund/index.js"></script>
+     <script src=" components/Paymentgatway/index.js"></script>
+     <script src=" components/Transactionsuccessfull/index.js"></script>
 
     <script src="components/home/index.js"></script>
     <div data-role="layout" data-id="PersonalCare">
@@ -536,22 +538,20 @@
         </header>
 
         <!-- application views will be rendered here -->
-        <footer data-role="footer">
+             <footer data-role="footer">
 
 
-         
             <div class="left footer-first-part">
-<a href="components/cartDetails/view.html" class="km-link-button">
-                <a href="components/cartDetails/view.html" id="A6" data-icon="cart" class="cart" data-role="button" data-badge="0"></a>
+
+
+                <a href="components/cartDetails/view.html" id="btnCart" data-icon="cart" class="cart" data-role="button" data-badge="0"></a>
             </div>
-       </a>
             <div class="left footer-second-part"  onclick="RedirectToCart()">
 
                 <div>
-                    <span>&#8377 680.00
+                    <span>&#8377 10000.00
                     </span>
                 </div>
-                </a>
             </div>
             <div class="footer-third-part">
                 <a data-role="button" href="components/authenticationView/view.html" class="km-primary checkout-button">Check out</a>
@@ -564,7 +564,7 @@
 
 
 
-            <div align="center" style="padding: 30px; background-color: #FFF; border-bottom: 1px solid #f1f1f1;">
+            <div align="center" style="padding: 6px; background-color: #FFF; border-bottom: 1px solid #f1f1f1;">
                 <div align="left" >
                     <img src="images/logos/hlogo.jpg" />
                 </div>
@@ -576,14 +576,14 @@
 
 
         </header>
-        <div class="navagation" valign="top">
-            <ul id="navigation-container" data-role="listview" data-use-native-scrolling="true">
+        <div class="navagation" align="top">
+            <ul id="navigation-container" data-role="listview" data-use-native-scrolling="true" data-align="top">
                 <li><a href="components/home/view.html" >Home</a></li>
-                <li><a href="components/dataListView/view.html">Personal Care</a>
+                <li><a href="components/childrenhealth/view.html">Pharmaceuticals</a>
                 </li>
                 <li><a href="components/pureHerbs/view.html">Wellness</a>
                 </li>
-                <li><a href="components/childrenhealth/view.html">pharmaceuticals</a>
+                <li><a href="components/dataListView/view.html">Personal Care</a>
                 </li>
                 <li><a href="components/postbath/view.html">Baby Care</a>
                 </li>
@@ -591,29 +591,23 @@
                 </li>
                 <li><a href="components/Currentoffers/view.html">Offers</a>
                 </li>
-                <li>
-                   <a href="tel:18004251930" data-rel="external" data-role="button" class="km-link-button">Call Customer Service</a>
+                  <li><a href="components/refund/view.html">About Himalaya</a>
                 </li>
-<!--                    <li>
-                   <a href="tel:18002081930" data-rel="external" data-role="button" class="km-link-button">1-800-208-1930</a>
-                </li> -->
-                  <li>
-                   <a href="mailto:support@himalayastore.com" data-rel="external" data-role="button" class="km-link-button">E-mail Customer Service</a>
+  <li><a href="components/FAQ/view.html">Shipping Information</a>
                 </li>
-                <li><a  >Refund Policy</a>
-                </li>
-                <li><a  >Shipping Policy</a>
-                </li>
-                <li><a >Support</a>
-                 
-                </li>
-                
-                <li><a  >Store Locator</a>
-
-                </li>
+              
 
             </ul>
         </div>
+        <footer data-role="footer">
+       <div class="floatleft">
+                   <a href="tel:18002081930" data-rel="external" data-role="button" data-icon="phone-e"></a>
+    <a href="mailto:support@himalayastore.com" data-rel="external" data-role="button" data-icon="mail-e"></a>   
+    <a href="tel:18002081930" data-rel="external" data-role="button" data-icon="help-e"></a>
+    <a href="components/storelocator/view.html" data-role="button" data-icon="storelocator-e"></a>
+   </div>
+     </footer>
+        
     </div>
 
 
@@ -659,13 +653,13 @@
 
     <div data-role="drawer" id="rightdrawer" style="width: 7em" data-title="Share" data-position="right" data-stretch="true">
         <div data-role="tabstrip" class="km-vertical-tabstrip">
-            <a href="components/authenticationView/view.html" data-icon="login-e">Sign In
+            <a href="components/authenticationView/view.html" data-icon="login-e">Sign In</a>
+          <a  data-icon="signout-e">Sign Out</a>
+            
+            <a href="components/OrderHistory/view.html" data-icon="history">Order History</a>
       
-            </a>
-            <a href="components/OrderHistory/view.html" data-icon="history">Order History
-      
-            </a><a href="components/Wishlist/view.html" data-icon="favorites">Wishlist
-           <a href="components/Redeempoints/view.html" data-icon="redeem-e">Redeem Points
+            <a href="components/Wishlist/view.html" data-icon="favorites">Wishlist</a>
+           <a href="components/Redeempoints/view.html" data-icon="redeem-e">Reward  Points
            </a><a href="components/egiftExternal/view.html" data-icon="gift-e">E-Gift Card </a>
         </div>
     </div>

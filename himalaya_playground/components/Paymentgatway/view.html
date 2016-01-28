@@ -1,0 +1,24 @@
+<div data-role="view" data-title="Payment" data-layout="Verification"
+     data-model="app.Search"  data-show="app.Search.onShow" data-after-show="app.Search.afterShow">
+ 
+      
+   <div data-role="scroller" style="height:1500px">
+
+ 
+
+   
+
+        
+       </div>
+       <form id="MediateForm" method='POST' 
+action='https://pgi.billdesk.com/pgidsk/PGIMerchantPayment'  target="myframe"   >
+            <input type="hidden" name="Merchant_Id" name="Merchant_Id"  value="" />
+            <input type="hidden" name="encRequest" name="encRequest"  value=""  />
+            <input type="hidden" name="inputvalue" id="inputvalue"  value="HIMALAYA|1010101010101010101|NA|2.00|NA|NA|NA|INR|NA|R|himalaya|NA|NA|F|NA|NA|NA|NA|NA|NA|NA|http://210.18.113.115/himalayastore/test.html|0YOV7CtlB88j" />  />
+    <input type="hidden" id="txtCustomerID" value="1010101010101010101"  />
+                <input type="hidden" name="txtTxnAmount" value="2.00"  />
+                <input type="hidden" name="msg" id="submitvalue" />
+       
+     </form>
+    
+</div> </div>

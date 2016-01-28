@@ -7,7 +7,8 @@ function AddtowishList(e)
 app.postbath = kendo.observable({
     onShow: function() {
 
-        
+        // $('#divOuter').scrollTop(0);
+       // window.onload = function() {document.body.scrollTop = document.documentElement.scrollTop = 0;};
           var app = {};
 app.db = null;
    
@@ -440,5 +441,20 @@ function removecart(e)
  count1--;
 $(e).next().text(count1);
             }
+}
+
+$(document).ready(function(){
+$('a .View-Cell').click(function(){
+  alert();  
+});
+});
+function go()
+{
+$("#listView").data("kendoListView").dataSource.read();
+  // var scroll =  $("#divOuter").data("kendoMobileScroller");
+  //   scroll.scroller().reset();
+ // $(".km-scroll-container").scrollTop( 300 );
+ //km-content km-widget km-scroll-wrapper  
+
 }
 // END_CUSTOM_CODE_postbathModel

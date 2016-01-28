@@ -4,7 +4,11 @@
 
 
 app.Search = kendo.observable({
-    onShow: function() {},
+    onShow: function() {
+        
+ alert(window.location.href); 
+        
+    },
     afterShow: function() {}
     
 });

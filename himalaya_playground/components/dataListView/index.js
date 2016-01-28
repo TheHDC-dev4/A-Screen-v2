@@ -31,10 +31,6 @@ function AddtowishList(e)
 app.dataListView = kendo.observable({
     onShow: function() {
        
-        
-        
-        
-        
           var app = {};
 app.db = null;
    
@@ -439,7 +435,9 @@ e.button.next().text(count1);
             schema: {
                 model: {
                     
-                    fields: {
+                   
+                       
+                     fields: {
                         'ProductName': {
                             field: 'ProductName',
                             defaultValue: ''
@@ -455,9 +453,10 @@ e.button.next().text(count1);
                          
                          
                     }
-                    
-                    
-                    
+                           
+                           
+                                               
+                  
                 }
                 
                 
@@ -466,7 +465,7 @@ e.button.next().text(count1);
 
         dataSource = new kendo.data.DataSource(dataSourceOptions),
         
-        dataListViewModel = kendo.observable({
+         dataListViewModel = kendo.observable({
             dataSource: dataSource,
           /*  itemClick: function(e) {
                 app.mobileApp.navigate('#components/dataListView/details.html?uid=' + e.dataItem.uid);
@@ -483,6 +482,24 @@ e.button.next().text(count1);
             },
             currentItem: null
         });
+        
+        // dataListViewModel = kendo.observable({
+        //     dataSource: dataSource,
+        //   /*  itemClick: function(e) {
+        //         app.mobileApp.navigate('#components/dataListView/details.html?uid=' + e.dataItem.uid);
+        //     },*/
+        //     detailsShow: function(e) {
+        //         var item = e.view.params.Catalogid,
+        //             dataSource = dataListViewModel.get('dataSource'),
+        //             itemModel = dataSource.get(item);
+        //         itemModel.ImageUrlUrl = processImage(itemModel.ImageUrl);
+        //         if (!itemModel.ProductName) {
+        //             itemModel.ProductName = String.fromCharCode(160);
+        //         }
+        //         dataListViewModel.set('currentItem', itemModel);
+        //     },
+        //     currentItem: null
+        // });
 
     parent.set('dataListViewModel', dataListViewModel);
     
@@ -564,18 +581,6 @@ function removecart(e)
  count1--;
 $(e).next().text(count1);
             }
-}
-
-
-
-
-
-
-function onShows() {
-      var view = this.view();
-
- view.loader.show();
-  
 }
    
 // END_CUSTOM_CODE_dataListViewModel

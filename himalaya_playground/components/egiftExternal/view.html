@@ -7,7 +7,7 @@
 <!--                         <span id="spanCardNumber" class="animated-placholder" style="top:30px;">E Gift Card Number</span> -->
                        <div class="authentication-textbox-div">
 
-                             <input id="inputCardNumber" onkeypress="aniEmail();"  onkeyup = "upaniEmail(this.id);"  placeholder="E Gift Card Number" type="number" maxlength="20" data-bind="value: authenticationViewModel.email" >
+                             <input id="inputCardNumber"   maxlength = "20" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)"   placeholder="E Gift Card Number" type="number" max="99999999999999999999"   >
                         </div>
 
 
@@ -20,7 +20,7 @@
                     <li>
 <!--                                             <span id="spanCardPin" class="animated-placholder" style="top:110px;">E Gift Card Pin</span> -->
                      <div class="authentication-textbox-div">
-                            <input id="inputCardPin" onkeypress="aniPassword();" maxlength="10" onkeyup = "upaniPassword(this.id);"  placeholder="E Gift Card Pin"  type="number" class="password" data-bind="value: authenticationViewModel.password" required>
+                            <input id="inputCardPin" max="9999999999" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)"  maxlength = "7"   placeholder="E Gift Card Pin"  type="number" class="password"  required>
                       </div>
                     </li>
                 </ul>

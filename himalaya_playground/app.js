@@ -16,8 +16,9 @@ loading: '',
                 // and feel of the operating system
                 skin: 'nova',
                 // the application needs to know which view to load first
-                initial: 'components/home/view.html',
-                statusBarStyle: 'black-translucent'
+                initial: 'components/FAQ/view.html',
+                statusBarStyle: 'black-translucent',
+               hideAddressBar: false 
             });
         });
         app.showLoading();
